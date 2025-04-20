@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Potisan.Windows.PropertySystem</RootNamespace>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <ErrorReport>none</ErrorReport>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+    <Platforms>AnyCPU</Platforms>
+		<TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
+		<TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <IsTrimmable>False</IsTrimmable>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsTrimmable>False</IsTrimmable>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+	
+  <ItemGroup>
+    <ProjectReference Include="..\PotisanComLib\PotisanComLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Potisan.Windows.Com" />
+    <Using Include="System.Diagnostics" />
+    <Using Include="System.Runtime.InteropServices" />
+    <Using Include="System.Runtime.InteropServices.Marshalling" />
+  </ItemGroup>
+
+</Project>

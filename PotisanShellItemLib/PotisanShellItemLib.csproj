@@ -6,43 +6,40 @@
     <Nullable>enable</Nullable>
     <NoWin32Manifest>true</NoWin32Manifest>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <ErrorReport>none</ErrorReport>
     <NeutralLanguage>ja-JP</NeutralLanguage>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
-    <Platforms>AnyCPU;x64</Platforms>
+    <Platforms>AnyCPU</Platforms>
+    <RootNamespace>Potisan.Windows.Shell</RootNamespace>
+		<TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
+		<TieredCompilationQuickJit>false</TieredCompilationQuickJit>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <IsPublishable>False</IsPublishable>
-    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <IsTrimmable>False</IsTrimmable>
     <DebugType>full</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <IsPublishable>False</IsPublishable>
-    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <IsTrimmable>False</IsTrimmable>
     <DebugType>full</DebugType>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IsPublishable>False</IsPublishable>
-    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
-    <DebugType>full</DebugType>
-	<DefineConstants>TARGET_64BIT</DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IsPublishable>False</IsPublishable>
-    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
-    <DebugType>full</DebugType>
-    <DefineConstants>TARGET_64BIT</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PotisanComLib\PotisanComLib.csproj" />
+    <ProjectReference Include="..\PotisanPropertySystemLib\PotisanPropertySystemLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Potisan.Windows.Com" />
+    <Using Include="System.Diagnostics" />
     <Using Include="System.Runtime.InteropServices" />
+    <Using Include="System.Runtime.InteropServices.Marshalling" />
   </ItemGroup>
 
 </Project>

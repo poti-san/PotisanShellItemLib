@@ -2,45 +2,46 @@
   "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
   "metadata": [
     {
-      "src": [
-        {
-          "src": "../PotisanShellItemLib",
-          "files": [
-            "**/*.csproj"
-          ]
-        }
-      ],
-      "dest": "api",
-      "filter": "filter.yml",
-//      "namespaceLayout": "nested"
+      "src": [{"src": "../PotisanComCoreLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanComCoreLib"
+    },
+    {
+      "src": [{"src": "../PotisanComLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanComLib"
+    },
+    {
+      "src": [{"src": "../PotisanPropertySystemLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanPropertySystemLib"
+    },
+    {
+      "src": [{"src": "../PotisanShellItemLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanShellItemLib"
+    },
+    {
+      "src": [{"src": "../PotisanDispatchLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanDispatchLib"
+    },
+    {
+      "src": [{"src": "../PotisanMediaFoundationLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanMediaFoundationLib"
+    },
+    {
+      "src": [{"src": "../PotisanDxgiLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanDxgiLib"
+    },
+    {
+      "src": [{"src": "../PotisanDXCoreLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanDXCoreLib"
     }
   ],
   "build": {
-    "content": [
-      {
-        "files": [
-          "**/*.{md,yml}"
-        ],
-        "exclude": [
-          "_site/**"
-        ]
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          "images/**"
-        ]
-      }
-    ],
+    "content": [{"files": ["**/*.{md,yml}"], "exclude": ["_site/**"]}],
+    "resource": [{"files": ["images/**"]}],
     "output": "_site",
-    "template": [
-      "default",
-      "modern"
-    ],
+    "template": ["default", "modern"],
     "globalMetadata": {
-      "_appName": "PotisanShellItemLib",
-      "_appTitle": "PotisanShellItemLib",
+      "_appName": "PotisanComLibs",
+      "_appTitle": "PotisanComLibs",
       "_enableSearch": true,
       "pdf": false
     }
