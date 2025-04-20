@@ -69,7 +69,7 @@ public class ShellItem : IComUnknownWrapper
 	/// 標準表示名。
 	/// </summary>
 	public ComResult<string> NormalDisplayNameNoThrow => GetDisplayNameNoThrow(ShellItemDisplayName.NormalDisplay);
-	/// <inheritdoc cref="NormalDisplayName"/>
+	/// <inheritdoc cref="NormalDisplayNameNoThrow"/>
 	public string NormalDisplayName => GetDisplayNameNoThrow(ShellItemDisplayName.NormalDisplay).Value;
 
 	/// <summary>
