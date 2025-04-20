@@ -19,7 +19,10 @@ jobs:
         shell: cmd
         run: |
           choco install docfx -y
-          docfx .docfx\docfx.json
+          cd .docfx
+          docfx metadata
+          docfx build
+          cd ..
 
       - name: Publish Documentation on GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
