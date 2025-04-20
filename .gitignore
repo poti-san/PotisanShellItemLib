@@ -5,7 +5,7 @@
 
 *.txt
 /Samples/ConsoleApp*/
-/.docfx/**/
+/.docfx/**
 /docs/
 
 # User-specific files
