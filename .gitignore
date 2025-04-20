@@ -8,6 +8,7 @@
 /Samples/ConsoleApp*/
 # docfx/api以下には絶対パスを含むファイルが作成されます。
 /.docfx/**
+/docs/
 
 # User-specific files
 *.rsuser
