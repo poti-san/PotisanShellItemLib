@@ -7,7 +7,7 @@
 # テスト用プロジェクト
 /Samples/ConsoleApp*/
 # docfx/api以下には絶対パスを含むファイルが作成されます。
-/docfx/**
+/docfx/**/
 /docs/
 
 # User-specific files
