@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ShellItem2 | PotisanShellItemLib </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ShellItem2 | PotisanShellItemLib ">
+      
+      <meta name="description" content="プロパティを取得しやすいシェルアイテム。 IShellItem COMインターフェイスのラッパーです。">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/poti-san/PotisanShellItemLib/new/main/apiSpec/new?filename=PotisanShellItemLib_Shell_ShellItem2.md&amp;value=---%0Auid%3A%20PotisanShellItemLib.Shell.ShellItem2%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="PotisanShellItemLib">
+            PotisanShellItemLib
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="PotisanShellItemLib.Shell.ShellItem2">
+
+
+
+  <h1 id="PotisanShellItemLib_Shell_ShellItem2" data-uid="PotisanShellItemLib.Shell.ShellItem2" class="text-break">
+Class ShellItem2  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="PotisanShellItemLib.html">PotisanShellItemLib</a>.<a class="xref" href="PotisanShellItemLib.Shell.html">Shell</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>PotisanShellItemLib.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>プロパティを取得しやすいシェルアイテム。
+IShellItem COMインターフェイスのラッパーです。</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ShellItem2 : ShellItem, IComUnknownWrapper, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html">ShellItem</a></div>
+      <div><span class="xref">ShellItem2</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="PotisanShellItemLib.IComUnknownWrapper.html">IComUnknownWrapper</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_WrappedObject">ShellItem.WrappedObject</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_Dispose">ShellItem.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_BindToHandlerNoThrow__2_System_Guid__PotisanShellItemLib_Core_BindContext_">ShellItem.BindToHandlerNoThrow&lt;TWrapper, TInterface&gt;(in Guid, BindContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_BindToHandler__2_System_Guid__PotisanShellItemLib_Core_BindContext_">ShellItem.BindToHandler&lt;TWrapper, TInterface&gt;(in Guid, BindContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_ParentNoThrow">ShellItem.ParentNoThrow</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_Parent">ShellItem.Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_NormalDisplayNameNoThrow">ShellItem.NormalDisplayNameNoThrow</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_NormalDisplayName">ShellItem.NormalDisplayName</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_ParentRelativeParsingNameNoThrow">ShellItem.ParentRelativeParsingNameNoThrow</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_ParentRelativeParsingName">ShellItem.ParentRelativeParsingName</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_DesktopAbsoluteParsingNameNoThrow">ShellItem.DesktopAbsoluteParsingNameNoThrow</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_DesktopAbsoluteParsingName">ShellItem.DesktopAbsoluteParsingName</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_ParentRelativeEditingNameNoThrow">ShellItem.ParentRelativeEditingNameNoThrow</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_ParentRelativeEditingName">ShellItem.ParentRelativeEditingName</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_DesktopAbsoluteEditingNameNoThrow">ShellItem.DesktopAbsoluteEditingNameNoThrow</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_DesktopAbsoluteEditingName">ShellItem.DesktopAbsoluteEditingName</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_FileSystemPathNoThrow">ShellItem.FileSystemPathNoThrow</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_FileSystemPath">ShellItem.FileSystemPath</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_URLNoThrow">ShellItem.URLNoThrow</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_URL">ShellItem.URL</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_ParentRelativeNameForAddressBarNoThrow">ShellItem.ParentRelativeNameForAddressBarNoThrow</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_ParentRelativeNameForAddressBar">ShellItem.ParentRelativeNameForAddressBar</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_ParentRelativeNameNoThrow">ShellItem.ParentRelativeNameNoThrow</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_ParentRelativeName">ShellItem.ParentRelativeName</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_ParentRelativeNameForUINoThrow">ShellItem.ParentRelativeNameForUINoThrow</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_ParentRelativeNameForUI">ShellItem.ParentRelativeNameForUI</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_GetAttributesNoThrow_PotisanShellItemLib_Shell_ShellItemAttribute_">ShellItem.GetAttributesNoThrow(ShellItemAttribute)</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_GetAttributes_PotisanShellItemLib_Shell_ShellItemAttribute_">ShellItem.GetAttributes(ShellItemAttribute)</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_AttributesNoThrow">ShellItem.AttributesNoThrow</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_Attributes">ShellItem.Attributes</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_CompareNoThrow_PotisanShellItemLib_Shell_ShellItem_PotisanShellItemLib_Shell_ShellItemCompareHint_">ShellItem.CompareNoThrow(ShellItem, ShellItemCompareHint)</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_Compare_PotisanShellItemLib_Shell_ShellItem_PotisanShellItemLib_Shell_ShellItemCompareHint_">ShellItem.Compare(ShellItem, ShellItemCompareHint)</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_EqualsNoThrow_PotisanShellItemLib_Shell_ShellItem_PotisanShellItemLib_Shell_ShellItemCompareHint_">ShellItem.EqualsNoThrow(ShellItem, ShellItemCompareHint)</a>
+    </div>
+    <div>
+      <a class="xref" href="PotisanShellItemLib.Shell.ShellItem.html#PotisanShellItemLib_Shell_ShellItem_Equals_PotisanShellItemLib_Shell_ShellItem_PotisanShellItemLib_Shell_ShellItemCompareHint_">ShellItem.Equals(ShellItem, ShellItemCompareHint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2__ctor_" data-uid="PotisanShellItemLib.Shell.ShellItem2.#ctor*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2__ctor_System_Object_" data-uid="PotisanShellItemLib.Shell.ShellItem2.#ctor(System.Object)">
+  ShellItem2(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>RCWインスタンスをラップします。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShellItem2(object? o)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>o</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>RCWインスタンス。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_Items_" data-uid="PotisanShellItemLib.Shell.ShellItem2.Items*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_Items" data-uid="PotisanShellItemLib.Shell.ShellItem2.Items">
+  Items
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShellItem2Enumerator Items { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.Core.ShellItem2Enumerator.html">ShellItem2Enumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_ItemsNoThrow_" data-uid="PotisanShellItemLib.Shell.ShellItem2.ItemsNoThrow*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_ItemsNoThrow" data-uid="PotisanShellItemLib.Shell.ShellItem2.ItemsNoThrow">
+  ItemsNoThrow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>サブアイテム。ファイルシステムオブジェクトと非ファイルシステムオブジェクトを含みます。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComResult&lt;ShellItem2Enumerator&gt; ItemsNoThrow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.ComResult-1.html">ComResult</a>&lt;<a class="xref" href="PotisanShellItemLib.Core.ShellItem2Enumerator.html">ShellItem2Enumerator</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_Properties_" data-uid="PotisanShellItemLib.Shell.ShellItem2.Properties*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_Properties" data-uid="PotisanShellItemLib.Shell.ShellItem2.Properties">
+  Properties
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>プロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;KeyValuePair&lt;PropertyKey, PropVariant&gt;&gt; Properties { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a>, <a class="xref" href="PotisanShellItemLib.PropertySystem.PropVariant.html">PropVariant</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PotisanShellItemLib_Shell_ShellItem2_Properties_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>このプロパティは内部でプロパティストアを作成します。
+繰り返し使用する場合はキャッシュやプロパティストア自体の使用を検討してください。</p>
+</div>
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_PropertyKeys_" data-uid="PotisanShellItemLib.Shell.ShellItem2.PropertyKeys*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_PropertyKeys" data-uid="PotisanShellItemLib.Shell.ShellItem2.PropertyKeys">
+  PropertyKeys
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>プロパティキーを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;PropertyKey&gt; PropertyKeys { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PotisanShellItemLib_Shell_ShellItem2_PropertyKeys_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>このプロパティは内部でプロパティストアを作成します。
+繰り返し使用する場合はキャッシュやプロパティストア自体の使用を検討してください。</p>
+</div>
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_StorageItems_" data-uid="PotisanShellItemLib.Shell.ShellItem2.StorageItems*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_StorageItems" data-uid="PotisanShellItemLib.Shell.ShellItem2.StorageItems">
+  StorageItems
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>サブアイテム。ファイルシステムオブジェクトのみ含みます。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShellItem2Enumerator StorageItems { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.Core.ShellItem2Enumerator.html">ShellItem2Enumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_StorageItemsNoThrow_" data-uid="PotisanShellItemLib.Shell.ShellItem2.StorageItemsNoThrow*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_StorageItemsNoThrow" data-uid="PotisanShellItemLib.Shell.ShellItem2.StorageItemsNoThrow">
+  StorageItemsNoThrow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>サブアイテム。ファイルシステムオブジェクトのみ含みます。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComResult&lt;ShellItem2Enumerator&gt; StorageItemsNoThrow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.ComResult-1.html">ComResult</a>&lt;<a class="xref" href="PotisanShellItemLib.Core.ShellItem2Enumerator.html">ShellItem2Enumerator</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_CreateItemInKnownFolder_" data-uid="PotisanShellItemLib.Shell.ShellItem2.CreateItemInKnownFolder*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_CreateItemInKnownFolder_System_Guid__System_String_PotisanShellItemLib_Shell_KnownFolderFlag_" data-uid="PotisanShellItemLib.Shell.ShellItem2.CreateItemInKnownFolder(System.Guid@,System.String,PotisanShellItemLib.Shell.KnownFolderFlag)">
+  CreateItemInKnownFolder(in Guid, string, KnownFolderFlag)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>既知フォルダを表すシェルアイテムを作成します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ShellItem2 CreateItemInKnownFolder(in Guid folderId, string itename, KnownFolderFlag flags = KnownFolderFlag.Default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>folderId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>既知フォルダID。<code>KnownFolderID</code>静的クラスで定義されたIDが使用できます。</p>
+</dd>
+    <dt><code>itename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>flags</code> <a class="xref" href="PotisanShellItemLib.Shell.KnownFolderFlag.html">KnownFolderFlag</a></dt>
+    <dd><p>既知フォルダの取得フラグ。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.Shell.ShellItem2.html">ShellItem2</a></dt>
+    <dd><p>既知フォルダを表すシェルアイテム。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_CreateItemInKnownFolderNoThrow_" data-uid="PotisanShellItemLib.Shell.ShellItem2.CreateItemInKnownFolderNoThrow*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_CreateItemInKnownFolderNoThrow_System_Guid__System_String_PotisanShellItemLib_Shell_KnownFolderFlag_" data-uid="PotisanShellItemLib.Shell.ShellItem2.CreateItemInKnownFolderNoThrow(System.Guid@,System.String,PotisanShellItemLib.Shell.KnownFolderFlag)">
+  CreateItemInKnownFolderNoThrow(in Guid, string, KnownFolderFlag)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>既知フォルダを表すシェルアイテムを作成します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ComResult&lt;ShellItem2&gt; CreateItemInKnownFolderNoThrow(in Guid folderId, string itemname, KnownFolderFlag flags = KnownFolderFlag.Default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>folderId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>既知フォルダID。<code>KnownFolderID</code>静的クラスで定義されたIDが使用できます。</p>
+</dd>
+    <dt><code>itemname</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>flags</code> <a class="xref" href="PotisanShellItemLib.Shell.KnownFolderFlag.html">KnownFolderFlag</a></dt>
+    <dd><p>既知フォルダの取得フラグ。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.ComResult-1.html">ComResult</a>&lt;<a class="xref" href="PotisanShellItemLib.Shell.ShellItem2.html">ShellItem2</a>&gt;</dt>
+    <dd><p>既知フォルダを表すシェルアイテム。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_CreateKnownFolderItem_" data-uid="PotisanShellItemLib.Shell.ShellItem2.CreateKnownFolderItem*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_CreateKnownFolderItem_System_Guid__PotisanShellItemLib_Shell_KnownFolderFlag_" data-uid="PotisanShellItemLib.Shell.ShellItem2.CreateKnownFolderItem(System.Guid@,PotisanShellItemLib.Shell.KnownFolderFlag)">
+  CreateKnownFolderItem(in Guid, KnownFolderFlag)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>既知フォルダを表すシェルアイテムを作成します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ShellItem2 CreateKnownFolderItem(in Guid folderId, KnownFolderFlag flags = KnownFolderFlag.Default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>folderId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>既知フォルダID。<code>KnownFolderID</code>静的クラスで定義されたIDが使用できます。</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="PotisanShellItemLib.Shell.KnownFolderFlag.html">KnownFolderFlag</a></dt>
+    <dd><p>既知フォルダの取得フラグ。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.Shell.ShellItem2.html">ShellItem2</a></dt>
+    <dd><p>既知フォルダを表すシェルアイテム。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_CreateKnownFolderItemNoThrow_" data-uid="PotisanShellItemLib.Shell.ShellItem2.CreateKnownFolderItemNoThrow*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_CreateKnownFolderItemNoThrow_System_Guid__PotisanShellItemLib_Shell_KnownFolderFlag_" data-uid="PotisanShellItemLib.Shell.ShellItem2.CreateKnownFolderItemNoThrow(System.Guid@,PotisanShellItemLib.Shell.KnownFolderFlag)">
+  CreateKnownFolderItemNoThrow(in Guid, KnownFolderFlag)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>既知フォルダを表すシェルアイテムを作成します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ComResult&lt;ShellItem2&gt; CreateKnownFolderItemNoThrow(in Guid folderId, KnownFolderFlag flags = KnownFolderFlag.Default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>folderId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>既知フォルダID。<code>KnownFolderID</code>静的クラスで定義されたIDが使用できます。</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="PotisanShellItemLib.Shell.KnownFolderFlag.html">KnownFolderFlag</a></dt>
+    <dd><p>既知フォルダの取得フラグ。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.ComResult-1.html">ComResult</a>&lt;<a class="xref" href="PotisanShellItemLib.Shell.ShellItem2.html">ShellItem2</a>&gt;</dt>
+    <dd><p>既知フォルダを表すシェルアイテム。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetBool_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetBool*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetBool_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetBool(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetBool(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>論理値形式のプロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetBool(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>プロパティの値。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetBoolNoThrow_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetBoolNoThrow*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetBoolNoThrow_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetBoolNoThrow(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetBoolNoThrow(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>論理値形式のプロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComResult&lt;bool&gt; GetBoolNoThrow(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.ComResult-1.html">ComResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>プロパティの値。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetClsid_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetClsid*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetClsid_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetClsid(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetClsid(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GUID形式のプロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guid GetClsid(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>プロパティの値。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetClsidNoThrow_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetClsidNoThrow*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetClsidNoThrow_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetClsidNoThrow(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetClsidNoThrow(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GUID形式のプロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComResult&lt;Guid&gt; GetClsidNoThrow(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.ComResult-1.html">ComResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</dt>
+    <dd><p>プロパティの値。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetFileTime_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetFileTime*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetFileTime_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetFileTime(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetFileTime(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>FILETIME形式のプロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileTime GetFileTime(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.Core.FileTime.html">FileTime</a></dt>
+    <dd><p>プロパティの値。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetFileTimeNoThrow_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetFileTimeNoThrow*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetFileTimeNoThrow_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetFileTimeNoThrow(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetFileTimeNoThrow(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>FILETIME形式のプロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComResult&lt;FileTime&gt; GetFileTimeNoThrow(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.ComResult-1.html">ComResult</a>&lt;<a class="xref" href="PotisanShellItemLib.Core.FileTime.html">FileTime</a>&gt;</dt>
+    <dd><p>プロパティの値。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetInt32_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetInt32*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetInt32_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetInt32(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetInt32(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>32ビット符号付き整数形式のプロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetInt32(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>プロパティの値。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetInt32NoThrow_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetInt32NoThrow*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetInt32NoThrow_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetInt32NoThrow(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetInt32NoThrow(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>32ビット符号付き整数形式のプロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComResult&lt;int&gt; GetInt32NoThrow(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.ComResult-1.html">ComResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>プロパティの値。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetProperty_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetProperty*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetProperty_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetProperty(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetProperty(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>プロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant GetProperty(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.PropertySystem.PropVariant.html">PropVariant</a></dt>
+    <dd><p>プロパティ。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetPropertyNoThrow_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetPropertyNoThrow*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetPropertyNoThrow_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetPropertyNoThrow(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetPropertyNoThrow(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>プロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComResult&lt;PropVariant&gt; GetPropertyNoThrow(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.ComResult-1.html">ComResult</a>&lt;<a class="xref" href="PotisanShellItemLib.PropertySystem.PropVariant.html">PropVariant</a>&gt;</dt>
+    <dd><p>プロパティ。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetPropertyStore_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetPropertyStore*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetPropertyStore_PotisanShellItemLib_PropertySystem_GetPropertyStoreFlag_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetPropertyStore(PotisanShellItemLib.PropertySystem.GetPropertyStoreFlag)">
+  GetPropertyStore(GetPropertyStoreFlag)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>プロパティストアを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertyStore GetPropertyStore(GetPropertyStoreFlag flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>flags</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.GetPropertyStoreFlag.html">GetPropertyStoreFlag</a></dt>
+    <dd><p>取得フラグ。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyStore.html">PropertyStore</a></dt>
+    <dd><p>プロパティストア。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="PotisanShellItemLib_Shell_ShellItem2_GetPropertyStore_PotisanShellItemLib_PropertySystem_GetPropertyStoreFlag__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>取得されたプロパティストアは一部のプロパティキーを列挙しません。
+確実に取得する場合は<code>PropertySystem</code>クラスからキーを取得してください。</p>
+</div>
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetPropertyStoreNoThrow_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetPropertyStoreNoThrow*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetPropertyStoreNoThrow_PotisanShellItemLib_PropertySystem_GetPropertyStoreFlag_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetPropertyStoreNoThrow(PotisanShellItemLib.PropertySystem.GetPropertyStoreFlag)">
+  GetPropertyStoreNoThrow(GetPropertyStoreFlag)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>プロパティストアを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComResult&lt;PropertyStore&gt; GetPropertyStoreNoThrow(GetPropertyStoreFlag flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>flags</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.GetPropertyStoreFlag.html">GetPropertyStoreFlag</a></dt>
+    <dd><p>取得フラグ。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.ComResult-1.html">ComResult</a>&lt;<a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyStore.html">PropertyStore</a>&gt;</dt>
+    <dd><p>プロパティストア。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="PotisanShellItemLib_Shell_ShellItem2_GetPropertyStoreNoThrow_PotisanShellItemLib_PropertySystem_GetPropertyStoreFlag__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>取得されたプロパティストアは一部のプロパティキーを列挙しません。
+確実に取得する場合は<code>PropertySystem</code>クラスからキーを取得してください。</p>
+</div>
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetString_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetString*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetString_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetString(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetString(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>文字列形式のプロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetString(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>プロパティの値。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetStringNoThrow_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetStringNoThrow*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetStringNoThrow_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetStringNoThrow(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetStringNoThrow(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>文字列形式のプロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComResult&lt;string&gt; GetStringNoThrow(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.ComResult-1.html">ComResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>プロパティの値。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetUInt32_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetUInt32*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetUInt32_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetUInt32(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetUInt32(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>32ビット符号無し整数形式のプロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint GetUInt32(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>プロパティの値。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetUInt32NoThrow_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetUInt32NoThrow*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetUInt32NoThrow_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetUInt32NoThrow(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetUInt32NoThrow(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>32ビット符号無し整数形式のプロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComResult&lt;uint&gt; GetUInt32NoThrow(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.ComResult-1.html">ComResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+    <dd><p>プロパティの値。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetUInt64_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetUInt64*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetUInt64_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetUInt64(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetUInt64(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>64ビット符号無し整数形式のプロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong GetUInt64(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>プロパティの値。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_GetUInt64NoThrow_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetUInt64NoThrow*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_GetUInt64NoThrow_PotisanShellItemLib_PropertySystem_PropertyKey_" data-uid="PotisanShellItemLib.Shell.ShellItem2.GetUInt64NoThrow(PotisanShellItemLib.PropertySystem.PropertyKey)">
+  GetUInt64NoThrow(PropertyKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>64ビット符号無し整数形式のプロパティを取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComResult&lt;ulong&gt; GetUInt64NoThrow(PropertyKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="PotisanShellItemLib.PropertySystem.PropertyKey.html">PropertyKey</a></dt>
+    <dd><p>プロパティキー。</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.ComResult-1.html">ComResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+    <dd><p>プロパティの値。</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_Update_" data-uid="PotisanShellItemLib.Shell.ShellItem2.Update*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_Update_PotisanShellItemLib_Core_BindContext_" data-uid="PotisanShellItemLib.Shell.ShellItem2.Update(PotisanShellItemLib.Core.BindContext)">
+  Update(BindContext?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>プロパティ情報のキャッシュを更新します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update(BindContext? bc = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bc</code> <a class="xref" href="PotisanShellItemLib.Core.BindContext.html">BindContext</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ShellItem2_UpdateNoThrow_" data-uid="PotisanShellItemLib.Shell.ShellItem2.UpdateNoThrow*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ShellItem2_UpdateNoThrow_PotisanShellItemLib_Core_BindContext_" data-uid="PotisanShellItemLib.Shell.ShellItem2.UpdateNoThrow(PotisanShellItemLib.Core.BindContext)">
+  UpdateNoThrow(BindContext?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>プロパティ情報のキャッシュを更新します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComResult UpdateNoThrow(BindContext? bc = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bc</code> <a class="xref" href="PotisanShellItemLib.Core.BindContext.html">BindContext</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PotisanShellItemLib.ComResult.html">ComResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ShellItem2.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

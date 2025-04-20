@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IShellItem | PotisanShellItemLib </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IShellItem | PotisanShellItemLib ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/poti-san/PotisanShellItemLib/new/main/apiSpec/new?filename=PotisanShellItemLib_Shell_ComTypes_IShellItem.md&amp;value=---%0Auid%3A%20PotisanShellItemLib.Shell.ComTypes.IShellItem%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="PotisanShellItemLib">
+            PotisanShellItemLib
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="PotisanShellItemLib.Shell.ComTypes.IShellItem">
+
+
+
+  <h1 id="PotisanShellItemLib_Shell_ComTypes_IShellItem" data-uid="PotisanShellItemLib.Shell.ComTypes.IShellItem" class="text-break">
+Interface IShellItem  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ComTypes/IShellItem.cs/#L5"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="PotisanShellItemLib.html">PotisanShellItemLib</a>.<a class="xref" href="PotisanShellItemLib.Shell.html">Shell</a>.<a class="xref" href="PotisanShellItemLib.Shell.ComTypes.html">ComTypes</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>PotisanShellItemLib.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Guid(&quot;43826d1e-e718-42ee-bc55-a1e261c37bfe&quot;)]
+[InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+public interface IShellItem</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="PotisanShellItemLib_Shell_ComTypes_IShellItem_BindToHandler_" data-uid="PotisanShellItemLib.Shell.ComTypes.IShellItem.BindToHandler*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ComTypes_IShellItem_BindToHandler_PotisanShellItemLib_Core_ComTypes_IBindCtx_System_Guid__System_Guid__System_Object__" data-uid="PotisanShellItemLib.Shell.ComTypes.IShellItem.BindToHandler(PotisanShellItemLib.Core.ComTypes.IBindCtx,System.Guid@,System.Guid@,System.Object@)">
+  BindToHandler(IBindCtx?, in Guid, in Guid, out object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ComTypes/IShellItem.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int BindToHandler(IBindCtx? pbc, in Guid bhid, in Guid riid, out object? ppv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pbc</code> <a class="xref" href="PotisanShellItemLib.Core.ComTypes.IBindCtx.html">IBindCtx</a></dt>
+    <dd></dd>
+    <dt><code>bhid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd></dd>
+    <dt><code>riid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd></dd>
+    <dt><code>ppv</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ComTypes_IShellItem_Compare_" data-uid="PotisanShellItemLib.Shell.ComTypes.IShellItem.Compare*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ComTypes_IShellItem_Compare_PotisanShellItemLib_Shell_ComTypes_IShellItem_PotisanShellItemLib_Shell_ShellItemCompareHint_System_Int32__" data-uid="PotisanShellItemLib.Shell.ComTypes.IShellItem.Compare(PotisanShellItemLib.Shell.ComTypes.IShellItem,PotisanShellItemLib.Shell.ShellItemCompareHint,System.Int32@)">
+  Compare(IShellItem, ShellItemCompareHint, out int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ComTypes/IShellItem.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Compare(IShellItem psi, ShellItemCompareHint hint, out int piOrder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>psi</code> <a class="xref" href="PotisanShellItemLib.Shell.ComTypes.IShellItem.html">IShellItem</a></dt>
+    <dd></dd>
+    <dt><code>hint</code> <a class="xref" href="PotisanShellItemLib.Shell.ShellItemCompareHint.html">ShellItemCompareHint</a></dt>
+    <dd></dd>
+    <dt><code>piOrder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ComTypes_IShellItem_GetAttributes_" data-uid="PotisanShellItemLib.Shell.ComTypes.IShellItem.GetAttributes*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ComTypes_IShellItem_GetAttributes_PotisanShellItemLib_Shell_ShellItemAttribute_PotisanShellItemLib_Shell_ShellItemAttribute__" data-uid="PotisanShellItemLib.Shell.ComTypes.IShellItem.GetAttributes(PotisanShellItemLib.Shell.ShellItemAttribute,PotisanShellItemLib.Shell.ShellItemAttribute@)">
+  GetAttributes(ShellItemAttribute, out ShellItemAttribute)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ComTypes/IShellItem.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetAttributes(ShellItemAttribute sfgaoMask, out ShellItemAttribute psfgaoAttribs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sfgaoMask</code> <a class="xref" href="PotisanShellItemLib.Shell.ShellItemAttribute.html">ShellItemAttribute</a></dt>
+    <dd></dd>
+    <dt><code>psfgaoAttribs</code> <a class="xref" href="PotisanShellItemLib.Shell.ShellItemAttribute.html">ShellItemAttribute</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ComTypes_IShellItem_GetDisplayName_" data-uid="PotisanShellItemLib.Shell.ComTypes.IShellItem.GetDisplayName*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ComTypes_IShellItem_GetDisplayName_PotisanShellItemLib_Shell_ShellItemDisplayName_System_String__" data-uid="PotisanShellItemLib.Shell.ComTypes.IShellItem.GetDisplayName(PotisanShellItemLib.Shell.ShellItemDisplayName,System.String@)">
+  GetDisplayName(ShellItemDisplayName, out string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ComTypes/IShellItem.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetDisplayName(ShellItemDisplayName sigdnName, out string? ppszName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sigdnName</code> <a class="xref" href="PotisanShellItemLib.Shell.ShellItemDisplayName.html">ShellItemDisplayName</a></dt>
+    <dd></dd>
+    <dt><code>ppszName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PotisanShellItemLib_Shell_ComTypes_IShellItem_GetParent_" data-uid="PotisanShellItemLib.Shell.ComTypes.IShellItem.GetParent*"></a>
+
+  <h3 id="PotisanShellItemLib_Shell_ComTypes_IShellItem_GetParent_PotisanShellItemLib_Shell_ComTypes_IShellItem__" data-uid="PotisanShellItemLib.Shell.ComTypes.IShellItem.GetParent(PotisanShellItemLib.Shell.ComTypes.IShellItem@)">
+  GetParent(out IShellItem?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ComTypes/IShellItem.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetParent(out IShellItem? ppsi)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ppsi</code> <a class="xref" href="PotisanShellItemLib.Shell.ComTypes.IShellItem.html">IShellItem</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/poti-san/PotisanShellItemLib/blob/main/PotisanShellItemLib/Shell/ComTypes/IShellItem.cs/#L5" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

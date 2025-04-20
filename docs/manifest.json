@@ -1,0 +1,993 @@
+{
+  "source_base_path": "C:/Users/dream/Documents/GitHub/PotisanShellItemLib/.docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.ComResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.ComResult-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.ComResult<T>",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.ComResult-1.yml\" sourcestartlinenumber=\"1\">戻り値のあるCOM関数の実行結果。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.ComResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.ComResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.ComResult",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.ComResult.yml\" sourcestartlinenumber=\"1\">戻り値のないCOM関数の実行結果。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.BindContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.BindContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.BindContext",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.CoTaskMemHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.CoTaskMemHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.CoTaskMemHelper",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.Core.CoTaskMemHelper.yml\" sourcestartlinenumber=\"1\">COMタスクメモリのヘルパー関数を提供します。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.ComResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.ComResult-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.ComResult<T>",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.Core.ComResult-1.yml\" sourcestartlinenumber=\"1\">戻り値のあるCOM関数の実行結果。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.ComResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.ComResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.ComResult",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.Core.ComResult.yml\" sourcestartlinenumber=\"1\">戻り値のないCOM関数の実行結果。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.ComTypes.BIND_FLAGS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.ComTypes.BIND_FLAGS.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.ComTypes.BIND_FLAGS",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.ComTypes.BIND_OPTS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.ComTypes.BIND_OPTS.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.ComTypes.BIND_OPTS",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.Core.ComTypes.BIND_OPTS.yml\" sourcestartlinenumber=\"1\">BIND_OPTS</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.ComTypes.BIND_OPTS2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.ComTypes.BIND_OPTS2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.ComTypes.BIND_OPTS2",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.ComTypes.BIND_OPTS3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.ComTypes.BIND_OPTS3.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.ComTypes.BIND_OPTS3",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.ComTypes.IBindCtx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.ComTypes.IBindCtx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.ComTypes.IBindCtx",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.ComTypes.IEnumString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.ComTypes.IEnumString.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.ComTypes.IEnumString",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.ComTypes.IRunningObjectTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.ComTypes.IRunningObjectTable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.ComTypes.IRunningObjectTable",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.ComTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.ComTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.ComTypes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.ComUnknownWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.ComUnknownWrapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.ComUnknownWrapper",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.Core.ComUnknownWrapper.yml\" sourcestartlinenumber=\"1\">COMインターフェイスのラッパーを表すベースクラス。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.FileTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.FileTime.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.FileTime",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.Core.FileTime.yml\" sourcestartlinenumber=\"1\">Windowsのファイル日時表現。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.Lcid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.Lcid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.Lcid",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.Core.Lcid.yml\" sourcestartlinenumber=\"1\">言語コードID。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.ShellItem2Enumerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.ShellItem2Enumerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.ShellItem2Enumerator",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.ShellItemEnumerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.ShellItemEnumerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.ShellItemEnumerator",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.StringEnumerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.StringEnumerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core.StringEnumerator",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.Core.StringEnumerator.yml\" sourcestartlinenumber=\"1\">文字列の列挙子。IEnumString COMインターフェイスのラッパーです。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Core.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Core",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.IComUnknownWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.IComUnknownWrapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.IComUnknownWrapper",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.IComUnknownWrapper.yml\" sourcestartlinenumber=\"1\">COMインターフェイスラッパーのインターフェイス。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.CONDITION_OPERATION.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.CONDITION_OPERATION.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.CONDITION_OPERATION",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.PropertySystem.CONDITION_OPERATION.yml\" sourcestartlinenumber=\"1\">CONDITION_OPERATION</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.ComTypes.IPropertyDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.ComTypes.IPropertyDescription.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.ComTypes.IPropertyDescription",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.ComTypes.IPropertyDescriptionList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.ComTypes.IPropertyDescriptionList.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.ComTypes.IPropertyDescriptionList",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.ComTypes.IPropertyEnumType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.ComTypes.IPropertyEnumType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.ComTypes.IPropertyEnumType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.ComTypes.IPropertyEnumTypeList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.ComTypes.IPropertyEnumTypeList.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.ComTypes.IPropertyEnumTypeList",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.ComTypes.IPropertyStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.ComTypes.IPropertyStore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.ComTypes.IPropertyStore",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.ComTypes.IPropertySystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.ComTypes.IPropertySystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.ComTypes.IPropertySystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.ComTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.ComTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.ComTypes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.GetPropertyStoreFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.GetPropertyStoreFlag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.GetPropertyStoreFlag",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.PropertySystem.GetPropertyStoreFlag.yml\" sourcestartlinenumber=\"1\">GETPROPERTYSTOREFLAGS</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_AGGREGATION_TYPE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_AGGREGATION_TYPE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PROPDESC_AGGREGATION_TYPE",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.PropertySystem.PROPDESC_AGGREGATION_TYPE.yml\" sourcestartlinenumber=\"1\">PROPDESC_AGGREGATION_TYPE</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_CONDITION_TYPE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_CONDITION_TYPE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PROPDESC_CONDITION_TYPE",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.PropertySystem.PROPDESC_CONDITION_TYPE.yml\" sourcestartlinenumber=\"1\">PROPDESC_CONDITION_TYPE</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_DISPLAYTYPE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_DISPLAYTYPE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PROPDESC_DISPLAYTYPE",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.PropertySystem.PROPDESC_DISPLAYTYPE.yml\" sourcestartlinenumber=\"1\">PROPDESC_DISPLAYTYPE</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_FORMAT_FLAGS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_FORMAT_FLAGS.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PROPDESC_FORMAT_FLAGS",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.PropertySystem.PROPDESC_FORMAT_FLAGS.yml\" sourcestartlinenumber=\"1\">PROPDESC_FORMAT_FLAGS</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_GROUPING_RANGE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_GROUPING_RANGE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PROPDESC_GROUPING_RANGE",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.PropertySystem.PROPDESC_GROUPING_RANGE.yml\" sourcestartlinenumber=\"1\">PROPDESC_GROUPING_RANGE</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_RELATIVEDESCRIPTION_TYPE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_RELATIVEDESCRIPTION_TYPE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PROPDESC_RELATIVEDESCRIPTION_TYPE",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.PropertySystem.PROPDESC_RELATIVEDESCRIPTION_TYPE.yml\" sourcestartlinenumber=\"1\">PROPDESC_RELATIVEDESCRIPTION_TYPE</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_SORTDESCRIPTION.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_SORTDESCRIPTION.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PROPDESC_SORTDESCRIPTION",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.PropertySystem.PROPDESC_SORTDESCRIPTION.yml\" sourcestartlinenumber=\"1\">PROPDESC_SORTDESCRIPTION</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_TYPE_FLAGS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_TYPE_FLAGS.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PROPDESC_TYPE_FLAGS",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.PropertySystem.PROPDESC_TYPE_FLAGS.yml\" sourcestartlinenumber=\"1\">PROPDESC_TYPE_FLAGS</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_VIEW_FLAGS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PROPDESC_VIEW_FLAGS.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PROPDESC_VIEW_FLAGS",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.PropertySystem.PROPDESC_VIEW_FLAGS.yml\" sourcestartlinenumber=\"1\">PROPDESC_VIEW_FLAGS</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PropDescEnumFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PropDescEnumFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PropDescEnumFilter",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.PropertySystem.PropDescEnumFilter.yml\" sourcestartlinenumber=\"1\">PROPDESC_ENUMFILTER</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PropEnumType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PropEnumType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PropEnumType",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.PropertySystem.PropEnumType.yml\" sourcestartlinenumber=\"1\">PROPENUMTYPE</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PropVariant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PropVariant.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PropVariant",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PropertyDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PropertyDescription.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PropertyDescription",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PropertyDescriptionList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PropertyDescriptionList.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PropertyDescriptionList",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PropertyEnumType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PropertyEnumType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PropertyEnumType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PropertyEnumTypeList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PropertyEnumTypeList.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PropertyEnumTypeList",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PropertyKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PropertyKey.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PropertyKey",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PropertyStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PropertyStore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PropertyStore",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.PropertySystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.PropertySystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.PropertySystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.SHCOLSTATE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.SHCOLSTATE.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.SHCOLSTATE",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.PropertySystem.SHCOLSTATE.yml\" sourcestartlinenumber=\"1\">SHCOLSTATE</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.VarType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.VarType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem.VarType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.PropertySystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.PropertySystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.PropertySystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Shell.BindHandlerID.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Shell.BindHandlerID.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Shell.BindHandlerID",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Shell.ComTypes.IEnumShellItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Shell.ComTypes.IEnumShellItems.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Shell.ComTypes.IEnumShellItems",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Shell.ComTypes.IShellItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Shell.ComTypes.IShellItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Shell.ComTypes.IShellItem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Shell.ComTypes.IShellItem2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Shell.ComTypes.IShellItem2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Shell.ComTypes.IShellItem2",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Shell.ComTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Shell.ComTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Shell.ComTypes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Shell.KnownFolderFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Shell.KnownFolderFlag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Shell.KnownFolderFlag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Shell.KnownFolderID.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Shell.KnownFolderID.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Shell.KnownFolderID",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.Shell.KnownFolderID.yml\" sourcestartlinenumber=\"1\">既知フォルダID。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Shell.ShellItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Shell.ShellItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Shell.ShellItem",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.Shell.ShellItem.yml\" sourcestartlinenumber=\"1\">シェルアイテム。\nWindowsの管理するファイルやフォルダの名前や属性を取得できます。\nIShellItem COMインターフェイスのラッパーです。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Shell.ShellItem2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Shell.ShellItem2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Shell.ShellItem2",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.Shell.ShellItem2.yml\" sourcestartlinenumber=\"1\">プロパティを取得しやすいシェルアイテム。\nIShellItem COMインターフェイスのラッパーです。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Shell.ShellItemAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Shell.ShellItemAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Shell.ShellItemAttribute",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.Shell.ShellItemAttribute.yml\" sourcestartlinenumber=\"1\">シェルアイテムの属性。SHFGAOに対応します。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Shell.ShellItemCompareHint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Shell.ShellItemCompareHint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Shell.ShellItemCompareHint",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.Shell.ShellItemCompareHint.yml\" sourcestartlinenumber=\"1\">シェルアイテムの比較方法。SICHINTFに対応します。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Shell.ShellItemDisplayName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Shell.ShellItemDisplayName.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Shell.ShellItemDisplayName",
+      "Summary": "<p sourcefile=\"api/PotisanShellItemLib.Shell.ShellItemDisplayName.yml\" sourcestartlinenumber=\"1\">シェルアイテムの表示名。SIGDNに対応します。</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.Shell.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.Shell.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib.Shell",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PotisanShellItemLib.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PotisanShellItemLib.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PotisanShellItemLib",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

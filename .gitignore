@@ -6,7 +6,6 @@
 *.txt
 /Samples/ConsoleApp*/
 /.docfx/**
-/docs/
 
 # User-specific files
 *.rsuser
