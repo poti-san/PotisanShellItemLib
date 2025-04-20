@@ -1,2 +1,2 @@
-cd .docfx
+cd docfx
 docfx --serve

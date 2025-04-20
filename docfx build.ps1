@@ -1,3 +1,3 @@
-cd .docfx
+cd docfx
 docfx metadata
 docfx build
