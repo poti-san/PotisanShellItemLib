@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <ErrorReport>none</ErrorReport>
+    <NeutralLanguage>ja-JP</NeutralLanguage>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <IsPublishable>False</IsPublishable>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsPublishable>False</IsPublishable>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IsPublishable>False</IsPublishable>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DebugType>full</DebugType>
+	<DefineConstants>TARGET_64BIT</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IsPublishable>False</IsPublishable>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DebugType>full</DebugType>
+    <DefineConstants>TARGET_64BIT</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="System.Runtime.InteropServices" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,2 @@
+cd .docfx
+docfx --serve
