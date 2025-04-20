@@ -1,3 +1,1 @@
-cd docfx
-docfx metadata
-docfx build
+docfx docfx/docfx.json
