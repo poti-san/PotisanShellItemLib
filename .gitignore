@@ -4,7 +4,9 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 *.txt
+# テスト用プロジェクト
 /Samples/ConsoleApp*/
+# docfx/api以下には絶対パスを含むファイルが作成されます。
 /.docfx/**
 
 # User-specific files
