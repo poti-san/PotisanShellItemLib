@@ -12,7 +12,7 @@ public class ClientSecurity(object? o) : ComUnknownWrapperBase<IClientSecurity>(
 {
 	public static ComResult<ClientSecurity> CreateFromProxyNoThrow(object o)
 	{
-		return o is IClientSecurity p ? new(CommonHResults.SOK, new(p)) : new(CommonHResults.ENotImpl, new(null));
+		return o is IClientSecurity p ? new(CommonHResults.SOK, new(p)) : new(CommonHResults.ENoInterface, new(null));
 	}
 
 	public static ClientSecurity CreateFromProxy(object o)

@@ -1,4 +1,6 @@
-﻿using Potisan.Windows.Com.ComTypes;
+﻿using System.Collections.Immutable;
+
+using Potisan.Windows.Com.ComTypes;
 using Potisan.Windows.PropertySystem;
 using Potisan.Windows.PropertySystem.ComTypes;
 using Potisan.Windows.Shell.ComTypes;
@@ -55,30 +57,40 @@ public class ShellItemArray(object? o) : ComUnknownWrapperBase<IShellItemArray>(
 		=> CountNoThrow.Value;
 
 	// ShellItem
-	public ComResult<ShellItem> GetItemAtNoThrow(uint index)
+	public ComResult<ShellItem> GetShellItemNoThrow(uint index)
 		=> new(_obj.GetItemAt(index, out var x), new(x));
 
-	public ShellItem GetItemAt(uint index)
-		=> GetItemAtNoThrow(index).Value;
+	public ShellItem GetShellItem(uint index)
+		=> GetShellItemNoThrow(index).Value;
 
-	public ComResult<ShellItemEnumerable> GetEnumerableNoThrow()
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	public ComResult<ShellItemEnumerable> ShellItemEnumerableNoThrow
 		=> new(_obj.EnumItems(out var x), new(x));
 
-	public ShellItemEnumerable GetEnumerable()
-		=> GetEnumerableNoThrow().Value;
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	public ShellItemEnumerable ShellItemEnumerable
+		=> ShellItemEnumerableNoThrow.Value;
+
+	public ImmutableArray<ShellItem> ShellItems
+		=> [.. ShellItemEnumerable];
 
 	// ShellItem2
-	public ComResult<ShellItem2> GetItem2AtNoThrow(uint index)
+	public ComResult<ShellItem2> GetShellItem2NoThrow(uint index)
 		=> new(_obj.GetItemAt(index, out var x), new(x));
 
-	public ShellItem2 GetItem2At(uint index)
-		=> GetItem2AtNoThrow(index).Value;
+	public ShellItem2 GetShellItem2(uint index)
+		=> GetShellItem2NoThrow(index).Value;
 
-	public ComResult<ShellItem2Enumerable> GetEnumerable2NoThrow()
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	public ComResult<ShellItem2Enumerable> ShellItem2EnumerableNoThrow
 		=> new(_obj.EnumItems(out var x), new(x));
 
-	public ShellItem2Enumerable GetEnumerable2()
-		=> GetEnumerable2NoThrow().Value;
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	public ShellItem2Enumerable ShellItem2Enumerable
+		=> ShellItem2EnumerableNoThrow.Value;
+
+	public ImmutableArray<ShellItem> ShellItems2
+		=> [.. ShellItem2Enumerable];
 
 	public static ComResult<ShellItemArray> CreateNoThrow(nint parentPidl, ReadOnlySpan<nint> pidls)
 	{

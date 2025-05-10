@@ -14,16 +14,6 @@
     <AnalysisLevel>latest-recommended</AnalysisLevel>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DebugType>full</DebugType>
-    <IsPublishable>False</IsPublishable>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DebugType>full</DebugType>
-    <IsPublishable>False</IsPublishable>
-  </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\PotisanComCoreLib\PotisanComCoreLib.csproj" />
   </ItemGroup>

@@ -20,16 +20,6 @@
 		<TieredCompilationQuickJit>false</TieredCompilationQuickJit>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <IsTrimmable>False</IsTrimmable>
-    <DebugType>full</DebugType>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <IsTrimmable>False</IsTrimmable>
-    <DebugType>full</DebugType>
-  </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\PotisanComLib\PotisanComLib.csproj" />
     <ProjectReference Include="..\PotisanPropertySystemLib\PotisanPropertySystemLib.csproj" />
@@ -39,7 +29,6 @@
     <Using Include="Potisan.Windows.Com" />
     <Using Include="System.Diagnostics" />
     <Using Include="System.Runtime.InteropServices" />
-    <Using Include="System.Runtime.InteropServices.Marshalling" />
   </ItemGroup>
 
 </Project>
