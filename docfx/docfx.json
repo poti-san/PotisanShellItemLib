@@ -1,0 +1,71 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [{"src": "../PotisanComCoreLib", "files": ["*.csproj"]}],
+      "dest": "api/PotisanComCoreLib",
+      "disableGitFeatures": false,
+      "namespaceLayout": "flattened"
+    },
+    {
+      "src": [{"src": "../PotisanComLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanComLib",
+      "disableGitFeatures": false,
+      "namespaceLayout": "flattened"
+    },
+    {
+      "src": [{"src": "../PotisanPropertySystemLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanPropertySystemLib",
+      "disableGitFeatures": false,
+      "namespaceLayout": "flattened"
+    },
+    {
+      "src": [{"src": "../PotisanShellItemLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanShellItemLib",
+      "disableGitFeatures": false,
+      "namespaceLayout": "flattened"
+    },
+    {
+      "src": [{"src": "../PotisanDispatchLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanDispatchLib",
+      "disableGitFeatures": false,
+      "namespaceLayout": "flattened"
+    },
+    {
+      "src": [{"src": "../PotisanMediaFoundationLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanMediaFoundationLib",
+      "disableGitFeatures": false,
+      "namespaceLayout": "flattened"
+    },
+    {
+      "src": [{"src": "../PotisanDxgiLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanDxgiLib",
+      "disableGitFeatures": false,
+      "namespaceLayout": "flattened"
+    },
+    {
+      "src": [{"src": "../PotisanDXCoreLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanDXCoreLib",
+      "disableGitFeatures": false,
+      "namespaceLayout": "flattened"
+    },
+    {
+      "src": [{"src": "../PotisanShellWindowLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanShellWindowLib",
+      "disableGitFeatures": false,
+      "namespaceLayout": "flattened"
+    }
+  ],
+  "build": {
+    "content": [{"files": ["**/*.{md,yml}"], "exclude": ["_site/**"]}],
+    "resource": [{"files": ["images/**"]}],
+    "output": "_site",
+    "template": ["default", "modern", "templates/ja"],
+    "globalMetadata": {
+      "_appName": "PotisanComLibs",
+      "_appTitle": "PotisanComLibs",
+      "_enableSearch": true,
+      "pdf": false
+    }
+  }
+}

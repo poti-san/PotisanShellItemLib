@@ -1,0 +1,22 @@
+- name: ドキュメント
+  href: docs/
+- name: APIリファレンス
+  items:
+  - name: PotisanComCoreLib
+    href: api/PotisanComCoreLib/
+  - name: PotisanComLib
+    href: api/PotisanComLib/
+  - name: PotisanPropertySystemLib
+    href: api/PotisanPropertySystemLib/
+  - name: PotisanShellItemLib
+    href: api/PotisanShellItemLib/
+  - name: PotisanDispatchLib
+    href: api/PotisanDispatchLib/
+  - name: PotisanMediaFoundationLib
+    href: api/PotisanMediaFoundationLib/
+  - name: PotisanDxgiLib
+    href: api/PotisanDxgiLib/
+  - name: PotisanDXCoreLib
+    href: api/PotisanDXCoreLib/
+  - name: PotisanShellWindowLib
+    href: ./api/PotisanShellWindowLib/

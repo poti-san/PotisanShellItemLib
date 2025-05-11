@@ -1,0 +1,32 @@
+- href: ../index.md
+- name: ドキュメント
+  expanded: true
+  items:
+  - href: PotisanComLib.md
+  - href: PotisanShellItemLib.md
+  - href: PotisanDispatchLib.md
+  - href: PotisanPropertySystemLib.md
+  - href: PotisanMediaFoundationLib.md
+  - href: PotisanShellWindowLib.md
+  - href: develop.md
+- name: APIリファレンス
+  expanded: true
+  items:
+  - name: PotisanComCoreLib
+    href: ../api/PotisanComCoreLib/toc.yml
+  - name: PotisanComLib
+    href: ../api/PotisanComLib/toc.yml
+  - name: PotisanPropertySystemLib
+    href: ../api/PotisanPropertySystemLib/toc.yml
+  - name: PotisanShellItemLib
+    href: ../api/PotisanShellItemLib/toc.yml
+  - name: PotisanDispatchLib
+    href: ../api/PotisanDispatchLib/toc.yml
+  - name: PotisanMediaFoundationLib
+    href: ../api/PotisanMediaFoundationLib/toc.yml
+  - name: PotisanDxgiLib
+    href: ../api/PotisanDxgiLib/toc.yml
+  - name: PotisanDXCoreLib
+    href: ../api/PotisanDXCoreLib/toc.yml
+  - name: PotisanShellWindowLib
+    href: ../api/PotisanShellWindowLib/toc.yml

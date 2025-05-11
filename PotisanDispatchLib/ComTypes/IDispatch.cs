@@ -1,0 +1,44 @@
+﻿namespace Potisan.Windows.Com.ComTypes;
+
+[ComImport]
+[Guid("00020400-0000-0000-C000-000000000046")]
+[InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+public interface IDispatch
+{
+	[PreserveSig]
+	int GetTypeInfoCount(
+		out uint pctinfo);
+
+	[PreserveSig]
+	int GetTypeInfo(
+		uint iTInfo,
+		Lcid lcid,
+		out ITypeInfo ppTInfo);
+
+	[PreserveSig]
+	int GetIDsOfNames(
+		in Guid riid,
+		[MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.LPWStr)] string[] rgszNames,
+		uint cNames,
+		Lcid lcid,
+		[MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 2)] out int[] rgDispId);
+
+	[PreserveSig]
+	int Invoke(
+		ComMemberID dispIdMember,
+		in Guid riid,
+		Lcid lcid,
+		ushort wFlags,
+		[In, Out] DISPPARAMS pDispParams,
+		[MarshalAs(UnmanagedType.Struct)] out object pVarResult,
+		[Out] ComExceptionInfo pExcepInfo,
+		out uint puArgErr);
+}
+
+public struct DISPPARAMS
+{
+	public nint rgvarg; // object[]
+	public nint rgdispidNamedArgs; // ComMemberID[]
+	public uint cArgs;
+	public uint cNamedArgs;
+}
