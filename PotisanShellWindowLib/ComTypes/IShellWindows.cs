@@ -11,7 +11,6 @@ public interface IShellWindows // IDispatch
 {
 	#region IDispatch
 
-
 	[PreserveSig]
 	int GetTypeInfoCount(
 		out uint pctinfo);

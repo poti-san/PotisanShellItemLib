@@ -67,7 +67,6 @@ public static partial class ComHelper
 		}
 	}
 
-
 	/// <summary>
 	/// クラスのアンマネージ表現配列を保持するCOMタスクメモリのセーフハンドルを作成します。nullを許容しません。
 	/// </summary>

@@ -243,7 +243,7 @@ public struct MFVideoSurfaceInfo
 [StructLayout(LayoutKind.Sequential)]
 public class MFVideoFormat
 {
-	private uint dwSize;
+	private readonly uint dwSize;
 	public required MFVideoInfo videoInfo;
 	public Guid guidFormat;
 	public required MFVideoCompressedInfo compressedInfo;

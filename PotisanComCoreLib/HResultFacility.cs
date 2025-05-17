@@ -2,6 +2,9 @@
 
 namespace Potisan.Windows.Com;
 
+/// <summary>
+/// <c>HRESULT</c>の施設コードです。
+/// </summary>
 public static class HResultFacility
 {
 	public const uint Null = 0;

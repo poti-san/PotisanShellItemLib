@@ -10,7 +10,7 @@ namespace Potisan.Windows.PropertySystem;
 public sealed class PropVariant
 {
 	public VarType vt;
-#pragma warning disable IDE0044, RCS1213
+#pragma warning disable IDE0044, RCS1213, RCS1139
 	private ushort _reserved1;
 	private ushort _reserved2;
 	private ushort _reserved3;

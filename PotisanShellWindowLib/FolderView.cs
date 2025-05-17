@@ -4,6 +4,10 @@ using Potisan.Windows.Shell.Window.ComTypes;
 
 namespace Potisan.Windows.Shell.Window;
 
+/// <summary>
+/// シェルのフォルダビュー。<see cref="IFolderView"/> COMインターフェイスのラッパーです。
+/// </summary>
+/// <param name="o">RCWインスタンス。</param>
 public class FolderView(object? o) : ComUnknownWrapperBase<IFolderView>(o)
 {
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]

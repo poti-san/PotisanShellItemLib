@@ -135,7 +135,7 @@ public class ShellBrowser(object? o) : OleWindow(o)
 		=> ActiveShellViewNoThrow switch
 		{
 			{ Succeeded: true, ValueUnchecked: var value } => value.AsFolderViewNoThrow,
-			{ HResult: var hr } => new(hr, new(null!)),
+			{ HResult: var hr } => new(hr, new(null)),
 		};
 
 	public FolderView ActiveShellViewAsFolderView

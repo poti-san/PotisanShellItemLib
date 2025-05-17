@@ -62,8 +62,8 @@
     "output": "_site",
     "template": ["default", "modern", "templates/ja"],
     "globalMetadata": {
-      "_appName": "PotisanComLibs",
-      "_appTitle": "PotisanComLibs",
+      "_appName": "PotisanWindowsComLibs",
+      "_appTitle": "PotisanWindowsComLibs",
       "_enableSearch": true,
       "pdf": false
     }
