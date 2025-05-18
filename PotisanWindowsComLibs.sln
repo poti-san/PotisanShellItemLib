@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PotisanDXCoreLib", "Potisan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PotisanShellWindowLib", "PotisanShellWindowLib\PotisanShellWindowLib.csproj", "{E77DA345-270F-5689-E9DE-BE9CD8C9C815}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PotisanTextServicesFrameworkLib", "PotisanTextServicesFrameworkLib\PotisanTextServicesFrameworkLib.csproj", "{7D6CE377-C2AB-DAC8-B262-87A44675448A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +96,10 @@ Global
 		{E77DA345-270F-5689-E9DE-BE9CD8C9C815}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E77DA345-270F-5689-E9DE-BE9CD8C9C815}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E77DA345-270F-5689-E9DE-BE9CD8C9C815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D6CE377-C2AB-DAC8-B262-87A44675448A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D6CE377-C2AB-DAC8-B262-87A44675448A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D6CE377-C2AB-DAC8-B262-87A44675448A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D6CE377-C2AB-DAC8-B262-87A44675448A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

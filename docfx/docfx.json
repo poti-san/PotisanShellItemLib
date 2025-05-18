@@ -54,6 +54,12 @@
       "dest": "api/PotisanShellWindowLib",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
+    },
+    {
+      "src": [{"src": "../PotisanTextServicesFrameworkLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanTextServicesFrameworkLib",
+      "disableGitFeatures": false,
+      "namespaceLayout": "flattened"
     }
   ],
   "build": {

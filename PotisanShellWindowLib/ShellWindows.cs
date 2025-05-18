@@ -17,7 +17,7 @@ public class ShellWindows(object? o) : ComUnknownWrapperBase<IShellWindows>(o)
 	public static ComResult<ShellWindows> CreateNoThrow()
 	{
 		Guid CLSID_ShellWindows = new("9BA05972-F6A8-11CF-A442-00A0C90A8F39");
-		return ComHelper.CreateInstanceNoThrow<ShellWindows>(CLSID_ShellWindows);
+		return ComHelper.CreateInstanceNoThrow<ShellWindows>(CLSID_ShellWindows, ComClassContext.LocalServer);
 	}
 
 	public static ShellWindows Create()

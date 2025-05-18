@@ -30,3 +30,5 @@
     href: ../api/PotisanDXCoreLib/toc.yml
   - name: PotisanShellWindowLib
     href: ../api/PotisanShellWindowLib/toc.yml
+  - name: PotisanTextServicesFrameworkLib
+    href: ../api/PotisanTextServicesFrameworkLib/toc.yml

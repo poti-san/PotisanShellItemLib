@@ -18,6 +18,7 @@ WindowsのCOM機能ラッパークラスライブラリをまとめたC#ソリ�
 |PotisanDxgiLib|DXGIのラッパーライブラリ|PotisanComCoreLib|
 |PotisanDXCoreLib|DXCoreのラッパーライブラリ|PotisanComCoreLib|
 |PotisanShellWindowLib|シェルウィンドウのラッパーライブラリ。|PotisanDispatchLib、PotisanShellItemLib|
+|PotisanTextServicesFrameworkLib|TSFのラッパーライブラリ。**特に作成初期です。**|PotisanComLib|
 
 ## 使用上の注意
 
