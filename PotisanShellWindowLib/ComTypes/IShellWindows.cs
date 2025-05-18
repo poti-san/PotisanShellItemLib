@@ -1,6 +1,6 @@
 ﻿#pragma warning disable IDE1006, CA1707
 
-using Potisan.Windows.Com.ComTypes;
+using Potisan.Windows.Com.Automation.ComTypes;
 
 namespace Potisan.Windows.Shell.Window.ComTypes;
 

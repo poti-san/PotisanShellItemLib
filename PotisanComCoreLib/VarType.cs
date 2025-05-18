@@ -1,4 +1,6 @@
-﻿namespace Potisan.Windows.Com;
+﻿#pragma warning disable CS1591
+
+namespace Potisan.Windows.Com;
 
 /// <summary>
 /// 値の型。

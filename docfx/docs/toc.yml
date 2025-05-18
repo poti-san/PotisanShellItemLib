@@ -4,7 +4,7 @@
   items:
   - href: PotisanComLib.md
   - href: PotisanShellItemLib.md
-  - href: PotisanDispatchLib.md
+  - href: PotisanAutomationLib.md
   - href: PotisanPropertySystemLib.md
   - href: PotisanMediaFoundationLib.md
   - href: PotisanShellWindowLib.md
@@ -20,8 +20,8 @@
     href: ../api/PotisanPropertySystemLib/toc.yml
   - name: PotisanShellItemLib
     href: ../api/PotisanShellItemLib/toc.yml
-  - name: PotisanDispatchLib
-    href: ../api/PotisanDispatchLib/toc.yml
+  - name: PotisanAutomationLib
+    href: ../api/PotisanAutomationLib/toc.yml
   - name: PotisanMediaFoundationLib
     href: ../api/PotisanMediaFoundationLib/toc.yml
   - name: PotisanDxgiLib
@@ -32,3 +32,5 @@
     href: ../api/PotisanShellWindowLib/toc.yml
   - name: PotisanTextServicesFrameworkLib
     href: ../api/PotisanTextServicesFrameworkLib/toc.yml
+  - name: PotisanWindowsUpdateAgentLib
+    href: ../api/PotisanWindowsUpdateAgentLib/toc.yml

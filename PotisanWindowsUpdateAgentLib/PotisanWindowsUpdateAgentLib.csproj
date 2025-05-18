@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<NoWin32Manifest>true</NoWin32Manifest>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+		<GenerateDocumentationFile>False</GenerateDocumentationFile>
+		<ErrorReport>none</ErrorReport>
+		<NeutralLanguage>ja-JP</NeutralLanguage>
+		<AnalysisLevel>latest-recommended</AnalysisLevel>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<Platforms>AnyCPU</Platforms>
+		<RootNamespace>Potisan.Windows.Diagnostics.Wua</RootNamespace>
+		<TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
+		<TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\PotisanAutomationLib\PotisanAutomationLib.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="Potisan.Windows.Com" />
+		<Using Include="Potisan.Windows.Com.Automation" />
+		<Using Include="System.Diagnostics" />
+		<Using Include="System.Runtime.InteropServices" />
+	</ItemGroup>
+
+</Project>

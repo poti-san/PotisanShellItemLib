@@ -26,8 +26,8 @@
       "namespaceLayout": "flattened"
     },
     {
-      "src": [{"src": "../PotisanDispatchLib", "files": ["**/*.csproj"]}],
-      "dest": "api/PotisanDispatchLib",
+      "src": [{"src": "../PotisanAutomationLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanAutomationLib",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
     },
@@ -58,6 +58,12 @@
     {
       "src": [{"src": "../PotisanTextServicesFrameworkLib", "files": ["**/*.csproj"]}],
       "dest": "api/PotisanTextServicesFrameworkLib",
+      "disableGitFeatures": false,
+      "namespaceLayout": "flattened"
+    },
+    {
+      "src": [{"src": "../PotisanWindowsUpdateAgentLib", "files": ["**/*.csproj"]}],
+      "dest": "api/PotisanWindowsUpdateAgentLib",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
     }

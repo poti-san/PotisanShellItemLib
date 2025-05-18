@@ -13,12 +13,13 @@ WindowsのCOM機能ラッパークラスライブラリをまとめたC#ソリ�
 |PotisanComLib|基本的なCOM機能。ほとんどのクラスライブラリから参照されます。|PotisanComCoreLib|
 |PotisanPropertySystemLib|プロパティシステムのラッパーライブラリ。|PotisanComLib|
 |PotisanShellItemLib|シェルアイテムのラッパーライブラリ。|PotisanPropertySystemLib|
-|PotisanDispatchLib|タイプライブラリ機能（IDispatchやITypeLib）のラッパーライブラリ。|PotisanComLib|
+|PotisanAutomationLib|タイプライブラリ機能（IDispatchやITypeLib）のラッパーライブラリ。|PotisanComLib|
 |PotisanMediaFoundationLib|Microsoft Media Foundationのラッパーライブラリ。|System.Drawing.Common、PotisanPropertySystemLib|
 |PotisanDxgiLib|DXGIのラッパーライブラリ|PotisanComCoreLib|
 |PotisanDXCoreLib|DXCoreのラッパーライブラリ|PotisanComCoreLib|
-|PotisanShellWindowLib|シェルウィンドウのラッパーライブラリ。|PotisanDispatchLib、PotisanShellItemLib|
-|PotisanTextServicesFrameworkLib|TSFのラッパーライブラリ。**特に作成初期です。**|PotisanComLib|
+|PotisanShellWindowLib|シェルウィンドウのラッパーライブラリ。|PotisanAutomationLib、PotisanShellItemLib|
+|PotisanTextServicesFrameworkLib|TSFのラッパーライブラリ。**作成初期です。**|PotisanComLib|
+|PotisanWindowsUpdateAgentLib|Windows Update Agentのラッパーライブラリ。**作成初期です。**|PotisanAutomationLib|
 
 ## 使用上の注意
 

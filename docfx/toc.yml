@@ -10,8 +10,8 @@
     href: api/PotisanPropertySystemLib/
   - name: PotisanShellItemLib
     href: api/PotisanShellItemLib/
-  - name: PotisanDispatchLib
-    href: api/PotisanDispatchLib/
+  - name: PotisanAutomationLib
+    href: api/PotisanAutomationLib/
   - name: PotisanMediaFoundationLib
     href: api/PotisanMediaFoundationLib/
   - name: PotisanDxgiLib
@@ -22,3 +22,5 @@
     href: ./api/PotisanShellWindowLib/
   - name: PotisanTextServicesFrameworkLib
     href: ./api/PotisanTextServicesFrameworkLib/
+  - name: PotisanWindowsUpdateAgentLib
+    href: ./api/PotisanWindowsUpdateAgentLib/

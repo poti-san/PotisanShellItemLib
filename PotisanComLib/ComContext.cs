@@ -31,7 +31,7 @@ public class ComContext(object? o) : ComUnknownWrapperBase<IContext>(o)
 		=> RemovePropertyNoThrow(policyId).ThrowIfError();
 
 	public ComResult<object> GetPropertyNoThrow(in Guid policyId)
-		=> new(_obj.GetProperty(policyId, out _, out var x), x);
+		=> new(_obj.GetProperty(policyId, out _, out var x), x!);
 
 	public object GetProperty(in Guid policyId)
 		=> GetPropertyNoThrow(policyId).Value;
