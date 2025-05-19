@@ -14,12 +14,20 @@ namespace Potisan.Windows.Shell.Window;
 /// <param name="o">RCWインスタンス。</param>
 public class ShellWindows(object? o) : ComUnknownWrapperBase<IShellWindows>(o)
 {
+	/// <summary>
+	/// シェルウィンドウコレクションのインターフェイスを作成します。
+	/// </summary>
+	/// <returns></returns>
+	/// <remarks>
+	///このCOMクラスはローカルセーバーです。スレッディングモデルに関係なく使用できます。
+	/// </remarks>
 	public static ComResult<ShellWindows> CreateNoThrow()
 	{
 		Guid CLSID_ShellWindows = new("9BA05972-F6A8-11CF-A442-00A0C90A8F39");
 		return ComHelper.CreateInstanceNoThrow<ShellWindows>(CLSID_ShellWindows, ComClassContext.LocalServer);
 	}
 
+	/// <inheritdoc cref="CreateNoThrow"/>
 	public static ShellWindows Create()
 		=> CreateNoThrow().Value;
 

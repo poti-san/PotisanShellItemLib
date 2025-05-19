@@ -81,6 +81,22 @@ public interface IComUnknownWrapper : IDisposable
 		var p = o as TInterface;
 		return Wrap<TWrapper>(p != null ? 0 : CommonHResults.ENoInterface, p);
 	}
+
+	/// <summary>
+	/// RCWオブジェクトをキャストしたCOMラッパーを保持する<see cref="ComResult{T}"/>を作成します。
+	/// COMインターフェイスのキャスト失敗時、戻り値は<see cref="CommonHResults.ENoInterface"/>を持ちます。
+	/// </summary>
+	/// <typeparam name="TWrapper"></typeparam>
+	/// <typeparam name="TInterface"></typeparam>
+	/// <param name="o"></param>
+	/// <returns></returns>
+	public static ComResult<TWrapper> Casted<TWrapper, TInterface>(IComUnknownWrapper o)
+		where TWrapper : IComUnknownWrapper
+		where TInterface : class
+	{
+		var p = o.WrappedObject as TInterface;
+		return Wrap<TWrapper>(p != null ? 0 : CommonHResults.ENoInterface, p);
+	}
 }
 
 /// <summary>

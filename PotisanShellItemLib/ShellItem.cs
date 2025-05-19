@@ -228,6 +228,7 @@ public class ShellItem(object? o) : ComUnknownWrapperBase<IShellItem>(o)
 	}
 
 	/// <inheritdoc cref="CreateKnownFolderItemNoThrow"/>
+	/// <completionlist cref="KnownFolderID"/>
 	public static ShellItem CreateKnownFolderItem(in Guid folderId, KnownFolderFlag flags = 0)
 		=> CreateKnownFolderItemNoThrow(folderId, flags).Value;
 
@@ -338,6 +339,20 @@ public class ShellItem(object? o) : ComUnknownWrapperBase<IShellItem>(o)
 
 	public ShellItemImageFactory ImageFactory
 		=> ImageFactoryNoThrow.Value;
+
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	public ComResult<PersistIDList> AsPersistIDListNoThrow
+		=> IComUnknownWrapper.Casted<PersistIDList, IPersistIDList>(this);
+
+	public PersistIDList AsPersistIDList
+		=> AsPersistIDListNoThrow.Value;
+
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	public ComResult<ParentAndItem> AsParentAndItemNoThrow
+		=> IComUnknownWrapper.Casted<ParentAndItem, IParentAndItem>(this);
+
+	public ParentAndItem AsParentAndItem
+		=> AsParentAndItemNoThrow.Value;
 }
 
 /// <summary>

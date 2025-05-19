@@ -5,7 +5,7 @@ using Potisan.Windows.Shell.ComTypes;
 namespace Potisan.Windows.Shell;
 
 /// <summary>
-/// シェルアイテム(ShellItem)の列挙子。IEnumShellItems COMインターフェイスのラッパーです。
+/// シェルアイテム<see cref="ShellItem"/>の列挙子。IEnumShellItems COMインターフェイスのラッパーです。
 /// </summary>
 /// <param name="o">RCWインスタンス。</param>
 /// <remarks>
