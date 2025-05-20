@@ -157,7 +157,10 @@ public static partial class ComHelper
 		{
 			unsafe
 			{
-				Unsafe.Copy((void*)p, ref MemoryMarshal.GetReference(data));
+				fixed (byte* pdata = data)
+				{
+					Unsafe.CopyBlockUnaligned((void*)p, pdata, (uint)data.Length);
+				}
 			}
 			return p;
 		}

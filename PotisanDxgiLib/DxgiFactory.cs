@@ -1,7 +1,4 @@
-﻿using System.Diagnostics;
-using System.Runtime.InteropServices;
-
-using Potisan.Windows.Com;
+﻿using Potisan.Windows.Com;
 using Potisan.Windows.Dxgi.ComTypes;
 
 namespace Potisan.Windows.Dxgi;

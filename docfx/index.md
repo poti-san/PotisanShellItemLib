@@ -2,22 +2,18 @@
 
 WindowsのCOM機能ラッパークラスライブラリをまとめたC#ソリューションです。開発方針は『COMに不慣れな人でも使いやすく、少しのコードでCOMを使えて、多少動作が遅くても開発に負担の少ないこと』です。作りはじめなので常に修正中です。
 
-> [!WARNING]
-> いくつかの名前空間ページ（`Potisan.Windows.Com`等）はdocfxの仕様により別ライブラリのページに飛ばされます。
-> 現時点ではライブラリ本体作成を優先するために仕様として残します。
-> 気付きにくいですが、ページが飛ばされた場合は直接メソッドやプロパティのページを表示してください。
-
 |クラスライブラリ|概要|依存関係|
 |:--|:--|:--|
 |PotisanComCoreLib|最低限のCOM機能。Direct3Dのような最低限のCOM機能を使用するクラスライブラリから参照されます。||
 |PotisanComLib|基本的なCOM機能。ほとんどのクラスライブラリから参照されます。|PotisanComCoreLib|
 |PotisanPropertySystemLib|プロパティシステムのラッパーライブラリ。|PotisanComLib|
 |PotisanShellItemLib|シェルアイテムのラッパーライブラリ。|PotisanPropertySystemLib|
-|PotisanAutomationLib|タイプライブラリ機能（IDispatchやITypeLib）のラッパーライブラリ。|PotisanComLib|
+|PotisanAutomationLib|オートメーション機能（IDispatchやITypeLib）のラッパーライブラリ。|PotisanComLib|
 |PotisanMediaFoundationLib|Microsoft Media Foundationのラッパーライブラリ。|System.Drawing.Common、PotisanPropertySystemLib|
 |PotisanDxgiLib|DXGIのラッパーライブラリ|PotisanComCoreLib|
 |PotisanDXCoreLib|DXCoreのラッパーライブラリ|PotisanComCoreLib|
 |PotisanShellWindowLib|シェルウィンドウのラッパーライブラリ。|PotisanAutomationLib、PotisanShellItemLib|
+|PotisanMSImeLib|Microsoft IME COM機能のラッパーライブラリ。**作成初期です。**|PotisanComLib|
 |PotisanTextServicesFrameworkLib|TSFのラッパーライブラリ。**作成初期です。**|PotisanComLib|
 |PotisanWindowsUpdateAgentLib|Windows Update Agentのラッパーライブラリ。**作成初期です。**|PotisanAutomationLib|
 

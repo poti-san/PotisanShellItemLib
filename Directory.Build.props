@@ -1,0 +1,35 @@
+<Project>
+
+	<PropertyGroup>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<NoWin32Manifest>true</NoWin32Manifest>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+		<GenerateDocumentationFile>False</GenerateDocumentationFile>
+		<ErrorReport>none</ErrorReport>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>latest-recommended</AnalysisLevel>
+		<TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+		<IncludeSymbols>False</IncludeSymbols>
+		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
+		<TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Using Include="System.Diagnostics" />
+		<Using Include="System.Runtime.CompilerServices" />
+		<Using Include="System.Runtime.InteropServices" />
+	</ItemGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<IsPublishable>False</IsPublishable>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<IsPublishable>False</IsPublishable>
+	</PropertyGroup>
+
+</Project>

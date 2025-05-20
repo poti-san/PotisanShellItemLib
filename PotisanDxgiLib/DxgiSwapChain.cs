@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-using Potisan.Windows.Com;
+﻿using Potisan.Windows.Com;
 using Potisan.Windows.Dxgi.ComTypes;
 
 namespace Potisan.Windows.Dxgi;

@@ -1,5 +1,4 @@
 ﻿using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 
 using Potisan.Windows.Com;
 using Potisan.Windows.Dxgi.ComTypes;

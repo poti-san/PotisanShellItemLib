@@ -1,25 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net9.0-windows</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <RootNamespace>Potisan.Windows.DXCore</RootNamespace>
-    <NoWin32Manifest>true</NoWin32Manifest>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
-    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
-    <ErrorReport>none</ErrorReport>
-    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
-    <AnalysisLevel>latest-recommended</AnalysisLevel>
-  </PropertyGroup>
+	<PropertyGroup>
+		<RootNamespace>Potisan.Windows.DXCore</RootNamespace>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\PotisanComCoreLib\PotisanComCoreLib.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Using Include="System.Runtime.InteropServices" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\PotisanComCoreLib\PotisanComCoreLib.csproj" />
+	</ItemGroup>
 
 </Project>

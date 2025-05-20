@@ -1,5 +1,4 @@
 ﻿using System.Collections.Immutable;
-using System.Runtime.CompilerServices;
 
 using Potisan.Windows.Shell.Window.ComTypes;
 
@@ -8,10 +7,10 @@ namespace Potisan.Windows.Shell.Window;
 /// <summary>
 /// シェルウィンドウコレクション。
 /// </summary>
+/// <param name="o">RCWインスタンス。</param>
 /// <remarks>
 /// このコレクションは複数種類のウィンドウを扱うため、<see cref="IEnumerable{T}"/>等は実装しません。
 /// </remarks>
-/// <param name="o">RCWインスタンス。</param>
 public class ShellWindows(object? o) : ComUnknownWrapperBase<IShellWindows>(o)
 {
 	/// <summary>

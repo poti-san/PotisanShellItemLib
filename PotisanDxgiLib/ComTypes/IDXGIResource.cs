@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace Potisan.Windows.Dxgi.ComTypes;
+﻿namespace Potisan.Windows.Dxgi.ComTypes;
 
 [Guid("035f3ab4-482e-4e50-b41f-8a7f8bd8960b")]
 public interface IDXGIResource // IDXGIDeviceSubObject

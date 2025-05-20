@@ -1,21 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net9.0-windows</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <RootNamespace>Potisan.Windows.Com</RootNamespace>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
-    <ErrorReport>none</ErrorReport>
-    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
-    <AnalysisLevel>latest-recommended</AnalysisLevel>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Using Include="System.Diagnostics" />
-    <Using Include="System.Runtime.InteropServices" />
-  </ItemGroup>
+	<PropertyGroup>
+		<RootNamespace>Potisan.Windows.Com</RootNamespace>
+	</PropertyGroup>
 
 </Project>

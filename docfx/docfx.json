@@ -3,67 +3,85 @@
   "metadata": [
     {
       "src": [{"src": "../PotisanComCoreLib", "files": ["*.csproj"]}],
-      "dest": "api/PotisanComCoreLib",
+      "output": "api/PotisanComCoreLib",
+      "outputFormat": "apiPage",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
     },
     {
-      "src": [{"src": "../PotisanComLib", "files": ["**/*.csproj"]}],
-      "dest": "api/PotisanComLib",
+      "src": [{"src": "../PotisanComLib", "files": ["*.csproj"]}],
+      "output": "api/PotisanComLib",
+      "outputFormat": "apiPage",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
     },
     {
-      "src": [{"src": "../PotisanPropertySystemLib", "files": ["**/*.csproj"]}],
-      "dest": "api/PotisanPropertySystemLib",
+      "src": [{"src": "../PotisanPropertySystemLib", "files": ["*.csproj"]}],
+      "output": "api/PotisanPropertySystemLib",
+      "outputFormat": "apiPage",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
     },
     {
-      "src": [{"src": "../PotisanShellItemLib", "files": ["**/*.csproj"]}],
-      "dest": "api/PotisanShellItemLib",
+      "src": [{"src": "../PotisanShellItemLib", "files": ["*.csproj"]}],
+      "output": "api/PotisanShellItemLib",
+      "outputFormat": "apiPage",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
     },
     {
-      "src": [{"src": "../PotisanAutomationLib", "files": ["**/*.csproj"]}],
-      "dest": "api/PotisanAutomationLib",
+      "src": [{"src": "../PotisanAutomationLib", "files": ["*.csproj"]}],
+      "output": "api/PotisanAutomationLib",
+      "outputFormat": "apiPage",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
     },
     {
-      "src": [{"src": "../PotisanMediaFoundationLib", "files": ["**/*.csproj"]}],
-      "dest": "api/PotisanMediaFoundationLib",
+      "src": [{"src": "../PotisanMediaFoundationLib", "files": ["*.csproj"]}],
+      "output": "api/PotisanMediaFoundationLib",
+      "outputFormat": "apiPage",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
     },
     {
-      "src": [{"src": "../PotisanDxgiLib", "files": ["**/*.csproj"]}],
-      "dest": "api/PotisanDxgiLib",
+      "src": [{"src": "../PotisanDxgiLib", "files": ["*.csproj"]}],
+      "output": "api/PotisanDxgiLib",
+      "outputFormat": "apiPage",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
     },
     {
-      "src": [{"src": "../PotisanDXCoreLib", "files": ["**/*.csproj"]}],
-      "dest": "api/PotisanDXCoreLib",
+      "src": [{"src": "../PotisanDXCoreLib", "files": ["*.csproj"]}],
+      "output": "api/PotisanDXCoreLib",
+      "outputFormat": "apiPage",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
     },
     {
-      "src": [{"src": "../PotisanShellWindowLib", "files": ["**/*.csproj"]}],
-      "dest": "api/PotisanShellWindowLib",
+      "src": [{"src": "../PotisanShellWindowLib", "files": ["*.csproj"]}],
+      "output": "api/PotisanShellWindowLib",
+      "outputFormat": "apiPage",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
     },
     {
-      "src": [{"src": "../PotisanTextServicesFrameworkLib", "files": ["**/*.csproj"]}],
-      "dest": "api/PotisanTextServicesFrameworkLib",
+      "src": [{"src": "../PotisanMSImeLib", "files": ["*.csproj"]}],
+      "output": "api/PotisanMSImeLib",
+      "outputFormat": "apiPage",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
     },
     {
-      "src": [{"src": "../PotisanWindowsUpdateAgentLib", "files": ["**/*.csproj"]}],
-      "dest": "api/PotisanWindowsUpdateAgentLib",
+      "src": [{"src": "../PotisanTextServicesFrameworkLib", "files": ["*.csproj"]}],
+      "output": "api/PotisanTextServicesFrameworkLib",
+      "outputFormat": "apiPage",
+      "disableGitFeatures": false,
+      "namespaceLayout": "flattened"
+    },
+    {
+      "src": [{"src": "../PotisanWindowsUpdateAgentLib", "files": ["*.csproj"]}],
+      "output": "api/PotisanWindowsUpdateAgentLib",
+      "outputFormat": "apiPage",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
     }

@@ -20,6 +20,8 @@
     href: api/PotisanDXCoreLib/
   - name: PotisanShellWindowLib
     href: ./api/PotisanShellWindowLib/
+  - name: PotisanMSImeLib
+    href: ./api/PotisanMSImeLib/
   - name: PotisanTextServicesFrameworkLib
     href: ./api/PotisanTextServicesFrameworkLib/
   - name: PotisanWindowsUpdateAgentLib

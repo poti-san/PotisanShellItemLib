@@ -1,16 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<RootNamespace>Potisan.Windows.Shell</RootNamespace>
+		<RootNamespace>Potisan.Windows.MSIme</RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\PotisanComLib\PotisanComLib.csproj" />
-		<ProjectReference Include="..\PotisanPropertySystemLib\PotisanPropertySystemLib.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Using Include="Potisan.Windows.Com" />
+	  <Using Include="Potisan.Windows.Com" />
 	</ItemGroup>
 
 </Project>

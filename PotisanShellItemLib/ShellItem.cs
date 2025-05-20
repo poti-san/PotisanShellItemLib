@@ -319,38 +319,58 @@ public class ShellItem(object? o) : ComUnknownWrapperBase<IShellItem>(o)
 	public ImmutableArray<ShellItem> StorageItems
 		=> [.. StorageItemEnumerable];
 
+	/// <summary>
+	/// シェルリンクのリンク先アイテム。
+	/// </summary>
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<ShellItem> LinkTargetNoThrow
 		=> BindToHandlerNoThrow<ShellItem, IShellItem>(BindHandlerID.LinkTargetItem);
 
+	/// <inheritdoc cref="LinkTargetNoThrow"/>
 	public ShellItem LinkTarget
 		=> LinkTargetNoThrow.Value;
 
+	/// <summary>
+	/// アイテム名制限。
+	/// </summary>
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<ItemNameLimits> ItemNameLimitsNoThrow
 		=> BindToHandlerNoThrow<ItemNameLimits, IItemNameLimits>(BindHandlerID.SFObject);
 
+	/// <inheritdoc cref="ItemNameLimitsNoThrow"/>
 	public ItemNameLimits ItemNameLimits
 		=> ItemNameLimitsNoThrow.Value;
 
+	/// <summary>
+	/// 画像ファクトリ。
+	/// </summary>
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<ShellItemImageFactory> ImageFactoryNoThrow
 		=> IComUnknownWrapper.Wrap<ShellItemImageFactory>(0, WrappedObject);
 
+	/// <inheritdoc cref="ImageFactoryNoThrow"/>
 	public ShellItemImageFactory ImageFactory
 		=> ImageFactoryNoThrow.Value;
 
+	/// <summary>
+	/// 永続化用のアイテムID。
+	/// </summary>
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<PersistIDList> AsPersistIDListNoThrow
 		=> IComUnknownWrapper.Casted<PersistIDList, IPersistIDList>(this);
 
+	/// <inheritdoc cref="AsPersistIDListNoThrow"/>
 	public PersistIDList AsPersistIDList
 		=> AsPersistIDListNoThrow.Value;
 
+	/// <summary>
+	/// シェルアイテムの保持する親フォルダとアイテムのペア。
+	/// </summary>
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<ParentAndItem> AsParentAndItemNoThrow
 		=> IComUnknownWrapper.Casted<ParentAndItem, IParentAndItem>(this);
 
+	/// <inheritdoc cref="AsParentAndItemNoThrow"/>
 	public ParentAndItem AsParentAndItem
 		=> AsParentAndItemNoThrow.Value;
 }

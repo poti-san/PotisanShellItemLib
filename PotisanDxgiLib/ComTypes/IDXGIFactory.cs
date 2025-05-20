@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace Potisan.Windows.Dxgi.ComTypes;
+﻿namespace Potisan.Windows.Dxgi.ComTypes;
 
 [ComImport]
 [Guid("7b7166ec-21c7-44ae-b21a-c9ae321ae369")]

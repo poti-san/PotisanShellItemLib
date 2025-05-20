@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using System.Drawing;
-using System.Runtime.InteropServices;
+﻿using System.Drawing;
 
 namespace Potisan.Windows.Dxgi;
 

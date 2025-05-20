@@ -30,6 +30,8 @@
     href: ../api/PotisanDXCoreLib/toc.yml
   - name: PotisanShellWindowLib
     href: ../api/PotisanShellWindowLib/toc.yml
+  - name: PotisanMSImeLib
+    href: ../api/PotisanMSImeLib/toc.yml
   - name: PotisanTextServicesFrameworkLib
     href: ../api/PotisanTextServicesFrameworkLib/toc.yml
   - name: PotisanWindowsUpdateAgentLib
