@@ -6,9 +6,12 @@ namespace Potisan.Windows.Com;
 
 // TODO
 /// <summary>
-/// COMデータオブジェクト。IDataObject COMインターフェイスのラッパーです。
+/// COMデータオブジェクト。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IDataObject</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class ComDataObject(object? o) : ComUnknownWrapperBase<IDataObject>(o)
 {
 	public ComResult<ComStorageMedium> GetDataNoThrow(ComFormatEtc fmtetc)

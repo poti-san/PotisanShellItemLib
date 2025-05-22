@@ -19,7 +19,6 @@ public class WuaUpdateInstaller(object? o) : ComUnknownWrapperBase<IUpdateInstal
 	public static WuaUpdateInstaller Create()
 		=> CreateNoThrow().Value;
 
-
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<string> ClientApplicationIDNoThrow
 		=> new(_obj.get_ClientApplicationID(out var x), x!);

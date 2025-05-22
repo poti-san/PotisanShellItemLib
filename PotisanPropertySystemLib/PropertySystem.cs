@@ -3,14 +3,15 @@
 namespace Potisan.Windows.PropertySystem;
 
 /// <summary>
-/// プロパティシステム。プロパティ情報を管理します。IPropertySystem COMインターフェイスのラッパーです。
+/// プロパティシステム。プロパティ情報を管理します。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 /// <example>
 /// <code><![CDATA[
 /// var propsys = PropertySystem.Create();
 /// ]]></code>
 /// </example>
+/// <remarks><c>IPropertySystem</c> COMインターフェイスのラッパーです。</remarks>
 public class PropertySystem(object? o) : ComUnknownWrapperBase<IPropertySystem>(o)
 {
 	/// <summary>

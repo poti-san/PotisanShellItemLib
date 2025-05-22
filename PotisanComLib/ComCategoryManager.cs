@@ -6,17 +6,14 @@ namespace Potisan.Windows.Com;
 
 /// <summary>
 /// COMコンポーネントカテゴリマネージャー。
-/// ICatRegister COMインターフェイスとICatInformation COMインターフェイスのラッパーです。
 /// </summary>
-public sealed class ComCategoryManager : ComUnknownWrapperBase<ICatInformation>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>ICatRegister</c> COMインターフェイスと<c>ICatInformation</c> COMインターフェイスのラッパーです。
+/// </remarks>
+public sealed class ComCategoryManager(object? o) : ComUnknownWrapperBase<ICatInformation>(o)
 {
-	private readonly ICatRegister _register;
-
-	public ComCategoryManager(object? o)
-		: base(o)
-	{
-		_register = o == null ? null! : (ICatRegister)o;
-	}
+	private readonly ICatRegister _register = o == null ? null! : (ICatRegister)o;
 
 	public static ComResult<ComCategoryManager> CreateNoThrow()
 	{

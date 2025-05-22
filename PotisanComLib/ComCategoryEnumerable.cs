@@ -4,6 +4,13 @@ using Potisan.Windows.Com.ComTypes;
 
 namespace Potisan.Windows.Com;
 
+/// <summary>
+/// COMのカテゴリ列挙機能。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IEnumCATEGORYINFO</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public sealed class ComCategoryEnumerable(object? o) :
 	ComUnknownWrapperBase<IEnumCATEGORYINFO>(o),
 	IEnumerable<ComCategoryInfo>,

@@ -1,5 +1,10 @@
 ﻿namespace Potisan.Windows.Com;
 
+/// <summary>
+/// サービスプロバイダー。他のCOMオブジェクトの作成に使用されます。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks><c>IServiceProvider</c> COMインターフェイスのラッパーです。</remarks>
 public class ComServiceProvider(object? o) : ComUnknownWrapperBase<ComTypes.IServiceProvider>(o)
 {
 	public ComResult<object> QueryServiceNoThrow(in Guid serviceGuid, in Guid iid)

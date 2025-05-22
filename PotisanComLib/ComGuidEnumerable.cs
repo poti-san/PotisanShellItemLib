@@ -4,6 +4,13 @@ using Potisan.Windows.Com.ComTypes;
 
 namespace Potisan.Windows.Com;
 
+/// <summary>
+/// <see cref="Guid"/>の列挙機能。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IEnumGUID</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public sealed class ComGuidEnumerable(object? o) :
 	ComUnknownWrapperBase<IEnumGUID>(o),
 	IEnumerable<Guid>,

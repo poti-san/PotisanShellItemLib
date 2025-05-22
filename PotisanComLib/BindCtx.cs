@@ -3,9 +3,12 @@
 namespace Potisan.Windows.Com;
 
 /// <summary>
-/// バインドコンテキスト。IBindCtx COMインターフェイスのラッパーです。
+/// バインドコンテキスト。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <para><c>IBindCtx</c> COMインターフェイスのラッパーです。</para>
+/// </remarks>
 public sealed class BindCtx(object? o) : ComUnknownWrapperBase<IBindCtx>(o)
 {
 	public ComResult RegisterObjectBoundNoThrow(object unk)

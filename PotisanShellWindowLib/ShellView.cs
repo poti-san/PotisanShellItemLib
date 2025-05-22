@@ -3,6 +3,13 @@ using Potisan.Windows.Shell.Window.ComTypes;
 
 namespace Potisan.Windows.Shell.Window;
 
+/// <summary>
+/// シェルビュー。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IShellView</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class ShellView(object? o) : ComUnknownWrapperBase<IShellView>(o) // : OleWindow(o)
 {
 	// IShellViewからIOleWindowインターフェイスの取得は失敗します。
@@ -142,8 +149,11 @@ public class ShellView(object? o) : ComUnknownWrapperBase<IShellView>(o) // : Ol
 }
 
 /// <summary>
-/// <c>SVUIA_STATUS</c>
+/// シェルビューのUIアクティブ状態。
 /// </summary>
+/// <remarks>
+/// <c>SVUIA_STATUS</c>
+/// </remarks>
 public enum ShellViewUIActivateStatus
 {
 	Deactivate = 0,
@@ -153,8 +163,11 @@ public enum ShellViewUIActivateStatus
 }
 
 /// <summary>
-/// <c>FOLDERFLAGS</c>
+/// フォルダビューのフラグ。
 /// </summary>
+/// <remarks>
+/// <c>FOLDERFLAGS</c>
+/// </remarks>
 [Flags]
 public enum FolderFlag : uint
 {

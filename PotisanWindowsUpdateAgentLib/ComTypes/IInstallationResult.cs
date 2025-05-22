@@ -56,5 +56,4 @@ public interface IInstallationResult // IDispatch
 	int GetUpdateResult(
 		int updateIndex,
 		out IUpdateInstallationResult retval);
-
 }

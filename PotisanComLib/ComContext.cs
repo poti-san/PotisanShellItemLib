@@ -4,6 +4,13 @@ using Potisan.Windows.Com.ComTypes;
 
 namespace Potisan.Windows.Com;
 
+/// <summary>
+/// COMのコンテキスト情報。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <para><c>IContext</c> COMインターフェイスのラッパーです。</para>
+/// </remarks>
 public class ComContext(object? o) : ComUnknownWrapperBase<IContext>(o)
 {
 	public static ComResult<ComContext> GetCurrentContextNoThrow()

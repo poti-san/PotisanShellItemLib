@@ -7,7 +7,7 @@ using Potisan.Windows.MediaFoundation.ComTypes;
 
 namespace Potisan.Windows.MediaFoundation;
 
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 public class MFTransform(object? o) : ComUnknownWrapperBase<IMFTransform>(o)
 {
 	// TODO タプルの分解版

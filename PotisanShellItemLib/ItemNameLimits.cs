@@ -23,6 +23,9 @@ namespace Potisan.Windows.Shell;
 ///	""");]]>
 ///	</code>
 /// </example>
+/// <remarks>
+/// <c>IItemNameLimits</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class ItemNameLimits(object? o) : ComUnknownWrapperBase<IItemNameLimits>(o)
 {
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]

@@ -7,7 +7,7 @@ namespace Potisan.Windows.MediaFoundation;
 /// <summary>
 /// MFストリーム記述子。IMFStreamDescriptor COMインターフェイスのラッパーです。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 public class MFStreamDescriptor(object? o) : ComUnknownWrapperWithMFAttribute<IMFStreamDescriptor>(o)
 {
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]

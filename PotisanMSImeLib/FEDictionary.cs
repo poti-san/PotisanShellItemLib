@@ -29,6 +29,10 @@ namespace Potisan.Windows.MSIme;
 /// </example>
 public class FEDictionary(object? o) : ComUnknownWrapperBase<IFEDictionary>(o)
 {
+	[UnmanagedFunctionPointer(CallingConvention.Winapi)]
+	[return: MarshalAs(UnmanagedType.Bool)]
+	private delegate bool CreateIFEDictionaryInstanceType([MarshalAs(UnmanagedType.IUnknown)] out object? ppv);
+
 	public ComResult<ImeUserDictionaryFileHeader> OpenNoThrow(string dictionaryPath)
 		=> new(_obj.Open(dictionaryPath, out var x), x);
 

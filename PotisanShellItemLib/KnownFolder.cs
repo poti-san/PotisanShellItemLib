@@ -6,9 +6,10 @@ namespace Potisan.Windows.Shell;
 /// <summary>
 /// 既知フォルダ。
 /// </summary>
-/// <param name="o"></param>
+/// <param name="o">RCWオブジェクト。</param>
 /// <remarks>
-/// 作成には<see cref="KnownFolderManager"/>を使用します。
+/// <para>作成には<see cref="KnownFolderManager"/>を使用します。</para>
+/// <para><c>IKnownFolder</c> COMインターフェイスのラッパーです。</para>
 /// </remarks>
 public class KnownFolder(object? o) : ComUnknownWrapperBase<IKnownFolder>(o)
 {

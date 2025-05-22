@@ -16,6 +16,9 @@ namespace Potisan.Windows.Shell;
 ///var persistIDList = documentsFolder.AsPersistIDList;]]>
 /// </code>
 /// </example>
+/// <remarks>
+/// <c>IPersistIDList</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class PersistIDList(object? o) : ComUnknownWrapperBase<IPersistIDList>(o)
 {
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]

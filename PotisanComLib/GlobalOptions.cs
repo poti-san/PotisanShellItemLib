@@ -2,6 +2,13 @@
 
 namespace Potisan.Windows.Com;
 
+/// <summary>
+/// COMグローバルオプション設定。
+/// </summary>
+/// <param name="o">RCWインスタンス</param>
+/// <remarks>
+/// <c>IGlobalOptions</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class GlobalOptions(object? o) : ComUnknownWrapperBase<IGlobalOptions>(o)
 {
 	public static ComResult<GlobalOptions> CreateNoThrow()

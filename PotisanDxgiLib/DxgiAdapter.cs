@@ -6,7 +6,7 @@ namespace Potisan.Windows.Dxgi;
 /// <summary>
 /// ディスプレイサブシステム（GPU、DAC、ビデオメモリ）。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 /// <example>
 /// <code>
 ///<![CDATA[using Potisan.Windows.Dxgi;

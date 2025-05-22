@@ -2,6 +2,13 @@
 
 namespace Potisan.Windows.Com;
 
+/// <summary>
+/// クラスファクトリ。
+/// </summary>
+/// <remarks>
+/// <para><c>IClassFactory</c> COMインターフェイスのラッパーです。</para>
+/// </remarks>
+/// <param name="o"></param>
 public class ClassFactory(object? o) : ComUnknownWrapperBase<IClassFactory>(o)
 {
 	public ComResult<object> CreateInstanceNoThrow(in Guid iid, object? outer = null)

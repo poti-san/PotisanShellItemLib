@@ -5,9 +5,12 @@ using Potisan.Windows.PropertySystem.ComTypes;
 namespace Potisan.Windows.PropertySystem;
 
 /// <summary>
-/// 列挙型プロパティのリスト。IPropertyEnumTypeList COMインターフェイスのラッパーです。
+/// 列挙型プロパティのリスト。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IPropertyEnumTypeList</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class PropertyEnumTypeList(object? o) :
 	ComUnknownWrapperBase<IPropertyEnumTypeList>(o),
 	IReadOnlyList<PropertyEnumType>

@@ -1,16 +1,15 @@
-﻿using System.Runtime.CompilerServices;
-
-using Potisan.Windows.Com.ComTypes;
+﻿using Potisan.Windows.Com.ComTypes;
 
 namespace Potisan.Windows.Com;
 
 /// <summary>
-/// 読み書きや位置移動が可能なCOMストリーム。IStream COMインターフェイスのラッパーです。
+/// 読み書きや位置移動が可能なCOMストリーム。
 /// </summary>
 /// <remarks>
-/// COMインターフェイスの継承関係からは<see cref="ComSequentialStream"/>を継承すべきですが、
+/// <para><c>IStream</c> COMインターフェイスのラッパーです。</para>
+/// <para>COMインターフェイスの継承関係からは<see cref="ComSequentialStream"/> COMインターフェイスを継承すべきですが、
 /// IStorage COMインターフェイスのCreateStreamメンバー関数で作成したインスタンスが
-/// IStream COMインターフェイスは実装してISequentialStream COMインターフェイスを実装しないので例外的に継承しません。
+/// IStream COMインターフェイスは実装してISequentialStream COMインターフェイスを実装しないので例外的に継承しません。</para>
 /// </remarks>
 public class ComStream(object? o) : ComUnknownWrapperBase<IStream>(o), ICloneable
 {

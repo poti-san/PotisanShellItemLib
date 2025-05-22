@@ -2,6 +2,13 @@
 
 namespace Potisan.Windows.Com;
 
+/// <summary>
+/// OLEウィンドウ。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IOleWindow</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class OleWindow(object? o) : ComUnknownWrapperBase<IOleWindow>(o)
 {
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]

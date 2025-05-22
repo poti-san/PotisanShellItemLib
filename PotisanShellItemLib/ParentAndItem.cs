@@ -16,6 +16,9 @@ namespace Potisan.Windows.Shell;
 ///var itemAndParent = documentsFolder.AsParentAndItem;]]>
 /// </code>
 /// </example>
+/// <remarks>
+/// <c>IParentAndItem</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class ParentAndItem(object? o) : ComUnknownWrapperBase<IParentAndItem>(o)
 {
 	public ComResult SetParentAndItemAsRcwNoThrow(SafeHandle pidlParent, object shellFolder, SafeHandle pidlChild)

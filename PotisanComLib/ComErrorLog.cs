@@ -3,8 +3,9 @@
 namespace Potisan.Windows.Com;
 
 /// <summary>
-/// COMエラーログ。IErrorLog COMインターフェイスのラッパーです。
+/// COMエラーログ。
 /// </summary>
+/// <remarks><c>IErrorLog</c> COMインターフェイスのラッパーです。</remarks>
 public class ComErrorLog(object? o) : ComUnknownWrapperBase<IErrorLog>(o)
 {
 	public ComResult AddErrorNoThrow(string propName, ComExceptionInfo excepInfo)

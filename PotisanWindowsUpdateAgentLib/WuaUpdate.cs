@@ -40,7 +40,7 @@ public class WuaUpdate(object? o) : ComUnknownWrapperBase<IUpdate>(o)
 
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<WuaCategoryCollection> CategoriesNoThrow
-		=> new(_obj.get_Categories(out var x), new(x!));
+		=> new(_obj.get_Categories(out var x), new(x));
 
 	public WuaCategoryCollection Categories
 		=> CategoriesNoThrow.Value;
@@ -110,7 +110,7 @@ public class WuaUpdate(object? o) : ComUnknownWrapperBase<IUpdate>(o)
 
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<WuaInstallationBehavior> InstallationBehaviorNoThrow
-		=> new(_obj.get_InstallationBehavior(out var x), new(x!));
+		=> new(_obj.get_InstallationBehavior(out var x), new(x));
 
 	public WuaInstallationBehavior InstallationBehavior
 		=> InstallationBehaviorNoThrow.Value;

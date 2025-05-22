@@ -4,6 +4,13 @@ using Potisan.Windows.Com.ComTypes;
 
 namespace Potisan.Windows.Com;
 
+/// <summary>
+/// COMコンテキストプロパティの列挙機能。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IEnumContextProps</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class ComContextPropertyEnumerable(object? o) : ComUnknownWrapperBase<IEnumContextProps>(o), IReadOnlyCollection<ComContextProperty>, ICloneable
 {
 	public IEnumerator<ComContextProperty> GetEnumerator()

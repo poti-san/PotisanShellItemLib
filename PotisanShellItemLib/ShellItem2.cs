@@ -9,9 +9,11 @@ namespace Potisan.Windows.Shell;
 
 /// <summary>
 /// プロパティを取得しやすいシェルアイテム。
-/// IShellItem COMインターフェイスのラッパーです。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IShellItem2</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class ShellItem2(object? o) : ShellItem(o)
 {
 	private new readonly IShellItem2 _obj = o == null ? null! : (IShellItem2)o;

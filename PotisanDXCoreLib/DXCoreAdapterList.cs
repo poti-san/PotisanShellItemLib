@@ -9,7 +9,7 @@ namespace Potisan.Windows.DXCore;
 /// <summary>
 /// DXCoreのアダプタ情報リスト。<see cref="DXCoreAdapterFactory"/>やその派生クラスから作成します。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 public class DXCoreAdapterList(object? o) : ComUnknownWrapperBase<IDXCoreAdapterList>(o)
 {
 	public uint AdapterCount

@@ -2,6 +2,13 @@
 
 namespace Potisan.Windows.Com;
 
+/// <summary>
+/// COMメモリアロケータ。
+/// </summary>
+/// <param name="o">RCWオブジェクト</param>
+/// <remarks>
+/// <c>IMalloc</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class ComMalloc(object? o) : ComUnknownWrapperBase<IMalloc>(o)
 {
 	public static ComResult<ComMalloc> CreateNoThrow()

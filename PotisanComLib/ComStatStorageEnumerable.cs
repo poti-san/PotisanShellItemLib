@@ -4,6 +4,13 @@ using Potisan.Windows.Com.ComTypes;
 
 namespace Potisan.Windows.Com;
 
+/// <summary>
+/// COMストレージ統計の列挙機能。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IEnumSTATSTG</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class ComStatStorageEnumerable(object? o) :
 	ComUnknownWrapperBase<IEnumSTATSTG>(o),
 	IEnumerable<ComStatStorage>,

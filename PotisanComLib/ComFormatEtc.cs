@@ -3,8 +3,11 @@
 namespace Potisan.Windows.Com;
 
 /// <summary>
-/// <c>FORMATETC</c>
+/// クリップボードフォーマットと追加情報。
 /// </summary>
+/// <remarks>
+/// <c>FORMATETC</c>ネイティブ構造体のラッパーです。
+/// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public class ComFormatEtc
 {

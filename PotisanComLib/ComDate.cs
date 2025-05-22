@@ -8,7 +8,7 @@
 /// 整数部分は経過日、小数部分は24時間における経過時間割合を示します。
 /// </param>
 /// <remarks>
-/// <c>DATE</c>型に対応します。
+/// <c>DATE</c>ネイティブ型のラッパーです。
 /// </remarks>
 public record struct ComDate(double Value)
 {

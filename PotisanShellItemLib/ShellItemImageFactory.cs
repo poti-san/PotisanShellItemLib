@@ -8,9 +8,9 @@ namespace Potisan.Windows.Shell;
 /// <summary>
 /// シェルアイコンのファクトリ。
 /// </summary>
-/// <param name="o"></param>
+/// <param name="o">RCWオブジェクト。</param>
 /// <example>
-/// ビットマップ表示にFormを使用するため、以下のコードはWinFormsプロジェクトに貼り付けてください。
+/// WinFormsプロジェクトでデスクトップのアイコンをフォームに表示します。
 /// <code>
 ///<![CDATA[using Potisan.Windows.Shell;
 ///
@@ -35,6 +35,10 @@ namespace Potisan.Windows.Shell;
 ///]]>
 /// </code>
 /// </example>
+/// <remarks>
+/// <para><see cref="ShellItem.ImageFactory"/>で作成できます。</para>
+/// <para><c>IShellItemImageFactory</c> COMインターフェイスのラッパーです。</para>
+/// </remarks>
 public class ShellItemImageFactory(object? o) : ComUnknownWrapperBase<IShellItemImageFactory>(o)
 {
 	public ComResult<SafeGdiObjectHandle> GetImageNoThrow(Size size, ShellItemImageFactoryGetBitmapFlag flags = 0)

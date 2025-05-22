@@ -3,9 +3,12 @@
 namespace Potisan.Windows.Com;
 
 /// <summary>
-/// COM読み書きストリーム。ISequentialStream COMインターフェイスのラッパーです。
+/// COM読み書きストリーム。
 /// </summary>
-public class ComSequentialStream(object?o) : ComUnknownWrapperBase<ISequentialStream>(o)
+/// <remarks>
+/// <c>ISequentialStream</c> COMインターフェイスのラッパーです。
+/// </remarks>
+public class ComSequentialStream(object? o) : ComUnknownWrapperBase<ISequentialStream>(o)
 {
 	public ComResult<uint> ReadNoThrow(Span<byte> buffer)
 		=> new(_obj.Read(ref MemoryMarshal.GetReference(buffer), checked((uint)buffer.Length), out var x), x);

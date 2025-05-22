@@ -11,7 +11,7 @@ namespace Potisan.Windows.DXCore;
 /// <summary>
 /// DXCoreのアダプタ情報（バージョン1）。<see cref="DXCoreAdapterList"/>から作成します。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 public class DXCoreAdapter(object? o) : ComUnknownWrapperBase<IDXCoreAdapter>(o)
 {
 	public bool IsValid

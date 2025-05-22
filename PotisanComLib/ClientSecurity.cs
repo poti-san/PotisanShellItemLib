@@ -1,13 +1,14 @@
-﻿using System.Runtime.CompilerServices;
-
-using Potisan.Windows.Com.ComTypes;
+﻿using Potisan.Windows.Com.ComTypes;
 
 namespace Potisan.Windows.Com;
 
 /// <summary>
-/// クライアントセキュリティ。IClientSecurity COMインターフェイスのラッパーです。
+/// クライアントセキュリティ。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <para><c>IClientSecurity</c> COMインターフェイスのラッパーです。</para>
+/// </remarks>
 public class ClientSecurity(object? o) : ComUnknownWrapperBase<IClientSecurity>(o)
 {
 	public static ComResult<ClientSecurity> CreateFromProxyNoThrow(object o)

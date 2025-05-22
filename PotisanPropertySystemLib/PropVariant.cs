@@ -5,9 +5,8 @@ namespace Potisan.Windows.PropertySystem;
 /// <summary>
 /// プロパティの値。
 /// </summary>
-[StructLayout(LayoutKind.Sequential, Size = 24)]
-// [StructLayout(LayoutKind.Sequential, Size = 16)]
-public sealed class PropVariant
+[StructLayout(LayoutKind.Sequential)]
+public sealed class PropVariant : IDisposable
 {
 	public VarType vt;
 #pragma warning disable IDE0044, RCS1213, RCS1139
@@ -27,6 +26,12 @@ public sealed class PropVariant
 	~PropVariant()
 	{
 		Clear();
+	}
+
+	public void Dispose()
+	{
+		Clear();
+		GC.SuppressFinalize(this);
 	}
 
 	public ComResult ClearNoThrow()

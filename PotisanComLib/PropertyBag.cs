@@ -5,7 +5,7 @@ namespace Potisan.Windows.Com;
 /// <summary>
 /// プロパティバッグ。IPropertyBag COMインターフェイスのラッパーです。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 public class PropertyBag(object? o) : ComUnknownWrapperBase<IPropertyBag>(o)
 {
 	public ComResult<object> ReadNoThrow(string propName, ComErrorLog? errorLog = null)

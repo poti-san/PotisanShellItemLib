@@ -6,7 +6,7 @@ namespace Potisan.Windows.DXCore;
 /// <summary>
 /// DXCoreのアダプタファクトリ（バージョン1）。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 /// <example>
 /// <code>
 ///<![CDATA[using Potisan.Windows.DXCore;

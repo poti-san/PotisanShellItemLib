@@ -3,9 +3,12 @@
 namespace Potisan.Windows.PropertySystem;
 
 /// <summary>
-/// プロパティ記述子。IPropertyDescription COMインターフェイスのラッパーです。
+/// プロパティ記述子。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IPropertyDescription</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class PropertyDescription(object? o) : ComUnknownWrapperBase<IPropertyDescription>(o)
 {
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]

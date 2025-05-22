@@ -9,10 +9,6 @@ namespace Potisan.Windows.MSIme;
 /// </summary>
 public sealed class MSIme(object? o) : ComUnknownWrapperBase<IUnknown>(o)
 {
-	[UnmanagedFunctionPointer(CallingConvention.Winapi)]
-	[return: MarshalAs(UnmanagedType.Bool)]
-	private delegate bool CreateIFEDictionaryInstanceType([MarshalAs(UnmanagedType.IUnknown)] out object? ppv);
-
 	public static ComResult<MSIme> CreateImeJpNoThrow()
 	{
 		// 分かりにくい原因なのでアサートを発生させます。

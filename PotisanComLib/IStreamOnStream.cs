@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-using Potisan.Windows.Com.ComTypes;
+﻿using Potisan.Windows.Com.ComTypes;
 
 namespace Potisan.Windows.Com;
 

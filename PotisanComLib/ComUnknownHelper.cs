@@ -2,6 +2,9 @@
 
 namespace Potisan.Windows.Com;
 
+/// <summary>
+/// <see cref="ComTypes.IUnknown"/>の便利機能。
+/// </summary>
 public static class ComUnknownHelper
 {
 	/// <summary>

@@ -5,8 +5,12 @@ using Potisan.Windows.Com.ComTypes;
 namespace Potisan.Windows.Com;
 
 /// <summary>
-/// FormatEtc構造体列挙子。IEnumFORMATETC COMインターフェイスのラッパーです。
+/// FormatEtc構造体列挙機能。
 /// </summary>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IEnumFORMATETC</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class ComFormatEtcEnumerable(object? o) :
 	ComUnknownWrapperBase<IEnumFORMATETC>(o),
 	IEnumerable<ComFormatEtc>,

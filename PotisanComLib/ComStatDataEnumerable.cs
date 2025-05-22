@@ -5,8 +5,11 @@ using Potisan.Windows.Com.ComTypes;
 namespace Potisan.Windows.Com;
 
 /// <summary>
-/// ComStatData構造体列挙子。IEnumSTATDATA COMインターフェイスのラッパーです。
+/// ComStatData構造体列挙子。
 /// </summary>
+/// <remarks>
+/// <c>IEnumSTATDATA</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class ComStatDataEnumerable(object? o) :
 	ComUnknownWrapperBase<IEnumSTATDATA>(o),
 	IEnumerable<ComStatData>,

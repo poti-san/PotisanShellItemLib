@@ -5,9 +5,12 @@ using Potisan.Windows.PropertySystem.ComTypes;
 namespace Potisan.Windows.PropertySystem;
 
 /// <summary>
-/// プロパティストア。プロパティのキーと値の組を管理します。IPropertyStore COMインターフェイスのラッパーです。
+/// プロパティストア。プロパティのキーと値の組を管理します。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IPropertyStore</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class PropertyStore(object? o) :
 	ComUnknownWrapperBase<IPropertyStore>(o),
 IReadOnlyDictionary<PropertyKey, PropVariant>

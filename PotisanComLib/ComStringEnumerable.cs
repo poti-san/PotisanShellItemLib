@@ -5,9 +5,12 @@ using Potisan.Windows.Com.ComTypes;
 namespace Potisan.Windows.Com;
 
 /// <summary>
-/// 文字列列挙子。IEnumString COMインターフェイスのラッパーです。
+/// 文字列列挙子。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IEnumString</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public sealed class ComStringEnumerable(object? o) : ComUnknownWrapperBase<IEnumString>(o), IEnumerable<string>, ICloneable
 {
 	public IEnumerator<string> GetEnumerator()

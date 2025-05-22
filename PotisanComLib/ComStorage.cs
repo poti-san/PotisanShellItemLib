@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-using Potisan.Windows.Com.ComTypes;
+﻿using Potisan.Windows.Com.ComTypes;
 
 namespace Potisan.Windows.Com;
 
@@ -28,6 +26,9 @@ namespace Potisan.Windows.Com;
 ///]]>
 /// </code>
 /// </example>
+/// <remarks>
+/// <c>IStorage</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class ComStorage(object? o) : ComUnknownWrapperBase<IStorage>(o)
 {
 	public ComResult<ComStream> CreateStreamNoThrow(string name, ComStorageMode mode)

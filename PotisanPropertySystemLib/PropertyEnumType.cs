@@ -3,9 +3,12 @@
 namespace Potisan.Windows.PropertySystem;
 
 /// <summary>
-/// 列挙型プロパティの値情報。IPropertyEnumType COMインターフェイスのラッパーです。
+/// 列挙型プロパティの値情報。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IPropertyEnumType</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class PropertyEnumType(object? o) : ComUnknownWrapperBase<IPropertyEnumType>(o)
 {
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]

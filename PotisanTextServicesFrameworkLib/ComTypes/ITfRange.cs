@@ -140,5 +140,4 @@ public interface ITfRange
 	[PreserveSig]
 	int GetContext(
 		out ITfContext ppContext);
-
 }

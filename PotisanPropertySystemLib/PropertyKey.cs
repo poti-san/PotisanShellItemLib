@@ -14,6 +14,9 @@
 /// // {f29f85e0-4ff9-1068-ab91-08002b27b3d9} 5
 /// ]]></code>
 /// </example>
+/// <remarks>
+/// <c>PROPERTYKEY</c>ネイティブ型のラッパーです。
+/// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public sealed record class PropertyKey(Guid FmtID, uint PID)
 {

@@ -4,6 +4,10 @@ using Potisan.Windows.Shell.Window.ComTypes;
 
 namespace Potisan.Windows.Shell.Window;
 
+/// <summary>
+/// シェルブラウザ。ウィンドウの状態や各部分のウィンドウハンドルを取得できます。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
 public class ShellBrowser(object? o) : OleWindow(o)
 {
 	private new readonly IShellBrowser _obj = o != null ? (IShellBrowser)o : null!;

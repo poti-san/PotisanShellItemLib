@@ -4,7 +4,7 @@ using Potisan.Windows.PropertySystem.ComTypes;
 namespace Potisan.Windows.PropertySystem;
 
 /// <summary>
-/// プロパティ情報を取得する型の拡張メソッド集。
+/// プロパティ情報を取得する型の拡張メソッドを提供します。
 /// </summary>
 public static class PropertyTypeExtensions
 {

@@ -7,7 +7,7 @@ using Potisan.Windows.MediaFoundation.ComTypes;
 
 namespace Potisan.Windows.MediaFoundation;
 
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 public class MFSample(object? o) : ComUnknownWrapperWithMFAttribute<IMFSample>(o)
 {
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]

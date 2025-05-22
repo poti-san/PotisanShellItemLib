@@ -3,9 +3,12 @@
 using ComTypes;
 
 /// <summary>
-/// ファイルによる永続化。IPersistFile COMインターフェイスのラッパーです。
+/// ファイルによる永続化。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IPersistFile</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class PersistFile(object? o) : ComUnknownWrapperBase<IPersistFile>(o)
 {
 	public ComResult<Guid> ClassIDNoThrow

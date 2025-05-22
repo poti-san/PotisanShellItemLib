@@ -3,7 +3,7 @@
 namespace Potisan.Windows.Com;
 
 /// <summary>
-/// IStream COMインターフェイスをラップする.NETのSystem.Streamの実装。
+/// <c>IStream</c> COMインターフェイスをラップする.NETの<see cref="System.IO.Stream"/>の実装。
 /// </summary>
 public class StreamOnIStream(IStream innerStream, bool readable = true, bool seekable = true, bool writable = true) : Stream
 {

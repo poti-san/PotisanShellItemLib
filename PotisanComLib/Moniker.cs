@@ -3,9 +3,12 @@
 namespace Potisan.Windows.Com;
 
 /// <summary>
-/// モニカ。IMoniker COMインターフェイスのラッパーです。
+/// モニカ。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IMoniker</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class Moniker(object? o) : PersistStream(o)
 {
 	private new readonly IMoniker _obj = o == null ? null! : (IMoniker)o;

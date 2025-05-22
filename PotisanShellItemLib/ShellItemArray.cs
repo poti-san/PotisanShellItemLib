@@ -9,11 +9,12 @@ using Potisan.Windows.Shell.ComTypes;
 namespace Potisan.Windows.Shell;
 
 /// <summary>
-/// シェルアイテム配列。IShellItemArray COMインターフェイスのラッパーです。
+/// シェルアイテム配列。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 /// <remarks>
-/// 扱うインターフェイスにShellItemとShellItem2があるため、IReadOnlyList&gt;ShellItem&lt;は実装しません。
+/// <c>扱うインターフェイスに<see cref="ShellItem"/>と<see cref="ShellItem2"/>があるため、<see cref="IReadOnlyList{ShellItem}"/>は実装しません。</c>
+/// <para><c>IShellItemArray</c> COMインターフェイスのラッパーです。</para>
 /// </remarks>
 public class ShellItemArray(object? o) : ComUnknownWrapperBase<IShellItemArray>(o)
 {

@@ -7,10 +7,13 @@ using Potisan.Windows.Shell.ComTypes;
 namespace Potisan.Windows.Shell;
 
 /// <summary>
-/// シェルアイテム。Windowsの管理するファイルやフォルダの名前や属性を取得できます。
-/// IShellItem COMインターフェイスのラッパーです。
+/// シェルアイテム。ファイルシステムオブジェクトと特殊オブジェクトの名前や属性を取得できます。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <para><c>IShellItem</c> COMインターフェイスのラッパーです。</para>
+/// <para><see cref="ShellItem.CreateKnownFolderItem(in Guid, Potisan.Windows.Shell.KnownFolderFlag)"/>等で作成できます。</para>
+/// </remarks>
 [DebuggerDisplay("{NormalDisplayName}")]
 public class ShellItem(object? o) : ComUnknownWrapperBase<IShellItem>(o)
 {

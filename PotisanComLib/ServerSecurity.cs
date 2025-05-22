@@ -3,9 +3,12 @@
 namespace Potisan.Windows.Com;
 
 /// <summary>
-/// サーバーセキュリティ。IServerSecurity COMインターフェイスのラッパーです。
+/// サーバーセキュリティ。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <para><c>IServerSecurity</c> COMインターフェイスのラッパーです。</para>
+/// </remarks>
 public class ServerSecurity(object? o) : ComUnknownWrapperBase<IServerSecurity>(o)
 {
 	public static ComResult<ServerSecurity> GetCallContextNoThrow()

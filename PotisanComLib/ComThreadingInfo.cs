@@ -8,8 +8,9 @@ namespace Potisan.Windows.Com;
 /// COMスレッド情報を取得・設定します。
 /// </summary>
 /// <remarks>
-/// マルチスレッド対応のラッパー関数として<c>CoGetApartmentType</c>があります。
-/// また、C#では<see cref="System.Threading.Thread.CurrentThread"/>から様々な情報を取得できます。
+/// <para><c>IComThreadingInfo</c> COMインターフェイスのラッパーです。</para> 
+/// <para>マルチスレッド対応のラッパー関数として<c>CoGetApartmentType</c>があります。
+/// また、C#では<see cref="System.Threading.Thread.CurrentThread"/>から様々な情報を取得できます。</para>
 /// </remarks>
 /// <example>
 /// <code>

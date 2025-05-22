@@ -5,9 +5,12 @@ using Potisan.Windows.PropertySystem.ComTypes;
 namespace Potisan.Windows.PropertySystem;
 
 /// <summary>
-/// プロパティ記述子リスト。IPropertyDescriptionList COMインターフェイスのラッパーです。
+/// プロパティ記述子リスト。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IPropertyDescriptionList</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class PropertyDescriptionList(object? o) :
 	ComUnknownWrapperBase<IPropertyDescriptionList>(o),
 	IReadOnlyList<PropertyDescription>

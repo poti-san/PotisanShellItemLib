@@ -1,8 +1,11 @@
 ﻿namespace Potisan.Windows.Com;
 
 /// <summary>
-/// CATEGORYINFO
+/// COMのカテゴリ情報。
 /// </summary>
+/// <remarks>
+/// <c>CATEGORYINFO</c>ネイティブ型のラッパーです。
+/// </remarks>
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
 public sealed record class ComCategoryInfo
 {

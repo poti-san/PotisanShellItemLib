@@ -3,9 +3,12 @@
 using ComTypes;
 
 /// <summary>
-/// 永続化基底クラス。IPersist COMインターフェイスのラッパーです。
+/// 永続化基底クラス。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IPersist</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class Persist(object? o) : ComUnknownWrapperBase<IPersist>(o)
 {
 	public ComResult<Guid> ClassIDNoThrow

@@ -5,11 +5,12 @@ using Potisan.Windows.Shell.ComTypes;
 namespace Potisan.Windows.Shell;
 
 /// <summary>
-/// シェルアイテム<see cref="ShellItem"/>の列挙子。IEnumShellItems COMインターフェイスのラッパーです。
+/// シェルアイテム<see cref="ShellItem"/>の列挙子。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 /// <remarks>
-/// <see cref="ShellItem2"/>を列挙する場合は<see cref="ShellItem2Enumerable"/>を使用します。
+/// <para><see cref="ShellItem2"/>を列挙する場合は<see cref="ShellItem2Enumerable"/>を使用します。</para>
+/// <para><c>IEnumShellItems</c> COMインターフェイスのラッパーです。</para>
 /// </remarks>
 public sealed class ShellItemEnumerable(object? o) : ComUnknownWrapperBase<IEnumShellItems>(o), IEnumerable<ShellItem>, ICloneable
 {

@@ -34,7 +34,7 @@ public class WuaWebProxy(object? o) : ComUnknownWrapperBase<IWebProxy>(o)
 
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<StringCollection> BypassListNoThrow
-		=> new(_obj.get_BypassList(out var x), new(x!));
+		=> new(_obj.get_BypassList(out var x), new(x));
 
 	public ComResult SetBypassListNoThrow(StringCollection value)
 		=> new(_obj.put_BypassList((IStringCollection)value.WrappedObject!));

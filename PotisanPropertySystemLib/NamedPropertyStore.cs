@@ -3,9 +3,12 @@
 namespace Potisan.Windows.PropertySystem;
 
 /// <summary>
-/// 名前付き項目のプロパティストア。INamedPropertyStore COMインターフェイスのラッパーです。
+/// 名前付き項目のプロパティストア。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>INamedPropertyStore</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class NamedPropertyStore(object? o) : ComUnknownWrapperBase<INamedPropertyStore>(o)
 {
 	public static ComResult<NamedPropertyStore> CreateInMemoryNoThrow()

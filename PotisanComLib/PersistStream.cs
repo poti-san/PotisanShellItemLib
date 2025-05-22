@@ -5,7 +5,7 @@ using ComTypes;
 /// <summary>
 /// ストリームによる永続化。IPersistStream COMインターフェイスのラッパーです。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 public class PersistStream(object? o) : ComUnknownWrapperBase<IPersistStream>(o)
 {
 	public ComResult<Guid> ClassIDNoThrow

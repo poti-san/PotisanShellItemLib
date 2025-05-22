@@ -1,8 +1,10 @@
 ﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
 
 namespace Potisan.Windows.Com;
 
+/// <summary>
+/// COMセキュリティ機能の便利機能。
+/// </summary>
 public static class ComSecurityUtility
 {
 	// TODO

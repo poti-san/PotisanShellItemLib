@@ -20,7 +20,7 @@
 public interface IComUnknownWrapper : IDisposable
 {
 	/// <summary>
-	/// 保持しているRCWインスタンス。
+	/// 保持しているRCWオブジェクト。
 	/// </summary>
 	public object? WrappedObject { get; }
 
@@ -102,7 +102,7 @@ public interface IComUnknownWrapper : IDisposable
 /// <summary>
 /// 公開COMインターフェイスを内部利用するCOMインターフェイスラッパー基底クラス。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 /// <remarks>
 /// <para>
 /// COMインターフェイス型が公開されている場合に<c>WrappedObject</c>や<c>Dispose</c>を実装するクラスです。

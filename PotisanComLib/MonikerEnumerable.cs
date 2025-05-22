@@ -5,9 +5,12 @@ using Potisan.Windows.Com.ComTypes;
 namespace Potisan.Windows.Com;
 
 /// <summary>
-/// モニカ列挙子。IEnumMoniker COMインターフェイスのラッパーです。
+/// モニカ列挙子。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks>
+/// <c>IEnumMoniker</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class MonikerEnumerable(object? o) : ComUnknownWrapperBase<IEnumMoniker>(o), IEnumerable<Moniker>, ICloneable
 {
 	public IEnumerator<Moniker> GetEnumerator()

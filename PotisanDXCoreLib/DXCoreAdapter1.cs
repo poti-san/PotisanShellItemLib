@@ -6,7 +6,7 @@ namespace Potisan.Windows.DXCore;
 /// <summary>
 /// DXCoreのアダプタ情報（バージョン1.1）。<see cref="DXCoreAdapterList"/>から作成します。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 public class DXCoreAdapter1(object? o) : DXCoreAdapter(o)
 {
 	private new readonly IDXCoreAdapter1 _obj = o != null ? (IDXCoreAdapter1)o : null!;

@@ -6,10 +6,11 @@ using Potisan.Windows.Shell.ComTypes;
 namespace Potisan.Windows.Shell;
 
 /// <summary>
-/// 関連付け呼び出し処理。IAssocHandlerInvoker COMインターフェイスのラッパーです。
+/// 関連付け呼び出し処理。
 /// </summary>
 /// <remarks>
-/// 作成には<see cref="ShellAssocHandler"/>を使用します。
+/// <para>作成には<see cref="ShellAssocHandler"/>を使用します。</para>
+/// <para><c>IAssocHandlerInvoker</c> COMインターフェイスのラッパーです。</para>
 /// </remarks>
 public class ShellAssocHandlerInvoker(object? o) : ComUnknownWrapperBase<IAssocHandlerInvoker>(o)
 {
@@ -28,10 +29,11 @@ public class ShellAssocHandlerInvoker(object? o) : ComUnknownWrapperBase<IAssocH
 }
 
 /// <summary>
-/// 関連付けハンドラ。IAssocHandler COMインターフェイスのラッパーです。
+/// 関連付けハンドラ。
 /// </summary>
 /// <remarks>
-/// 作成には<see cref="ShellAssocHandlerEnumerable"/>を使用します。
+/// <para>作成には<see cref="ShellAssocHandlerEnumerable"/>を使用します。</para>
+/// <para><c>IAssocHandler</c> COMインターフェイスのラッパーです。</para>
 /// </remarks>
 public class ShellAssocHandler(object? o) : ComUnknownWrapperBase<IAssocHandler>(o)
 {
@@ -83,19 +85,24 @@ public class ShellAssocHandler(object? o) : ComUnknownWrapperBase<IAssocHandler>
 }
 
 /// <summary>
-/// 関連付けハンドラ列挙子。IEnumAssocHandlers COMインターフェイスのラッパーです。
+/// 関連付けハンドラ列挙機能。
 /// </summary>
 /// <example>
-/// <code><![CDATA[
-///using Potisan.Windows.Shell;
+/// <para>テキストファイルの関連付けハンドラを列挙する。</para>
+/// <code>
+/// <![CDATA[
+/// using Potisan.Windows.Shell;
 ///
-///Console.WriteLine($"UI名, 名前, アイコンの場所");
-///foreach (var assoc in ShellAssocHandlerEnumerable.Create(".txt", ShellAssocFilter.None))
-///{
-///    Console.WriteLine($"{assoc.UIName}, {assoc.Name}, {assoc.IconLocation}");
-///}
-///]]></code>
+/// Console.WriteLine($"UI名, 名前, アイコンの場所");
+/// foreach (var assoc in ShellAssocHandlerEnumerable.Create(".txt", ShellAssocFilter.None))
+/// {
+///     Console.WriteLine($"{assoc.UIName}, {assoc.Name}, {assoc.IconLocation}");
+/// }
+/// ]]></code>
 /// </example>
+/// <remarks>
+/// <c>IEnumAssocHandlers</c> COMインターフェイスのラッパーです。
+/// </remarks>
 public class ShellAssocHandlerEnumerable(object? o) :
 	ComUnknownWrapperBase<IEnumAssocHandlers>(o),
 	IEnumerable<ShellAssocHandler>
@@ -138,8 +145,11 @@ public class ShellAssocHandlerEnumerable(object? o) :
 }
 
 /// <summary>
-/// ASSOC_FILTER
+/// シェル関連付けのフィルター。
 /// </summary>
+/// <remarks>
+/// <c>ASSOC_FILTER</c>
+/// </remarks>
 [Flags]
 public enum ShellAssocFilter : uint
 {
@@ -148,8 +158,11 @@ public enum ShellAssocFilter : uint
 }
 
 /// <summary>
-/// AHTYPE
+/// シェル関連付けのハンドラ種類。
 /// </summary>
+/// <remarks>
+/// <c>AHTYPE</c>
+/// </remarks>
 [Flags]
 public enum ShellAssocHandlerType : uint
 {

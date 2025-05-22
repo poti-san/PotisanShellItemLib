@@ -7,7 +7,7 @@ namespace Potisan.Windows.Shell;
 /// <summary>
 /// 既知フォルダ管理。
 /// </summary>
-/// <param name="o"></param>
+/// <param name="o">RCWオブジェクト。</param>
 /// <example>
 /// <code>
 ///<![CDATA[using Potisan.Windows.Shell;
@@ -20,6 +20,7 @@ namespace Potisan.Windows.Shell;
 ///}]]>
 /// </code>
 /// </example>
+/// <remarks><c>IKnownFolderManager</c> COMインターフェイスのラッパーです。</remarks>
 public class KnownFolderManager(object? o) : ComUnknownWrapperBase<IKnownFolderManager>(o)
 {
 	public static ComResult<KnownFolderManager> CreateNoThrow()

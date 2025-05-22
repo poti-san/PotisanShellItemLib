@@ -7,12 +7,15 @@ namespace Potisan.Windows.Shell.Window;
 /// <summary>
 /// シェルウィンドウコレクション。
 /// </summary>
-/// <param name="o">RCWインスタンス。</param>
+/// <param name="o">RCWオブジェクト。</param>
 /// <remarks>
-/// このコレクションは複数種類のウィンドウを扱うため、<see cref="IEnumerable{T}"/>等は実装しません。
+/// <para>このコレクションは複数種類のウィンドウを扱うため、<see cref="IEnumerable{T}"/>等は実装しません。</para>
+/// <para><c>IShellWindows</c> COMインターフェイスのラッパーです。</para>
 /// </remarks>
 public class ShellWindows(object? o) : ComUnknownWrapperBase<IShellWindows>(o)
 {
+	public ComDispatch AsDispatch => new(_obj);
+
 	/// <summary>
 	/// シェルウィンドウコレクションのインターフェイスを作成します。
 	/// </summary>
@@ -64,8 +67,10 @@ public class ShellWindows(object? o) : ComUnknownWrapperBase<IShellWindows>(o)
 		{
 			var c = Count;
 			for (int i = 0; i < c; i++)
+			{
 				if (Item(i).AsTopLevelShellBrowserNoThrow is { Succeeded: true, ValueUnchecked: var value })
 					yield return value;
+			}
 		}
 	}
 
