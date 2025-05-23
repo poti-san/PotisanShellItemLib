@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<RootNamespace>Potisan.Windows.Network</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\PotisanAutomationLib\PotisanAutomationLib.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="Potisan.Windows.Com" />
+		<Using Include="Potisan.Windows.Com.Automation" />
+		<Using Include="Potisan.Windows.Com.Automation.ComTypes" />
+	</ItemGroup>
+
+</Project>

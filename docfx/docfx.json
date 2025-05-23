@@ -84,6 +84,13 @@
       "outputFormat": "apiPage",
       "disableGitFeatures": false,
       "namespaceLayout": "flattened"
+    },
+    {
+      "src": [{"src": "../PotisanNetworkConnectionLib", "files": ["*.csproj"]}],
+      "output": "api/PotisanNetworkConnectionLib",
+      "outputFormat": "apiPage",
+      "disableGitFeatures": false,
+      "namespaceLayout": "flattened"
     }
   ],
   "build": {

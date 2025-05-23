@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PotisanWindowsUpdateAgentLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PotisanMSImeLib", "PotisanMSImeLib\PotisanMSImeLib.csproj", "{13D8FAE3-3C05-B824-5E01-D353C5FA5FD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PotisanNetworkConnectionLib", "PotisanNetworkConnectionLib\PotisanNetworkConnectionLib.csproj", "{4F991D2F-2C24-485E-858C-4760B423B3D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,10 @@ Global
 		{13D8FAE3-3C05-B824-5E01-D353C5FA5FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13D8FAE3-3C05-B824-5E01-D353C5FA5FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13D8FAE3-3C05-B824-5E01-D353C5FA5FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F991D2F-2C24-485E-858C-4760B423B3D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F991D2F-2C24-485E-858C-4760B423B3D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F991D2F-2C24-485E-858C-4760B423B3D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F991D2F-2C24-485E-858C-4760B423B3D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -36,3 +36,5 @@
     href: ../api/PotisanTextServicesFrameworkLib/toc.yml
   - name: PotisanWindowsUpdateAgentLib
     href: ../api/PotisanWindowsUpdateAgentLib/toc.yml
+  - name: PotisanNetworkConnectionLib
+    href: ../api/PotisanNetworkConnectionLib/toc.yml

@@ -16,6 +16,7 @@ WindowsのCOM機能ラッパークラスライブラリをまとめたC#ソリ�
 |PotisanMSImeLib|Microsoft IME COM機能のラッパーライブラリ。**作成初期です。**|PotisanComLib|
 |PotisanTextServicesFrameworkLib|TSFのラッパーライブラリ。**作成初期です。**|PotisanComLib|
 |PotisanWindowsUpdateAgentLib|Windows Update Agentのラッパーライブラリ。**作成初期です。**|PotisanAutomationLib|
+|PotisanNetworkConnectionLib|ネットワーク接続のラッパーライブラリ。現在はWindows Firewall with Advanced Security APIが推奨されています。|PotisanAutomationLib|
 
 ## 使用上の注意
 
