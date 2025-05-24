@@ -11,7 +11,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 /// </remarks>
 public class WuaUpdateService(object? o) : ComUnknownWrapperBase<IUpdateService>(o)
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<string> NameNoThrow

@@ -24,21 +24,12 @@ public sealed class MSIme(object? o) : ComUnknownWrapperBase<IUnknown>(o)
 	public static MSIme CreateImeJp()
 		=> CreateImeJpNoThrow().Value;
 
-	public ComResult<FECommon> AsFECommonNoThrow
-		=> IComUnknownWrapper.Casted<FECommon, IFECommon>(this);
+	public FECommon? AsFECommon
+		=> this.As<FECommon, IFECommon>();
 
-	public FECommon AsFECommon
-		=> AsFECommonNoThrow.Value;
+	public FELanguage? AsFELanguage
+		=> this.As<FELanguage, IFELanguage>();
 
-	public ComResult<FELanguage> AsFELanguageNoThrow
-		=> IComUnknownWrapper.Casted<FELanguage, IFELanguage>(this);
-
-	public FELanguage AsFELanguage
-		=> AsFELanguageNoThrow.Value;
-
-	public ComResult<FEDictionary> AsFEDictionaryNoThrow
-		=> IComUnknownWrapper.Casted<FEDictionary, IFEDictionary>(this);
-
-	public FEDictionary AsFEDictionary
-		=> AsFEDictionaryNoThrow.Value;
+	public FEDictionary? AsFEDictionary
+		=> this.As<FEDictionary, IFEDictionary>();
 }

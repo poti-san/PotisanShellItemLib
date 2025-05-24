@@ -13,7 +13,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 /// </remarks>
 public class WuaUpdateServiceCollection(object? o) : ComUnknownWrapperBase<IUpdateServiceCollection>(o), IReadOnlyList<WuaUpdateService>
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	public ComResult<WuaUpdateService> GetAtNoThrow(int index)
 		=> new(_obj.get_Item(index, out var x), new(x));

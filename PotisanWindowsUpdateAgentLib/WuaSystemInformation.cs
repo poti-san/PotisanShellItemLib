@@ -11,7 +11,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 /// </remarks>
 public class WuaSystemInformation(object? o) : ComUnknownWrapperBase<ISystemInformation>(o)
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	public static ComResult<WuaSystemInformation> CreateNoThrow()
 	{

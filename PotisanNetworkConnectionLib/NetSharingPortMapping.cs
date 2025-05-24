@@ -11,8 +11,7 @@ namespace Potisan.Windows.Network;
 /// </remarks>
 public sealed class NetSharingPortMapping(object? o) : ComUnknownWrapperBase<INetSharingPortMapping>(o)
 {
-	public ComDispatch AsDispatch
-		=> new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	public ComResult DisableNoThrow()
 		=> new(_obj.Disable());

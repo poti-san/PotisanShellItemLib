@@ -296,6 +296,6 @@ public class ShellItem2(object? o) : ShellItem(o)
 	public new ComResult<ShellItem2> LinkTargetNoThrow
 		=> BindToHandlerNoThrow<ShellItem2, IShellItem2>(BindHandlerID.LinkTargetItem);
 
-	public new ShellItem LinkTarget
+	public new ShellItem2 LinkTarget
 		=> LinkTargetNoThrow.Value;
 }

@@ -4,5 +4,5 @@ namespace Potisan.Windows.Diagnostics.Wua;
 
 public sealed class WuaSearchCompletedCallbackArgs(object? o) : ComUnknownWrapperBase<ISearchCompletedCallbackArgs>(o)
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 }

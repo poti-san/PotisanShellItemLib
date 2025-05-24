@@ -26,7 +26,7 @@ namespace Potisan.Windows.Shell;
 ///		var form = new Form();
 ///
 ///		var item = ShellItem2.CreateKnownFolderItem(KnownFolderID.Desktop);
-///		using var bmp = item.ImageFactory.GetImage(new(64, 64));
+///		using var bmp = item.AsImageFactory.GetImage(new(64, 64));
 ///		form.Controls.Add(new PictureBox { Dock = DockStyle.Fill, Image = Bitmap.FromHbitmap(bmp.DangerousGetHandle()) });
 ///
 ///		Application.Run(form);

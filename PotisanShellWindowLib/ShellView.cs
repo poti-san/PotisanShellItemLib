@@ -140,12 +140,8 @@ public class ShellView(object? o) : ComUnknownWrapperBase<IShellView>(o) // : Ol
 	public ShellItemArray CheckedItems
 		=> CheckedItemsNoThrow.Value;
 
-	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
-	public ComResult<FolderView> AsFolderViewNoThrow
-		=> _obj is IFolderView x ? new(CommonHResults.SOK, new(x)) : new(CommonHResults.ENoInterface, new(null));
-
-	public FolderView AsFolderView
-		=> AsFolderViewNoThrow.Value;
+	public FolderView? AsFolderView
+		=> this.As<FolderView, IFolderView>();
 }
 
 /// <summary>

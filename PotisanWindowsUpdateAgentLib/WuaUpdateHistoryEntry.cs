@@ -22,7 +22,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 /// </example>
 public sealed class WuaUpdateHistoryEntry(object? o) : ComUnknownWrapperBase<IUpdateHistoryEntry>(o)
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<WuaUpdateOperation> OperationNoThrow

@@ -13,8 +13,7 @@ namespace Potisan.Windows.Network;
 /// </remarks>
 public sealed class NetSharingConfiguration(object? o) : ComUnknownWrapperBase<INetSharingConfiguration>(o)
 {
-	public ComDispatch AsDispatch
-		=> new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<bool> SharingEnabledNoThrow

@@ -82,20 +82,18 @@ public interface IComUnknownWrapper : IDisposable
 		return Wrap<TWrapper>(p != null ? 0 : CommonHResults.ENoInterface, p);
 	}
 
-	/// <summary>
-	/// RCWオブジェクトをキャストしたCOMラッパーを保持する<see cref="ComResult{T}"/>を作成します。
-	/// COMインターフェイスのキャスト失敗時、戻り値は<see cref="CommonHResults.ENoInterface"/>を持ちます。
-	/// </summary>
-	/// <typeparam name="TWrapper"></typeparam>
-	/// <typeparam name="TInterface"></typeparam>
-	/// <param name="o"></param>
-	/// <returns></returns>
-	public static ComResult<TWrapper> Casted<TWrapper, TInterface>(IComUnknownWrapper o)
+	public static ComResult<TWrapper> EmptyComResult<TWrapper>(int hr = CommonHResults.ENoInterface)
 		where TWrapper : IComUnknownWrapper
-		where TInterface : class
 	{
-		var p = o.WrappedObject as TInterface;
-		return Wrap<TWrapper>(p != null ? 0 : CommonHResults.ENoInterface, p);
+		return new(
+			hr,
+			(TWrapper)typeof(TWrapper).GetConstructor([typeof(object)])!.Invoke([null]));
+	}
+
+	public static ComResult<TWrapper> NullableToComResult<TWrapper>(TWrapper? value)
+		where TWrapper : IComUnknownWrapper
+	{
+		return value != null ? new(0, value) : EmptyComResult<TWrapper>();
 	}
 }
 
@@ -132,5 +130,39 @@ public class ComUnknownWrapperBase<TIUnknown>(object? o) : IComUnknownWrapper
 		if (_obj != null)
 			Marshal.FinalReleaseComObject(_obj);
 		GC.SuppressFinalize(this);
+	}
+}
+
+/// <summary>
+/// <see cref="IComUnknownWrapper"/>や派生クラスの拡張メソッドを提供します。
+/// </summary>
+public static class IComUnknownWrapperExtensions
+{
+	/// <summary>
+	/// 保持するRCWオブジェクトを<typeparamref name="TInterface"/>にキャストして
+	/// ラッパーを<typeparamref name="TWrapper"/>に変換します。
+	/// <c>as</c>演算子と同様に変換失敗時は<c>null</c>を返します。
+	/// </summary>
+	public static TWrapper? As<TWrapper, TInterface>(this IComUnknownWrapper value)
+		where TWrapper : class, IComUnknownWrapper
+		where TInterface : class
+	{
+		return (TWrapper)typeof(TWrapper).GetConstructor([typeof(object)])!.Invoke([value.WrappedObject]);
+	}
+
+	/// <summary>
+	/// RCWオブジェクトをキャストしたCOMラッパーを保持する<see cref="ComResult{T}"/>を作成します。
+	/// COMインターフェイスのキャスト失敗時、戻り値は<see cref="CommonHResults.ENoInterface"/>を持ちます。
+	/// </summary>
+	/// <typeparam name="TWrapper"></typeparam>
+	/// <typeparam name="TInterface"></typeparam>
+	/// <param name="value"></param>
+	/// <returns></returns>
+	public static ComResult<TWrapper> Casted<TWrapper, TInterface>(this IComUnknownWrapper value)
+		where TWrapper : IComUnknownWrapper
+		where TInterface : class
+	{
+		var p = value.WrappedObject as TInterface;
+		return IComUnknownWrapper.Wrap<TWrapper>(p != null ? 0 : CommonHResults.ENoInterface, p);
 	}
 }

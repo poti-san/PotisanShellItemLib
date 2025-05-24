@@ -6,7 +6,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 
 public sealed class WuaUpdateHistoryEntryCollection(object? o) : ComUnknownWrapperBase<IUpdateHistoryEntryCollection>(o), IReadOnlyList<WuaUpdateHistoryEntry>
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	public ComResult<WuaUpdateHistoryEntry> GetAtNoThrow(int index)
 		=> new(_obj.get_Item(index, out var x), new(x));

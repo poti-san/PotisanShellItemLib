@@ -157,7 +157,7 @@ public enum NetConMediaType
 }
 
 /// <summary>
-/// 
+/// 接続のプロパティ。
 /// </summary>
 /// <remarks><c>NETCON_PROPERTIES</c></remarks>
 [StructLayout(LayoutKind.Sequential)]
@@ -171,6 +171,12 @@ public record class NetConProperties(
 	Guid ThisObjectClsid,
 	Guid UIObjectClsid)
 {
+	/// <summary>
+	/// <see cref="NETCON_PROPERTIES"/>へのポインタからオブジェクトを作成します。
+	/// 通常は内部でのみ使用します。
+	/// </summary>
+	/// <param name="p"></param>
+	/// <returns></returns>
 	public unsafe static NetConProperties GetAndFree(ref nint p)
 	{
 		[DllImport("netshell.dll")]

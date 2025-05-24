@@ -4,7 +4,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 
 public class WuaUpdateIdentity(object? o) : ComUnknownWrapperBase<IUpdateIdentity>(o)
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<int> RevisionNumberNoThrow

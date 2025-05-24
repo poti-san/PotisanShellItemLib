@@ -10,7 +10,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 /// <param name="o"></param>
 public class StringCollection(object? o) : ComUnknownWrapperBase<IStringCollection>(o), IList<string>, ICloneable
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	public static ComResult<StringCollection> CreateEmptyNoThrow()
 	{

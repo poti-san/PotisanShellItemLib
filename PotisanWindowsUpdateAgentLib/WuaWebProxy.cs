@@ -6,7 +6,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 
 public class WuaWebProxy(object? o) : ComUnknownWrapperBase<IWebProxy>(o)
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	public static ComResult<WuaWebProxy> CreateNoThrow()
 	{

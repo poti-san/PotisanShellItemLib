@@ -6,7 +6,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 
 public class WuaUpdateCollection(object? o) : ComUnknownWrapperBase<IUpdateCollection>(o), IList<WuaUpdate>, ICloneable
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	public static ComResult<WuaUpdateCollection> CreateEmptyNoThrow()
 	{

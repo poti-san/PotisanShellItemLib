@@ -10,22 +10,19 @@ using IServiceProvider = Com.ComTypes.IServiceProvider;
 /// </summary>
 public class ShellWindowDispatch(object? o) : ComDispatch(o)
 {
-	public ComResult<ComServiceProvider> AsServiceProviderNoThrow
-		=> _obj is IServiceProvider x ? new(CommonHResults.SOK, new(x)) : new(CommonHResults.ENoInterface, null!);
-
-	public ComServiceProvider AsServiceProvider
-		=> AsServiceProviderNoThrow.Value;
+	public ComServiceProvider? AsServiceProvider
+		=> this.As<ComServiceProvider, IServiceProvider>();
 
 	// TODO: AsWebBrowser
 
-	public ComResult<ShellBrowser> AsTopLevelShellBrowserNoThrow
-		=> AsServiceProviderNoThrow switch
+	public ComResult<ShellBrowser> QueryTopLevelShellBrowserNoThrow()
+		=> AsServiceProvider switch
 		{
-			{ Succeeded: true, ValueUnchecked: var provider }
+			{ } provider
 				=> provider.QueryServiceNoThrow<ShellBrowser, IShellBrowser>(ShellWindowServiceIDs.TopLevelShellBrowser),
-			{ HResult: var hr } => new(hr, null!),
+			_ => new(CommonHResults.ENoInterface, null!),
 		};
 
-	public ShellBrowser AsTopLevelShellBrowser
-		=> AsTopLevelShellBrowserNoThrow.Value;
+	public ShellBrowser QueryTopLevelShellBrowser()
+		=> QueryTopLevelShellBrowserNoThrow().Value;
 }

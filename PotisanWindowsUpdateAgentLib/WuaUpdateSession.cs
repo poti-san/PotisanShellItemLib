@@ -11,7 +11,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 /// </remarks>
 public sealed class WuaUpdateSession(object? o) : ComUnknownWrapperBase<IUpdateSession>(o)
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	public static ComResult<WuaUpdateSession> CreateNoThrow()
 	{

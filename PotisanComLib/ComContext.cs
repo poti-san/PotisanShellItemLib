@@ -59,8 +59,10 @@ public class ComContext(object? o) : ComUnknownWrapperBase<IContext>(o)
 public readonly struct ComContextProperty
 {
 	public readonly Guid PolicyId;
+#pragma warning disable CS0169
 	// 現在は使用されないので隠します。
 	private readonly uint Flags;
+#pragma warning restore CS0169
 	[MarshalAs(UnmanagedType.IUnknown)]
 	public readonly object Value;
 }

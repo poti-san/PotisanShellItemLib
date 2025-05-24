@@ -138,7 +138,8 @@ public class ShellBrowser(object? o) : OleWindow(o)
 	public ComResult<FolderView> ActiveShellViewAsFolderViewNoThrow
 		=> ActiveShellViewNoThrow switch
 		{
-			{ Succeeded: true, ValueUnchecked: var value } => value.AsFolderViewNoThrow,
+			{ Succeeded: true, ValueUnchecked: var value }
+				=> IComUnknownWrapper.NullableToComResult(value.AsFolderView),
 			{ HResult: var hr } => new(hr, new(null)),
 		};
 

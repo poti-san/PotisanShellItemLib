@@ -6,7 +6,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 
 public sealed class WuaUpdateExceptionCollection(object? o) : ComUnknownWrapperBase<IUpdateExceptionCollection>(o), IReadOnlyList<WuaUpdateException>
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	public ComResult<WuaUpdateException> GetAtNoThrow(int index)
 		=> new(_obj.get_Item(index, out var x), new(x));

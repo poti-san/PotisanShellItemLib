@@ -8,23 +8,9 @@ namespace Potisan.Windows.PropertySystem;
 /// </summary>
 public static class PropertyTypeExtensions
 {
-	public static ComResult<PropertyBag> AsPropertyBagNoThrow(this PropertyStore propStore)
-	{
-		if (propStore.WrappedObject is not IPropertyBag p)
-			return new(CommonHResults.ENoInterface, new(null));
-		return new(CommonHResults.SOK, new(p));
-	}
+	public static PropertyBag? AsPropertyBag(this PropertyStore propStore)
+		=> propStore.As<PropertyBag, IPropertyBag>();
 
-	public static PropertyBag AsPropertyBag(this PropertyStore propStore)
-		=> AsPropertyBagNoThrow(propStore).Value;
-
-	public static ComResult<PropertyStore> AsPropertyStoreNoThrow(this PropertyBag propBag)
-	{
-		if (propBag.WrappedObject is not IPropertyStore p)
-			return new(CommonHResults.ENoInterface, new(null));
-		return new(CommonHResults.SOK, new(p));
-	}
-
-	public static PropertyStore AsPropertyStore(this PropertyBag propBag)
-		=> AsPropertyStoreNoThrow(propBag).Value;
+	public static PropertyStore? AsPropertyStore(this PropertyBag propBag)
+		=> propBag.As<PropertyStore, IPropertyStore>();
 }

@@ -336,35 +336,23 @@ public class ShellItem(object? o) : ComUnknownWrapperBase<IShellItem>(o)
 	/// <summary>
 	/// アイテム名制限。
 	/// </summary>
-	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
-	public ComResult<ItemNameLimits> ItemNameLimitsNoThrow
-		=> BindToHandlerNoThrow<ItemNameLimits, IItemNameLimits>(BindHandlerID.SFObject);
-
 	/// <inheritdoc cref="ItemNameLimitsNoThrow"/>
-	public ItemNameLimits ItemNameLimits
-		=> ItemNameLimitsNoThrow.Value;
+	public ItemNameLimits? AsItemNameLimits
+		=> this.As<ItemNameLimits, IItemNameLimits>();
 
 	/// <summary>
 	/// 画像ファクトリ。
 	/// </summary>
-	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
-	public ComResult<ShellItemImageFactory> ImageFactoryNoThrow
-		=> IComUnknownWrapper.Wrap<ShellItemImageFactory>(0, WrappedObject);
-
 	/// <inheritdoc cref="ImageFactoryNoThrow"/>
-	public ShellItemImageFactory ImageFactory
-		=> ImageFactoryNoThrow.Value;
+	public ShellItemImageFactory? AsImageFactory
+		=> this.As<ShellItemImageFactory, IShellItemImageFactory>();
 
 	/// <summary>
 	/// 永続化用のアイテムID。
 	/// </summary>
-	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
-	public ComResult<PersistIDList> AsPersistIDListNoThrow
-		=> IComUnknownWrapper.Casted<PersistIDList, IPersistIDList>(this);
-
 	/// <inheritdoc cref="AsPersistIDListNoThrow"/>
-	public PersistIDList AsPersistIDList
-		=> AsPersistIDListNoThrow.Value;
+	public PersistIDList? AsPersistIDList
+		=> this.As<PersistIDList, IPersistIDList>();
 
 	/// <summary>
 	/// シェルアイテムの保持する親フォルダとアイテムのペア。

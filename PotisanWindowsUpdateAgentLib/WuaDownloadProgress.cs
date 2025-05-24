@@ -4,7 +4,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 
 public sealed class WuaDownloadProgress(object? o) : ComUnknownWrapperBase<IDownloadProgress>(o)
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<decimal> CurrentUpdateBytesDownloadedNoThrow

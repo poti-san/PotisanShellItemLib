@@ -1,5 +1,6 @@
 ﻿using System.Collections.Immutable;
 
+using Potisan.Windows.Com.Automation.ComTypes;
 using Potisan.Windows.Shell.Window.ComTypes;
 
 namespace Potisan.Windows.Shell.Window;
@@ -14,7 +15,7 @@ namespace Potisan.Windows.Shell.Window;
 /// </remarks>
 public class ShellWindows(object? o) : ComUnknownWrapperBase<IShellWindows>(o)
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	/// <summary>
 	/// シェルウィンドウコレクションのインターフェイスを作成します。
@@ -68,7 +69,7 @@ public class ShellWindows(object? o) : ComUnknownWrapperBase<IShellWindows>(o)
 			var c = Count;
 			for (int i = 0; i < c; i++)
 			{
-				if (Item(i).AsTopLevelShellBrowserNoThrow is { Succeeded: true, ValueUnchecked: var value })
+				if (Item(i).QueryTopLevelShellBrowserNoThrow() is { Succeeded: true, ValueUnchecked: var value })
 					yield return value;
 			}
 		}

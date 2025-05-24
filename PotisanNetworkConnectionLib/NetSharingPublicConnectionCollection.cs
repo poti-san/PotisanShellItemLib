@@ -9,8 +9,7 @@ namespace Potisan.Windows.Network;
 /// <remarks><c>INetSharingPublicConnectionCollection</c> COMインターフェイスのラッパーです。</remarks>
 public sealed class NetSharingPublicConnectionCollection(object? o) : ComUnknownWrapperBase<INetSharingPublicConnectionCollection>(o)
 {
-	public ComDispatch AsDispatch
-		=> new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	public ComResult<NetSharingPublicConnectionEnumerable> EnumerableNoThrow
 		=> new(_obj.get__NewEnum(out var x), new(x));

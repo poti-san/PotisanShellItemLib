@@ -6,6 +6,8 @@ namespace Potisan.Windows.Com.Automation;
 
 public class ComTypeInfo(object? o) : ComUnknownWrapperBase<ITypeInfo>(o)
 {
+	public ComTypeInfo2? AsTypeInfo2 => this.As<ComTypeInfo2, ITypeInfo2>();
+
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<ComTypeAttribute> TypeAttributeNoThrow
 	{

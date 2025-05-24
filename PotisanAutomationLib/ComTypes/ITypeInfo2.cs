@@ -1,9 +1,9 @@
 ﻿namespace Potisan.Windows.Com.Automation.ComTypes;
 
 [ComImport]
-[Guid("00020401-0000-0000-C000-000000000046")]
+[Guid("00020412-0000-0000-C000-000000000046")]
 [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-public interface ITypeInfo
+public interface ITypeInfo2 // ITypeInfo
 {
 	#region ITypeInfo
 
@@ -114,4 +114,99 @@ public interface ITypeInfo
 		nint pVarDesc);
 
 	#endregion ITypeInfo
+
+	[PreserveSig]
+	int GetTypeKind(
+		out ComTypeKind pTypeKind);
+
+	[PreserveSig]
+	int GetTypeFlags(
+		out uint pTypeFlags);
+
+	[PreserveSig]
+	int GetFuncIndexOfMemId(
+		ComMemberID memid,
+		ComInvokeKind invKind,
+		out uint pFuncIndex);
+
+	[PreserveSig]
+	int GetVarIndexOfMemId(
+		ComMemberID memid,
+		out uint pVarIndex);
+
+	[PreserveSig]
+	int GetCustData(
+		in Guid guid,
+		[MarshalAs(UnmanagedType.Struct)] out object? pVarVal);
+
+	[PreserveSig]
+	int GetFuncCustData(
+		uint index,
+		in Guid guid,
+		[MarshalAs(UnmanagedType.Struct)] out object? pVarVal);
+
+	[PreserveSig]
+	int GetParamCustData(
+		uint indexFunc,
+		uint indexParam,
+		in Guid guid,
+		[MarshalAs(UnmanagedType.Struct)] out object? pVarVal);
+
+	[PreserveSig]
+	int GetVarCustData(
+		uint index,
+		in Guid guid,
+		[MarshalAs(UnmanagedType.Struct)] out object? pVarVal);
+
+	[PreserveSig]
+	int GetImplTypeCustData(
+		uint index,
+		in Guid guid,
+		[MarshalAs(UnmanagedType.Struct)] out object? pVarVal);
+
+	[PreserveSig]
+	int GetDocumentation2(
+		ComMemberID memid,
+		Lcid lcid,
+		[MarshalAs(UnmanagedType.BStr)] out string? pbstrHelpString,
+		out uint pdwHelpStringContext,
+		[MarshalAs(UnmanagedType.BStr)] out string? pbstrHelpStringDll);
+
+	[PreserveSig]
+	int GetAllCustData(
+		out CUSTDATA pCustData);
+
+	[PreserveSig]
+	int GetAllFuncCustData(
+		uint index,
+		out CUSTDATA pCustData);
+
+	[PreserveSig]
+	int GetAllParamCustData(
+		uint indexFunc,
+		uint indexParam,
+		out CUSTDATA pCustData);
+
+	[PreserveSig]
+	int GetAllVarCustData(
+		uint index,
+		out CUSTDATA pCustData);
+
+	[PreserveSig]
+	int GetAllImplTypeCustData(
+		uint index,
+		out CUSTDATA pCustData);
+}
+
+public struct CUSTDATAITEM
+{
+	public Guid guid;
+	[MarshalAs(UnmanagedType.Struct)]
+	public object varValue;
+}
+
+public struct CUSTDATA
+{
+	public uint cCustData;
+	public nint prgCustData0;
 }

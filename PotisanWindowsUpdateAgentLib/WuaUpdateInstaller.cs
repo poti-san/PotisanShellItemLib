@@ -6,7 +6,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 
 public class WuaUpdateInstaller(object? o) : ComUnknownWrapperBase<IUpdateInstaller>(o)
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	public static ComResult<WuaUpdateInstaller> CreateNoThrow()
 	{

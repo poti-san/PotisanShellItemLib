@@ -4,7 +4,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 
 public sealed class WuaSearchJob(object? o) : ComUnknownWrapperBase<ISearchJob>(o)
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	/// <summary>
 	/// 作成時に指定したステートオブジェクトを取得します。

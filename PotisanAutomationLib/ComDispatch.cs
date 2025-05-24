@@ -83,6 +83,13 @@ public class ComDispatch(object? o) : ComUnknownWrapperBase<IDispatch>(o)
 	// ユーティリティ
 	//
 
+	public override string ToString()
+	{
+		if (HasTypeInfo)
+			return TypeInfo.Documentation.Name;
+		return base.ToString() ?? "";
+	}
+
 	// 本来は「GetPropertyValues」の方が良いかもしれませんが、
 	// 取得用メソッドと紛らわしいので「PropertyGetValues」としています。
 	public ImmutableDictionary<string, ComDispatchInvokeResult> PropertyGetValues

@@ -23,7 +23,7 @@ namespace Potisan.Windows.Diagnostics.Wua;
 /// </example>
 public class WuaUpdateServiceManager(object? o) : ComUnknownWrapperBase<IUpdateServiceManager>(o)
 {
-	public ComDispatch AsDispatch => new(_obj);
+	public ComDispatch? AsDispatch => this.As<ComDispatch, IDispatch>();
 
 	public static ComResult<WuaUpdateServiceManager> CreateNoThrow()
 	{
