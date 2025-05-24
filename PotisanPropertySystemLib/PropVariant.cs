@@ -1,12 +1,14 @@
 ﻿using System.Buffers.Binary;
 
+using Potisan.Windows.PropertySystem.ComTypes;
+
 namespace Potisan.Windows.PropertySystem;
 
 /// <summary>
 /// プロパティの値。
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
-public sealed class PropVariant : IDisposable
+public sealed class PropVariant : IDisposable, ICloneable
 {
 	public VarType vt;
 #pragma warning disable IDE0044, RCS1213, RCS1139
@@ -22,6 +24,8 @@ public sealed class PropVariant : IDisposable
 	public VarType Type => (VarType)((uint)vt & 0xfff);
 	public bool IsArray => (vt & VarType.Array) != 0;
 	public bool IsVector => (vt & VarType.Vector) != 0;
+
+	public PropVariant() { }
 
 	~PropVariant()
 	{
@@ -255,4 +259,19 @@ public sealed class PropVariant : IDisposable
 	//ByRef = 0x4000,
 	//Reserved = 0x8000,
 	//Illegal = 0xffff,
+
+	public ComResult<PropVariant> CloneNoThrow()
+	{
+		[DllImport("ole32.dll")]
+		static extern int PropVariantCopy([Out] PropVariant pvarDest, PropVariant pvarSrc);
+
+		var pv = new PropVariant();
+		return new(PropVariantCopy(pv, this), pv);
+	}
+
+	public PropVariant Clone()
+		=> CloneNoThrow().Value;
+
+	object ICloneable.Clone()
+		=> Clone();
 }
