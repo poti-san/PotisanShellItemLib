@@ -45,7 +45,7 @@ public class ShellItem2(object? o) : ShellItem(o)
 	{
 		get
 		{
-			using var ps = GetPropertyStore(PropertySystem.GetPropertyStoreFlag.Default);
+			using var ps = GetPropertyStore(GetPropertyStoreFlag.Default);
 			return ps.Keys;
 		}
 	}
@@ -61,7 +61,7 @@ public class ShellItem2(object? o) : ShellItem(o)
 	{
 		get
 		{
-			using var ps = GetPropertyStore(PropertySystem.GetPropertyStoreFlag.Default);
+			using var ps = GetPropertyStore(GetPropertyStoreFlag.Default);
 			return ps.Items;
 		}
 	}

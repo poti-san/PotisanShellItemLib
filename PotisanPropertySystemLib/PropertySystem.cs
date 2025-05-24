@@ -1,4 +1,6 @@
-﻿using Potisan.Windows.PropertySystem.ComTypes;
+﻿using System.Collections.Immutable;
+
+using Potisan.Windows.PropertySystem.ComTypes;
 
 namespace Potisan.Windows.PropertySystem;
 
@@ -83,6 +85,7 @@ public class PropertySystem(object? o) : ComUnknownWrapperBase<IPropertySystem>(
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	public ComResult<PropertyDescriptionList> AllPropertyDescriptionListNoThrow
 		=> GetPropertyDescriptionListNoThrow(PropDescEnumFilter.All);
+
 	/// <inheritdoc cref="AllPropertyDescriptionListNoThrow"/>
 	public PropertyDescriptionList AllPropertyDescriptionList
 		=> GetPropertyDescriptionList(PropDescEnumFilter.All);
@@ -158,11 +161,13 @@ public class PropertySystem(object? o) : ComUnknownWrapperBase<IPropertySystem>(
 	/// <summary>
 	/// システム及び非システムプロパティキーのイテレーター。
 	/// </summary>
-	public IEnumerable<PropertyKey> AllPropertyKeys
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	public IEnumerable<PropertyKey> AllPropertyKeyEnumerable
 	{
 		get
 		{
-			using var propdescs = AllPropertyDescriptionList;
+			// 遅延評価のためにusingは使いません。
+			var propdescs = AllPropertyDescriptionList;
 			return [.. propdescs.Items.Select(propdesc =>
 			{
 				using (propdesc)
@@ -172,15 +177,20 @@ public class PropertySystem(object? o) : ComUnknownWrapperBase<IPropertySystem>(
 			})];
 		}
 	}
+
+	public ImmutableArray<PropertyKey> AllPropertyKeys
+		=> [.. AllPropertyKeyEnumerable];
 
 	/// <summary>
 	/// システムプロパティキーのイテレーター。
 	/// </summary>
-	public IEnumerable<PropertyKey> SystemPropertyKeys
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	public IEnumerable<PropertyKey> SystemPropertyKeyEnumerable
 	{
 		get
 		{
-			using var propdescs = SystemPropertyDescriptionList;
+			// 遅延評価のためにusingは使いません。
+			var propdescs = SystemPropertyDescriptionList;
 			return [.. propdescs.Items.Select(propdesc =>
 			{
 				using (propdesc)
@@ -191,14 +201,19 @@ public class PropertySystem(object? o) : ComUnknownWrapperBase<IPropertySystem>(
 		}
 	}
 
+	public ImmutableArray<PropertyKey> SystemPropertyKeys
+		=> [.. SystemPropertyKeyEnumerable];
+
 	/// <summary>
 	/// 非システムプロパティキーのイテレーター。
 	/// </summary>
-	public IEnumerable<PropertyKey> NonSystemPropertyKeys
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	public IEnumerable<PropertyKey> NonSystemPropertyKeyEnumerable
 	{
 		get
 		{
-			using var propdescs = NonSystemPropertyDescriptionList;
+			// 遅延評価のためにusingは使いません。
+			var propdescs = NonSystemPropertyDescriptionList;
 			return [.. propdescs.Items.Select(propdesc =>
 			{
 				using (propdesc)
@@ -208,4 +223,7 @@ public class PropertySystem(object? o) : ComUnknownWrapperBase<IPropertySystem>(
 			})];
 		}
 	}
+
+	public ImmutableArray<PropertyKey> NonSystemPropertyKeys
+		=> [.. NonSystemPropertyKeyEnumerable];
 }
