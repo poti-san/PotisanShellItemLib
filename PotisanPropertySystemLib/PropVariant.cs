@@ -1,14 +1,12 @@
 ﻿using System.Buffers.Binary;
 
-using Potisan.Windows.PropertySystem.ComTypes;
-
 namespace Potisan.Windows.PropertySystem;
 
 /// <summary>
 /// プロパティの値。
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
-public sealed class PropVariant : IDisposable, ICloneable
+public sealed class PropVariant : IDisposable, ICloneable, IEquatable<PropVariant>, IComparable<PropVariant>
 {
 	public VarType vt;
 #pragma warning disable IDE0044, RCS1213, RCS1139
@@ -274,4 +272,88 @@ public sealed class PropVariant : IDisposable, ICloneable
 
 	object ICloneable.Clone()
 		=> Clone();
+
+	public bool Equals(PropVariant? other)
+		=> CompareTo(other) == 0;
+
+	public int CompareTo(PropVariant? other, PROPVAR_COMPARE_UNIT compareUnit, PROPVAR_COMPARE_FLAGS flags)
+	{
+		[DllImport("propsys.dll")]
+		static extern int PropVariantCompareEx(
+			PropVariant? propvar1,
+			PropVariant? propvar2,
+			PROPVAR_COMPARE_UNIT unit,
+			PROPVAR_COMPARE_FLAGS flags);
+
+		return PropVariantCompareEx(this, other, compareUnit, flags);
+	}
+
+	public int CompareTo(PropVariant? other)
+		=> CompareTo(other, PROPVAR_COMPARE_UNIT.PVCU_DEFAULT, PROPVAR_COMPARE_FLAGS.PVCF_DEFAULT);
+
+	public override bool Equals(object? obj)
+		=> obj is PropVariant pv && Equals(pv);
+
+	public static bool operator ==(PropVariant left, PropVariant right)
+	{
+		if (left is null)
+			return right is null;
+
+		return left.Equals(right);
+	}
+
+	public static bool operator !=(PropVariant left, PropVariant right)
+	{
+		return !(left == right);
+	}
+
+	public static bool operator <(PropVariant left, PropVariant right)
+	{
+		return left is null ? right is not null : left.CompareTo(right) < 0;
+	}
+
+	public static bool operator <=(PropVariant left, PropVariant right)
+	{
+		return left is null || left.CompareTo(right) <= 0;
+	}
+
+	public static bool operator >(PropVariant left, PropVariant right)
+	{
+		return left is not null && left.CompareTo(right) > 0;
+	}
+
+	public static bool operator >=(PropVariant left, PropVariant right)
+	{
+		return left is null ? right is null : left.CompareTo(right) >= 0;
+	}
+}
+
+/// <summary>
+/// 
+/// </summary>
+/// <remarks><c>PROPVAR_COMPARE_UNIT</c></remarks>
+public enum PROPVAR_COMPARE_UNIT
+{
+	PVCU_DEFAULT = 0,
+	PVCU_SECOND = 1,
+	PVCU_MINUTE = 2,
+	PVCU_HOUR = 3,
+	PVCU_DAY = 4,
+	PVCU_MONTH = 5,
+	PVCU_YEAR = 6
+}
+
+/// <summary>
+/// 
+/// </summary>
+/// <remarks><c>PROPVAR_COMPARE_FLAGS</c></remarks>
+public enum PROPVAR_COMPARE_FLAGS
+{
+	PVCF_DEFAULT = 0x00000000,
+	PVCF_TREATEMPTYASGREATERTHAN = 0x00000001,
+	PVCF_USESTRCMP = 0x00000002,
+	PVCF_USESTRCMPC = 0x00000004,
+	PVCF_USESTRCMPI = 0x00000008,
+	PVCF_USESTRCMPIC = 0x00000010,
+	PVCF_DIGITSASNUMBERS_CASESENSITIVE = 0x00000020,
 }

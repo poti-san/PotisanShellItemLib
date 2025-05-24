@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Immutable;
 
 using Potisan.Windows.PropertySystem.ComTypes;
 
@@ -11,9 +12,7 @@ namespace Potisan.Windows.PropertySystem;
 /// <remarks>
 /// <c>IPropertyStore</c> COMインターフェイスのラッパーです。
 /// </remarks>
-public class PropertyStore(object? o) :
-	ComUnknownWrapperBase<IPropertyStore>(o),
-IReadOnlyDictionary<PropertyKey, PropVariant>
+public class PropertyStore(object? o) : ComUnknownWrapperBase<IPropertyStore>(o), IReadOnlyDictionary<PropertyKey, PropVariant>
 {
 	/// <summary>
 	/// メモリ内プロパティストアを作成します。
@@ -140,9 +139,11 @@ IReadOnlyDictionary<PropertyKey, PropVariant>
 		=> Items.ToDictionary();
 
 	/// <summary>
-	/// プロパティキーのイテレーター。
+	/// プロパティキーのイテレーターを取得します。
 	/// </summary>
-	public IEnumerable<PropertyKey> Keys
+	/// <remarks>プロパティストア自体が解放された場合は無効化されることに注意してください。</remarks>
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	public IEnumerable<PropertyKey> KeyEnumerable
 	{
 		get
 		{
@@ -153,9 +154,17 @@ IReadOnlyDictionary<PropertyKey, PropVariant>
 	}
 
 	/// <summary>
+	/// プロパティキーの配列を取得します。
+	/// </summary>
+	public ImmutableArray<PropertyKey> Keys
+		=> [.. KeyEnumerable];
+
+	/// <summary>
 	/// プロパティ値のイテレーター。
 	/// </summary>
-	public IEnumerable<PropVariant> Values
+	/// <remarks>プロパティストア自体が解放された場合は無効化されることに注意してください。</remarks>
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	public IEnumerable<PropVariant> ValueEnumerable
 	{
 		get
 		{
@@ -165,10 +174,15 @@ IReadOnlyDictionary<PropertyKey, PropVariant>
 		}
 	}
 
+	public ImmutableArray<PropVariant> Values
+		=> [.. ValueEnumerable];
+
 	/// <summary>
 	/// プロパティキーと値ペアのイテレーター。
 	/// </summary>
-	public IEnumerable<KeyValuePair<PropertyKey, PropVariant>> Items
+	/// <remarks>プロパティストア自体が解放された場合は無効化されることに注意してください。</remarks>
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	public IEnumerable<KeyValuePair<PropertyKey, PropVariant>> ItemEnumerable
 	{
 		get
 		{
@@ -180,6 +194,12 @@ IReadOnlyDictionary<PropertyKey, PropVariant>
 			}
 		}
 	}
+
+	/// <summary>
+	/// プロパティキーと値ペアの配列。
+	/// </summary>
+	public ImmutableArray<KeyValuePair<PropertyKey, PropVariant>> Items
+		=> [.. ItemEnumerable];
 
 	/// <summary>
 	/// 与えられたプロパティキーをプロパティストアに有効な値が設定されているかでフィルター処理します。
@@ -229,10 +249,10 @@ IReadOnlyDictionary<PropertyKey, PropVariant>
 	}
 
 	IEnumerator<KeyValuePair<PropertyKey, PropVariant>> IEnumerable<KeyValuePair<PropertyKey, PropVariant>>.GetEnumerator()
-		=> Items.GetEnumerator();
+		=> ItemEnumerable.GetEnumerator();
 
 	IEnumerator IEnumerable.GetEnumerator()
-		=> Items.GetEnumerator();
+		=> ItemEnumerable.GetEnumerator();
 }
 
 /// <summary>

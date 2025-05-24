@@ -41,7 +41,7 @@ public class ShellItem2(object? o) : ShellItem(o)
 	/// このプロパティは内部でプロパティストアを作成します。
 	/// 繰り返し使用する場合はキャッシュやプロパティストア自体の使用を検討してください。
 	/// </remarks>
-	public IEnumerable<PropertyKey> PropertyKeys
+	public ImmutableArray<PropertyKey> PropertyKeys
 	{
 		get
 		{
@@ -57,7 +57,7 @@ public class ShellItem2(object? o) : ShellItem(o)
 	/// このプロパティは内部でプロパティストアを作成します。
 	/// 繰り返し使用する場合はキャッシュやプロパティストア自体の使用を検討してください。
 	/// </remarks>
-	public IEnumerable<KeyValuePair<PropertyKey, PropVariant>> Properties
+	public ImmutableArray<KeyValuePair<PropertyKey, PropVariant>> Properties
 	{
 		get
 		{
