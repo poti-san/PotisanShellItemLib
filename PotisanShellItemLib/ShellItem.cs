@@ -336,9 +336,13 @@ public class ShellItem(object? o) : ComUnknownWrapperBase<IShellItem>(o)
 	/// <summary>
 	/// アイテム名制限。
 	/// </summary>
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+	public ComResult<ItemNameLimits> ItemNameLimitsNoThrow
+		=> BindToHandlerNoThrow<ItemNameLimits, IItemNameLimits>(BindHandlerID.SFObject);
+
 	/// <inheritdoc cref="ItemNameLimitsNoThrow"/>
-	public ItemNameLimits? AsItemNameLimits
-		=> this.As<ItemNameLimits, IItemNameLimits>();
+	public ItemNameLimits ItemNameLimits
+		=> ItemNameLimitsNoThrow.Value;
 
 	/// <summary>
 	/// 画像ファクトリ。

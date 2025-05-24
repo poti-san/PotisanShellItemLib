@@ -10,7 +10,7 @@ namespace Potisan.Windows.Shell;
 ///<![CDATA[using Potisan.Windows.Shell;
 ///
 ///using var desktop = ShellItem2.CreateKnownFolderItem(KnownFolderID.Desktop);
-///using var nameLimits = desktop.AsItemNameLimits;
+///using var nameLimits = desktop.ItemNameLimits;
 ///
 ///var maxLen = nameLimits.GetMaxLength("");
 ///var(validChars, invalidChars) = nameLimits.ValidCharacters;

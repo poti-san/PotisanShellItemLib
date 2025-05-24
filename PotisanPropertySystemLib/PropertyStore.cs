@@ -157,7 +157,15 @@ public class PropertyStore(object? o) : ComUnknownWrapperBase<IPropertyStore>(o)
 	/// プロパティキーの配列を取得します。
 	/// </summary>
 	public ImmutableArray<PropertyKey> Keys
-		=> [.. KeyEnumerable];
+	{
+		get
+		{
+			var array = new PropertyKey[Count];
+			for (uint i = 0; i < array.Length; i++)
+				array[i] = GetKey(i);
+			return ImmutableCollectionsMarshal.AsImmutableArray(array);
+		}
+	}
 
 	/// <summary>
 	/// プロパティ値のイテレーター。
@@ -175,7 +183,15 @@ public class PropertyStore(object? o) : ComUnknownWrapperBase<IPropertyStore>(o)
 	}
 
 	public ImmutableArray<PropVariant> Values
-		=> [.. ValueEnumerable];
+	{
+		get
+		{
+			var array = new PropVariant[Count];
+			for (uint i = 0; i < array.Length; i++)
+				array[i] = GetValue(i);
+			return ImmutableCollectionsMarshal.AsImmutableArray(array);
+		}
+	}
 
 	/// <summary>
 	/// プロパティキーと値ペアのイテレーター。
@@ -199,7 +215,18 @@ public class PropertyStore(object? o) : ComUnknownWrapperBase<IPropertyStore>(o)
 	/// プロパティキーと値ペアの配列。
 	/// </summary>
 	public ImmutableArray<KeyValuePair<PropertyKey, PropVariant>> Items
-		=> [.. ItemEnumerable];
+	{
+		get
+		{
+			var array = new KeyValuePair<PropertyKey, PropVariant>[Count];
+			for (uint i = 0; i < array.Length; i++)
+			{
+				var key = GetKey(i);
+				array[i] = new(key, GetValue(key));
+			}
+			return ImmutableCollectionsMarshal.AsImmutableArray(array);
+		}
+	}
 
 	/// <summary>
 	/// 与えられたプロパティキーをプロパティストアに有効な値が設定されているかでフィルター処理します。
