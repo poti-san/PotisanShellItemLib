@@ -225,6 +225,9 @@ public class ComStream(object? o) : ComUnknownWrapperBase<IStream>(o), ICloneabl
 			Position = curPos;
 		}
 	}
+
+	public static ComStream CreateOnStream(Stream stream)
+		=> new(new IStreamOnStream(stream));
 }
 
 /// <summary>

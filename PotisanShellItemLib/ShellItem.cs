@@ -12,7 +12,7 @@ namespace Potisan.Windows.Shell;
 /// <param name="o">RCWオブジェクト。</param>
 /// <remarks>
 /// <para><c>IShellItem</c> COMインターフェイスのラッパーです。</para>
-/// <para><see cref="ShellItem.CreateKnownFolderItem(in Guid, Potisan.Windows.Shell.KnownFolderFlag)"/>等で作成できます。</para>
+/// <para><see cref="CreateKnownFolderItem(in Guid, KnownFolderFlag)"/>等で作成できます。</para>
 /// </remarks>
 [DebuggerDisplay("{NormalDisplayName}")]
 public class ShellItem(object? o) : ComUnknownWrapperBase<IShellItem>(o)
@@ -303,7 +303,8 @@ public class ShellItem(object? o) : ComUnknownWrapperBase<IShellItem>(o)
 	/// サブアイテム。ファイルシステムオブジェクトと非ファイルシステムオブジェクトを含みます。
 	/// </summary>
 	/// <inheritdoc cref="ItemsNoThrow"/>
-	public ImmutableArray<ShellItem> Items => [.. ItemEnumerable];
+	public ImmutableArray<ShellItem> Items
+		=> [.. ItemEnumerable];
 
 	/// <summary>
 	/// サブアイテム。ファイルシステムオブジェクトのみ含みます。

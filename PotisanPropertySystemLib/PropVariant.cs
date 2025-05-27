@@ -1,4 +1,5 @@
 ﻿using System.Buffers.Binary;
+using System.Globalization;
 
 namespace Potisan.Windows.PropertySystem;
 
@@ -72,6 +73,18 @@ public sealed class PropVariant : IDisposable, ICloneable, IEquatable<PropVarian
 	public Span<byte> DataSpan
 		=> MemoryMarshal.AsBytes(MemoryMarshal.CreateSpan(
 			ref _dummy1, Marshal.SizeOf<PropVariant>() - (int)Marshal.OffsetOf<PropVariant>(nameof(_dummy1))));
+
+	public ReadOnlySpan<byte> DataReadOnlySpan
+		=> MemoryMarshal.AsBytes(MemoryMarshal.CreateReadOnlySpan(
+			ref _dummy1, Marshal.SizeOf<PropVariant>() - (int)Marshal.OffsetOf<PropVariant>(nameof(_dummy1))));
+
+	public Span<byte> VTAndDataSpan
+		=> MemoryMarshal.AsBytes(MemoryMarshal.CreateSpan(
+			ref vt, (int)Marshal.OffsetOf<PropVariant>(nameof(_dummy1))));
+
+	public ReadOnlySpan<byte> VTAndDataReadOnlySpan
+		=> MemoryMarshal.AsBytes(MemoryMarshal.CreateReadOnlySpan(
+			ref vt, (int)Marshal.OffsetOf<PropVariant>(nameof(_dummy1))));
 
 	public static PropVariant InitNoData(VarType vt)
 	{
@@ -326,6 +339,9 @@ public sealed class PropVariant : IDisposable, ICloneable, IEquatable<PropVarian
 	{
 		return left is null ? right is null : left.CompareTo(right) >= 0;
 	}
+
+	public override int GetHashCode()
+		=> VTAndDataReadOnlySpan.ToArray().GetHashCode();
 }
 
 /// <summary>
