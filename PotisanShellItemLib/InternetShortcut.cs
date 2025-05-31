@@ -1,4 +1,6 @@
 ﻿using Potisan.Windows.Com.ComTypes;
+using Potisan.Windows.PropertySystem;
+using Potisan.Windows.PropertySystem.ComTypes;
 using Potisan.Windows.Shell.ComTypes;
 
 namespace Potisan.Windows.Shell;
@@ -122,6 +124,9 @@ public sealed class InternetShortcut(object? o) : ComUnknownWrapperBase<IUniform
 
 	public ShellLink? AsShellLink
 		=> this.As<ShellLink, IShellLinkW>();
+
+	public PropertySetStorage? AsPropertySetStorage
+		=> this.As<PropertySetStorage, IPropertySetStorage>();
 }
 
 [Flags]
