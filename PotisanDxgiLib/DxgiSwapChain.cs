@@ -3,6 +3,10 @@ using Potisan.Windows.Dxgi.ComTypes;
 
 namespace Potisan.Windows.Dxgi;
 
+/// <summary>
+/// レンダリングデータを出力する前の１つ以上のサーフェス。
+/// </summary>
+/// <param name="o"></param>
 public class DxgiSwapChain(object? o) : ComUnknownWrapperBase<IDXGISwapChain>(o)
 {
 	public const int MaxBuffers = 16;

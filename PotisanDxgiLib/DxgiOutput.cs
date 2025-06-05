@@ -3,6 +3,10 @@ using Potisan.Windows.Dxgi.ComTypes;
 
 namespace Potisan.Windows.Dxgi;
 
+/// <summary>
+/// アダプター出力デバイス（モニター等）。
+/// </summary>
+/// <param name="o"></param>
 public class DxgiOutput(object? o) : ComUnknownWrapperBase<IDXGIOutput>(o)
 {
 	public DxgiObject DxgiObject { get; } = new(o);

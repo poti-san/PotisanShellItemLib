@@ -2,6 +2,11 @@
 
 namespace Potisan.Windows.MSIme;
 
+/// <summary>
+/// IME言語処理サービス。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks><see cref="MSIme"/>クラスを使って作成できます。</remarks>
 public class FELanguage(object? o) : ComUnknownWrapperBase<IFELanguage>(o)
 {
 	public ComResult OpenNoThrow()

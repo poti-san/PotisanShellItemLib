@@ -31,7 +31,7 @@ public class WuaUpdateServiceCollection(object? o) : ComUnknownWrapperBase<IUpda
 	public IEnumerator<WuaUpdateService> GetEnumerator()
 	{
 		Marshal.ThrowExceptionForHR(_obj.get__NewEnum(out var oenum));
-		return new VariantEnumerable(oenum).Select(o => new WuaUpdateService(o)).GetEnumerator();
+		return new ComVariantEnumerable(oenum).Select(o => new WuaUpdateService(o)).GetEnumerator();
 	}
 
 	IEnumerator IEnumerable.GetEnumerator()

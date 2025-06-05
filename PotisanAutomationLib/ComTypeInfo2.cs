@@ -4,6 +4,10 @@ using Potisan.Windows.Com.Automation.ComTypes;
 
 namespace Potisan.Windows.Com.Automation;
 
+/// <summary>
+/// タイプライブラリの型情報。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
 public class ComTypeInfo2(object? o) : ComTypeInfo(o)
 {
 	private new readonly ITypeInfo2 _obj = o != null ? (ITypeInfo2)o : null!;

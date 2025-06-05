@@ -9,6 +9,10 @@ using Potisan.Windows.Com.Automation.ComTypes;
 
 namespace Potisan.Windows.Com.Automation;
 
+/// <summary>
+/// タイプライブラリの型属性。
+/// </summary>
+/// <param name="source"></param>
 public sealed class ComTypeAttribute(in TYPEATTR source)
 {
 	public Guid Guid { get; } = source.guid;
@@ -31,12 +35,21 @@ public sealed class ComTypeAttribute(in TYPEATTR source)
 	public ComIdlDescription TypeIdleDesc { get; } = new(source.idldescType);
 }
 
+/// <summary>
+/// タイプライブラリのIDL記述。
+/// </summary>
+/// <param name="source"></param>
 public sealed class ComIdlDescription(in IDLDESC source)
 {
 	public nuint Reserved { get; } = source.dwReserved;
 	public ComIdlFlag Flags { get; } = source.wIDLFlags;
 }
 
+
+/// <summary>
+/// タイプライブラリの型記述。
+/// </summary>
+/// <param name="source"></param>
 public sealed class ComTypeDescription(in TYPEDESC source)
 {
 	public ComTypeDescription? ArraySubTypeDescription { get; } = source.vt == VarType.SafeArray && source.u.lptdesc != 0
@@ -49,7 +62,7 @@ public sealed class ComTypeDescription(in TYPEDESC source)
 }
 
 /// <summary>
-/// 関数の説明。
+/// タイプライブラリの関数記述。
 /// </summary>
 /// <remarks>
 /// 詳細は<seealso href="https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-oaut/d3349d25-e11d-4095-ba86-de3fda178c4e">公開仕様</seealso>を確認してください。
@@ -99,18 +112,30 @@ public sealed class ComFunctionDescription
 	}
 }
 
+/// <summary>
+/// タイプライブラリの要素記述。
+/// </summary>
+/// <param name="source"></param>
 public sealed class ComElementDescription(in ELEMDESC source)
 {
 	public ComTypeDescription? TypeDesc { get; } = new(source.tdesc);
 	public ComParameterDescription? ParamDesc { get; } = new(source.paramdesc);
 }
 
+/// <summary>
+/// タイプライブラリの引数記述。
+/// </summary>
+/// <param name="source"></param>
 public sealed class ComParameterDescription(in PARAMDESC source)
 {
 	public ComParameterFlag ParamFlags { get; } = source.wParamFlags;
 	public object? DefaultValue { get; } = source.pparamdescex != 0 ? Marshal.PtrToStructure<PARAMDESCEX>(source.pparamdescex).varDefaultValue : null;
 }
 
+/// <summary>
+/// タイプライブラリの変数記述。
+/// </summary>
+/// <param name="source"></param>
 public sealed class ComVariableDescription(in VARDESC source)
 {
 	public ComMemberID MemberID { get; } = source.memid;
@@ -122,6 +147,9 @@ public sealed class ComVariableDescription(in VARDESC source)
 	public ComVariableKind VarType { get; } = source.varkind;
 }
 
+/// <summary>
+/// タイプライブラリの配列記述。
+/// </summary>
 public sealed class ComArrayDescription
 {
 	public ComTypeDescription ElementTypeDesc { get; }

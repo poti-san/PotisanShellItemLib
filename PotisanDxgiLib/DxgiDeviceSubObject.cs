@@ -3,6 +3,10 @@ using Potisan.Windows.Dxgi.ComTypes;
 
 namespace Potisan.Windows.Dxgi;
 
+/// <summary>
+/// DXGIデバイスに関連付けられているオブジェクト。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
 public class DxgiDeviceSubObject(object? o) : DxgiObject(o)
 {
 	private new readonly IDXGIDeviceSubObject _obj = o != null ? (IDXGIDeviceSubObject)o : null!;

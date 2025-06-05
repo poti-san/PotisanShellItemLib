@@ -4,6 +4,11 @@ using Potisan.Windows.MSIme.ComTypes;
 
 namespace Potisan.Windows.MSIme;
 
+/// <summary>
+/// IME基本機能の制御。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
+/// <remarks><see cref="MSIme"/>クラスを使って作成できます。</remarks>
 public class FECommon(object? o) : ComUnknownWrapperBase<IFECommon>(o)
 {
 	[DebuggerBrowsable(DebuggerBrowsableState.Never)]

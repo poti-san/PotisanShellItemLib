@@ -24,7 +24,7 @@ public sealed class WuaUpdateExceptionCollection(object? o) : ComUnknownWrapperB
 	public IEnumerator<WuaUpdateException> GetEnumerator()
 	{
 		Marshal.ThrowExceptionForHR(_obj.get__NewEnum(out var oenum));
-		return new VariantEnumerable(oenum).Select(o => new WuaUpdateException(o)).GetEnumerator();
+		return new ComVariantEnumerable(oenum).Select(o => new WuaUpdateException(o)).GetEnumerator();
 	}
 
 	IEnumerator IEnumerable.GetEnumerator()

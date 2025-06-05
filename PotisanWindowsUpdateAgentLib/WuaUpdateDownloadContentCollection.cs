@@ -24,7 +24,7 @@ public class WuaUpdateDownloadContentCollection(object? o) : ComUnknownWrapperBa
 	public IEnumerator<WuaUpdateDownloadContent> GetEnumerator()
 	{
 		Marshal.ThrowExceptionForHR(_obj.get__NewEnum(out var oenum));
-		return new VariantEnumerable(oenum).Select(o => new WuaUpdateDownloadContent(o)).GetEnumerator();
+		return new ComVariantEnumerable(oenum).Select(o => new WuaUpdateDownloadContent(o)).GetEnumerator();
 	}
 
 	IEnumerator IEnumerable.GetEnumerator()

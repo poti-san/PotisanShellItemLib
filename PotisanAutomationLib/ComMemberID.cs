@@ -1,5 +1,9 @@
 ﻿namespace Potisan.Windows.Com.Automation;
 
+/// <summary>
+/// COM型メンバーの識別子。
+/// </summary>
+/// <param name="value"></param>
 public readonly struct ComMemberID(int value)
 {
 	public int Value { get; } = value;

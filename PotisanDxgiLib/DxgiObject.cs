@@ -1,10 +1,12 @@
-﻿using System.Runtime.CompilerServices;
-
-using Potisan.Windows.Com;
+﻿using Potisan.Windows.Com;
 using Potisan.Windows.Dxgi.ComTypes;
 
 namespace Potisan.Windows.Dxgi;
 
+/// <summary>
+/// DXGIデバイス。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
 public class DxgiObject(object? o) : ComUnknownWrapperBase<IDXGIObject>(o)
 {
 	public ComResult SetPrivateDataNoThrow(in Guid name, ReadOnlySpan<byte> Data)

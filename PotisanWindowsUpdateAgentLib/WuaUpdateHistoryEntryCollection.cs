@@ -24,7 +24,7 @@ public sealed class WuaUpdateHistoryEntryCollection(object? o) : ComUnknownWrapp
 	public IEnumerator<WuaUpdateHistoryEntry> GetEnumerator()
 	{
 		Marshal.ThrowExceptionForHR(_obj.get__NewEnum(out var oenum));
-		return new VariantEnumerable(oenum).Select(o => new WuaUpdateHistoryEntry(o)).GetEnumerator();
+		return new ComVariantEnumerable(oenum).Select(o => new WuaUpdateHistoryEntry(o)).GetEnumerator();
 	}
 
 	IEnumerator IEnumerable.GetEnumerator()

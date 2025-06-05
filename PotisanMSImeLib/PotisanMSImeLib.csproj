@@ -9,7 +9,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Using Include="Potisan.Windows.Com" />
+		<Using Include="Potisan.Windows.Com" />
 	</ItemGroup>
 
 </Project>

@@ -3,6 +3,10 @@ using Potisan.Windows.Dxgi.ComTypes;
 
 namespace Potisan.Windows.Dxgi;
 
+/// <summary>
+/// DXGIオブジェクトの生成オブジェクト。
+/// </summary>
+/// <param name="o">RCWオブジェクト。</param>
 public class DxgiFactory(object? o) : ComUnknownWrapperBase<IDXGIFactory>(o)
 {
 	public DxgiObject DxgiObject { get; } = new(o);

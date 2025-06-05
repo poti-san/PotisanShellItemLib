@@ -5,7 +5,7 @@ using Potisan.Windows.MSIme.ComTypes;
 namespace Potisan.Windows.MSIme;
 
 /// <summary>
-/// ユーザー辞書。
+/// IMEユーザー辞書。
 /// </summary>
 /// <param name="o">RCWオブジェクト。</param>
 /// <example>
@@ -27,8 +27,19 @@ namespace Potisan.Windows.MSIme;
 /// Console.WriteLine();]]>
 /// </code>
 /// </example>
+/// <remarks><see cref="MSIme"/>クラスを使って作成できます。</remarks>
 public class FEDictionary(object? o) : ComUnknownWrapperBase<IFEDictionary>(o)
 {
+	/// <summary>
+	/// コメントの最大バイト長。UTF-16の場合は半分です。
+	/// </summary>
+	public const int MaxCommentByteLength = 256;
+
+	/// <summary>
+	/// プライベートユニコード文字。
+	/// </summary>
+	public const char PrivateUnicodeChar1 = '\uE000';
+
 	[UnmanagedFunctionPointer(CallingConvention.Winapi)]
 	[return: MarshalAs(UnmanagedType.Bool)]
 	private delegate bool CreateIFEDictionaryInstanceType([MarshalAs(UnmanagedType.IUnknown)] out object? ppv);
@@ -45,10 +56,10 @@ public class FEDictionary(object? o) : ComUnknownWrapperBase<IFEDictionary>(o)
 	public void Close()
 		=> CloseNoThrow().ThrowIfError();
 
-	public ComResult<(ImeUserDictionaryFileHeader Header, ImeDictionaryFormat Format, int Type)> GetHeaderNoThrow(string dictionaryPath)
-		=> new(_obj.GetHeader(dictionaryPath, out var x1, out var x2, out var x3), (x1, x2, x3));
+	public ComResult<(ImeUserDictionaryFileHeader Header, ImeDictionaryFormat Format, ImeDictionaryType Type)> GetHeaderNoThrow(string dictionaryPath)
+		=> new(_obj.GetHeader(dictionaryPath, out var x1, out var x2, out var x3), (x1, x2, (ImeDictionaryType)x3));
 
-	public (ImeUserDictionaryFileHeader Header, ImeDictionaryFormat Format, int Type) GetHeader(string dictionaryPath)
+	public (ImeUserDictionaryFileHeader Header, ImeDictionaryFormat Format, ImeDictionaryType Type) GetHeader(string dictionaryPath)
 		=> GetHeaderNoThrow(dictionaryPath).Value;
 
 	public ComResult DisplayPropertyNoThrow(nint windowHandle = 0)
@@ -555,4 +566,64 @@ public struct ImeWord : IDisposable
 		cbComment = 0;
 		pvComment = 0;
 	}
+}
+
+[Flags]
+public enum ImeWordPos : uint
+{
+	None = 0x00000000,
+	Noun = 0x00000001,
+	Verb = 0x00000002,
+	Adjective = 0x00000004,
+	AdjectiveVerb = 0x00000008,
+	Adverb = 0x00000010,
+	Adnoun = 0x00000020,
+	Conjunction = 0x00000040,
+	Interjection = 0x00000080,
+	Independent = 0x000000ff,
+	InflectionalSuffix = 0x00000100,
+	Prefix = 0x00000200,
+	Suffix = 0x00000400,
+	Affix = 0x00000600,
+	TanJanji = 0x00000800,
+	Idioms = 0x00001000,
+	Symbols = 0x00002000,
+	Particle = 0x00004000,
+	AuxiliaryVerb = 0x00008000,
+	SubVerb = 0x00010000,
+	Dependent = 0x0001c000,
+	All = 0x0001ffff,
+}
+
+[Flags]
+public enum ImeWordSelection : uint
+{
+	None = 0x00000000,
+	Reading = 0x00000001,
+	Display = 0x00000002,
+	Pos = 0x00000004,
+	Comment = 0x00000008,
+	All = 0x0000000f,
+}
+
+[Flags]
+public enum ImeRegisteredWordType : uint
+{
+	None = 0x00000000,
+	User = 0x00000001,
+	Auto = 0x00000002,
+	Grammer = 0x00000004,
+	All = 0x00000007,
+}
+
+[Flags]
+public enum ImeDictionaryType : uint
+{
+	None = 0x00000000,
+	General = 0x00000001,
+	Nameplace = 0x00000002,
+	Speech = 0x00000004,
+	Reverse = 0x00000008,
+	English = 0x00000010,
+	All = 0x0000001f,
 }

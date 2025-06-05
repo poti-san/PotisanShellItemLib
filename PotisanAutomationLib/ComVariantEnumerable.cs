@@ -4,7 +4,11 @@ using Potisan.Windows.Com.Automation.ComTypes;
 
 namespace Potisan.Windows.Com.Automation;
 
-public sealed class VariantEnumerable(object? o) : ComUnknownWrapperBase<IEnumVARIANT>(o), IEnumerable<object>, ICloneable
+/// <summary>
+/// <c>object</c>型（COMの<c>VARIANT</c>型）列挙オブジェクト。
+/// </summary>
+/// <param name="o"></param>
+public sealed class ComVariantEnumerable(object? o) : ComUnknownWrapperBase<IEnumVARIANT>(o), IEnumerable<object>, ICloneable
 {
 	public IEnumerator<object> GetEnumerator()
 	{
@@ -20,10 +24,10 @@ public sealed class VariantEnumerable(object? o) : ComUnknownWrapperBase<IEnumVA
 	IEnumerator IEnumerable.GetEnumerator()
 		=> GetEnumerator();
 
-	public ComResult<VariantEnumerable> CloneNoThrow()
+	public ComResult<ComVariantEnumerable> CloneNoThrow()
 		=> new(_obj.Clone(out var x), new(x));
 
-	public VariantEnumerable Clone()
+	public ComVariantEnumerable Clone()
 		=> CloneNoThrow().Value;
 
 	object ICloneable.Clone() => Clone();

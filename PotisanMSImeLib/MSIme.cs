@@ -4,7 +4,7 @@ using Potisan.Windows.MSIme.ComTypes;
 namespace Potisan.Windows.MSIme;
 
 /// <summary>
-/// Microsoft IMEのクラスインスタンスです。
+/// Microsoft IMEのクラスインスタンス。
 /// ここから他のCOMインターフェイスを取得できます。
 /// </summary>
 public sealed class MSIme(object? o) : ComUnknownWrapperBase<IUnknown>(o)
@@ -23,6 +23,34 @@ public sealed class MSIme(object? o) : ComUnknownWrapperBase<IUnknown>(o)
 
 	public static MSIme CreateImeJp()
 		=> CreateImeJpNoThrow().Value;
+
+	private static ComResult<MSIme> CreateLangNoThrow(string progId)
+	{
+		// 分かりにくい原因なのでアサートを発生させます。
+		Debug.Assert(Thread.CurrentThread.GetApartmentState() == ApartmentState.STA,
+			"シングルスレッドモデルでのみ正常に動作します。");
+
+		var clsid = ComGuidHelper.ProgIDToClsid(progId);
+		return ComHelper.CreateInstanceNoThrow<MSIme, IUnknown>(clsid, ComClassContext.InProcServer);
+	}
+
+	public static ComResult<MSIme> CreateImeJapanNoThrow()
+		=> CreateLangNoThrow("MSIME.Japan");
+	public static ComResult<MSIme> CreateImeKoreaNoThrow()
+		=> CreateLangNoThrow("MSIME.Korea");
+	public static ComResult<MSIme> CreateImeChinaNoThrow()
+		=> CreateLangNoThrow("MSIME.China");
+	public static ComResult<MSIme> CreateImeTaiwanNoThrow()
+		=> CreateLangNoThrow("MSIME.Taiwan");
+
+	public static MSIme CreateImeJapan()
+		=> CreateLangNoThrow("MSIME.Japan").Value;
+	public static MSIme CreateImeKorea()
+		=> CreateLangNoThrow("MSIME.Korea").Value;
+	public static MSIme CreateImeChina()
+		=> CreateLangNoThrow("MSIME.China").Value;
+	public static MSIme CreateImeTaiwan()
+		=> CreateLangNoThrow("MSIME.Taiwan").Value;
 
 	public FECommon? AsFECommon
 		=> this.As<FECommon, IFECommon>();

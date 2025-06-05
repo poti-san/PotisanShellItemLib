@@ -2,6 +2,12 @@
 
 namespace Potisan.Windows.MSIme;
 
+/// <summary>
+/// 日本語形態素解析（分かち書き）の結果。
+/// </summary>
+/// <remarks>
+/// <see cref="FELanguage.GetJMorphResult(Potisan.Windows.MSIme.FELanguageConversionRequest, Potisan.Windows.MSIme.FELanguageConversionMode, ReadOnlySpan{char}, Potisan.Windows.MSIme.FELanguageMorphologyInfo[]?)"/>で作成します。
+/// </remarks>
 public sealed class JMorphResult
 {
 	public string OutputString;

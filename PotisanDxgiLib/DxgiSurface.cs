@@ -3,6 +3,10 @@ using Potisan.Windows.Dxgi.ComTypes;
 
 namespace Potisan.Windows.Dxgi;
 
+/// <summary>
+/// イメージデータオブジェクト。
+/// </summary>
+/// <param name="o"></param>
 public class DxgiSurface(object? o) : ComUnknownWrapperBase<IDXGISurface>(o)
 {
 	public DxgiDeviceSubObject DxgiDeviceSubOejct { get; } = new(o);

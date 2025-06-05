@@ -2,6 +2,10 @@
 
 namespace Potisan.Windows.Com.Automation;
 
+/// <summary>
+/// コンパイラ用の型情報。
+/// </summary>
+/// <param name="o"></param>
 public class ComTypeComp(object? o) : ComUnknownWrapperBase<ITypeComp>(o)
 {
 	public ComResult<(ComTypeInfo? TypeInfo, ComDescriptionKind DescKind, object? BindedObject)> BindNoThrow(string name, uint hashValue, ComInvokeKind flags = 0)

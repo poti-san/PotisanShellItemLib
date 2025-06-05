@@ -111,7 +111,11 @@ public sealed class InternetShortcut(object? o) : ComUnknownWrapperBase<IUniform
 		nint parentWindowHandle = 0)
 		=> InvokeCommandNoThrow(flags, verb, parentWindowHandle).ThrowIfError();
 
-	// TODO As...
+	public void InvokeOpen(InternetShortcutInvokeCommand flags = 0, nint parentWindowHandle = 0)
+		=> InvokeCommand(flags, "open", parentWindowHandle);
+
+	public void InvokeEdit(InternetShortcutInvokeCommand flags = 0, nint parentWindowHandle = 0)
+		=> InvokeCommand(flags, "edit", parentWindowHandle);
 
 	public PersistFile? AsPersistFile
 		=> this.As<PersistFile, IPersistFile>();
