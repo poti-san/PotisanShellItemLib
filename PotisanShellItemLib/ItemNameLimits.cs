@@ -7,20 +7,20 @@ namespace Potisan.Windows.Shell;
 /// </summary>
 /// <example>
 /// <code>
-///<![CDATA[using Potisan.Windows.Shell;
+/// <![CDATA[using Potisan.Windows.Shell;
 ///
-///using var desktop = ShellItem2.CreateKnownFolderItem(KnownFolderID.Desktop);
-///using var nameLimits = desktop.ItemNameLimits;
+/// using var desktop = ShellItem2.CreateKnownFolderItem(KnownFolderID.Desktop);
+/// using var nameLimits = desktop.ItemNameLimits;
 ///
-///var maxLen = nameLimits.GetMaxLength("");
-///var(validChars, invalidChars) = nameLimits.ValidCharacters;
+/// var maxLen = nameLimits.GetMaxLength("");
+/// var(validChars, invalidChars) = nameLimits.ValidCharacters;
 ///
-///Console.WriteLine($"""
-///	ファイル名：{desktop.NormalDisplayName}
-///	有効な文字："{validChars}"
-///	無効な文字："{invalidChars}"
-///	最大長　　：{maxLen}
-///	""");]]>
+/// Console.WriteLine($"""
+/// 	ファイル名：{desktop.NormalDisplayName}
+/// 	有効な文字："{validChars}"
+/// 	無効な文字："{invalidChars}"
+/// 	最大長　　：{maxLen}
+/// 	""");]]>
 ///	</code>
 /// </example>
 /// <remarks>

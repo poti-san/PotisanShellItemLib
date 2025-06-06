@@ -9,11 +9,11 @@ namespace Potisan.Windows.Shell;
 /// <param name="o">RCWオブジェクト。</param>
 /// <example>
 /// <code>
-///<![CDATA[using Potisan.Windows.Shell;
+/// <![CDATA[using Potisan.Windows.Shell;
 ///
-///var documentsFolder = ShellItem.CreateKnownFolderItem(KnownFolderID.Documents);
+/// var documentsFolder = ShellItem.CreateKnownFolderItem(KnownFolderID.Documents);
 ///
-///var itemAndParent = documentsFolder.AsParentAndItem;]]>
+/// var itemAndParent = documentsFolder.AsParentAndItem;]]>
 /// </code>
 /// </example>
 /// <remarks>

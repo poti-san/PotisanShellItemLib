@@ -5,6 +5,10 @@ using Potisan.Windows.Shell.ComTypes;
 
 namespace Potisan.Windows.Shell;
 
+/// <summary>
+/// ショートカットファイル（シェルリンク）のデータリスト。
+/// </summary>
+/// <param name="o"></param>
 public sealed class ShellLinkDataList(object? o) : ComUnknownWrapperBase<IShellLinkDataList>(o)
 {
 	// TODO データブロックの操作

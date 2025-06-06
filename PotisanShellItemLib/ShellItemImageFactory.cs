@@ -12,27 +12,26 @@ namespace Potisan.Windows.Shell;
 /// <example>
 /// WinFormsプロジェクトでデスクトップのアイコンをフォームに表示します。
 /// <code>
-///<![CDATA[using Potisan.Windows.Shell;
+/// <![CDATA[using Potisan.Windows.Shell;
 ///
-///namespace WinFormsApp1;
+/// namespace WinFormsApp1;
 ///
-///internal static class Program
-///{
-///	[STAThread]
-///	internal static void Main()
-///	{
-///		ApplicationConfiguration.Initialize();
+/// internal static class Program
+/// {
+/// 	[STAThread]
+/// 	internal static void Main()
+/// 	{
+/// 		ApplicationConfiguration.Initialize();
 ///
-///		var form = new Form();
+/// 		var form = new Form();
 ///
-///		var item = ShellItem2.CreateKnownFolderItem(KnownFolderID.Desktop);
-///		using var bmp = item.AsImageFactory.GetImage(new(64, 64));
-///		form.Controls.Add(new PictureBox { Dock = DockStyle.Fill, Image = Bitmap.FromHbitmap(bmp.DangerousGetHandle()) });
+/// 		var item = ShellItem2.CreateKnownFolderItem(KnownFolderID.Desktop);
+/// 		using var bmp = item.AsImageFactory.GetImage(new(64, 64));
+/// 		form.Controls.Add(new PictureBox { Dock = DockStyle.Fill, Image = Bitmap.FromHbitmap(bmp.DangerousGetHandle()) });
 ///
-///		Application.Run(form);
-///	}
-///}
-///]]>
+/// 		Application.Run(form);
+/// 	}
+/// }]]>
 /// </code>
 /// </example>
 /// <remarks>

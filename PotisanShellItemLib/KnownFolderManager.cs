@@ -10,14 +10,14 @@ namespace Potisan.Windows.Shell;
 /// <param name="o">RCWオブジェクト。</param>
 /// <example>
 /// <code>
-///<![CDATA[using Potisan.Windows.Shell;
+/// <![CDATA[using Potisan.Windows.Shell;
 ///
-///using var kfManager = KnownFolderManager.Create();
-///foreach (var folder in kfManager.FolderEnumerable)
-///{
-///	using var item = folder.ShellItem2NoThrow.Or(null!);
-///	Console.WriteLine($"{folder.ID}, {folder.Category}, {item?.NormalDisplayName}");
-///}]]>
+/// using var kfManager = KnownFolderManager.Create();
+/// foreach (var folder in kfManager.FolderEnumerable)
+/// {
+/// 	using var item = folder.ShellItem2NoThrow.Or(null!);
+/// 	Console.WriteLine($"{folder.ID}, {folder.Category}, {item?.NormalDisplayName}");
+/// }]]>
 /// </code>
 /// </example>
 /// <remarks><c>IKnownFolderManager</c> COMインターフェイスのラッパーです。</remarks>

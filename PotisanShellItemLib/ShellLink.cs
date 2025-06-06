@@ -1,14 +1,12 @@
 ﻿using Potisan.Windows.Com.ClrExtensions;
 using Potisan.Windows.Com.ComTypes;
 using Potisan.Windows.Com.SafeHandles;
-using Potisan.Windows.PropertySystem;
-using Potisan.Windows.PropertySystem.ComTypes;
 using Potisan.Windows.Shell.ComTypes;
 
 namespace Potisan.Windows.Shell;
 
 /// <summary>
-/// ショートカットファイルの操作機能。
+/// ショートカットファイル（シェルリンク）。
 /// </summary>
 /// <param name="o">RCWオブジェクト。</param>
 /// <example>
